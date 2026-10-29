@@ -11,6 +11,11 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 $requestedCat = $_GET['cat'] ?? 'All';
 $requestedAvail = $_GET['avail'] ?? 'All';
+
+header(
+    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
+);
+
 ?>
 
 <div class="page-header-banner">

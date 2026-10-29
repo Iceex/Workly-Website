@@ -8,6 +8,10 @@ $pageTitle = "About Workly – Vetted Bilingual Remote Talent";
 $pageDescription = "Learn why ambitious founders, agencies, and medical practices choose Workly for dedicated English-fluent virtual assistants across the US and globally.";
 
 require_once dirname(__DIR__) . '/includes/header.php';
+
+header(
+    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
+);
 ?>
 
 <div class="page-header-banner">
