@@ -5,7 +5,8 @@
  */
 $currentPage = "home";
 $pageTitle = "Workly – Elite Bilingual Virtual Assistant Talent Platform";
-$pageDescription = "Hire vetted, top 1% bilingual virtual assistants for IT, Marketing, Legal, Insurance, Healthcare, Operations, and Real Estate.";
+$pageDescription = "Connect with highly skilled bilingual virtual assistants delivering tailored expertise across multiple industries and business functions.";
+$canonicalUrl = 'https://worklystaff.com';
 
 header(
     'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
@@ -46,7 +47,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
         </div>
         <div class="metric-item">
           <strong>100% Bilingual</strong>
-          <span>Native English & Spanish</span>
+          <span>English & Spanish</span>
         </div>
         <div class="metric-item">
           <strong>Up to 70%</strong>

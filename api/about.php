@@ -4,8 +4,9 @@
  * File: /php/about.php
  */
 $currentPage = "about";
-$pageTitle = "About Workly – Vetted Bilingual Remote Talent";
-$pageDescription = "Learn why ambitious founders, agencies, and medical practices choose Workly for dedicated English-fluent virtual assistants across the US and globally.";
+$pageTitle = 'About Workly | Our Company';
+$pageDescription = 'Discover Workly and our virtual assistant services.';
+$canonicalUrl = 'https://worklystaff.com/about';
 
 header(
     'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'

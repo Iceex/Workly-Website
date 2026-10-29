@@ -6,6 +6,7 @@
 $currentPage = "terms";
 $pageTitle = "Terms & Conditions – Workly";
 $pageDescription = "Legal agreement and terms of service for clients engaging virtual assistants through Workly Talent Group Inc.";
+$canonicalUrl = 'https://worklystaff.com/terms';
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>

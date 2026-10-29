@@ -6,6 +6,7 @@
 $currentPage = "privacy";
 $pageTitle = "Privacy Policy & Data Security – Workly";
 $pageDescription = "Workly data protection protocols, GDPR/CCPA compliance, and cybersecurity measures protecting client operations.";
+$canonicalUrl = 'https://worklystaff.com/privacy';
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>

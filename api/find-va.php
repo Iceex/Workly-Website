@@ -4,8 +4,9 @@
  * File: /php/find-va.php
  */
 $currentPage = "find-va";
-$pageTitle = "Find a Virtual Assistant – Workly Directory";
-$pageDescription = "Search and filter our verified bilingual virtual assistants by availability (Full-time or Part-time) and industry domain (IT, Marketing, Legal, Healthcare, Real Estate, Insurance, and Operations).";
+$pageTitle = 'Find a VA | Workly';
+$pageDescription = 'Find skilled virtual assistants for your business.';
+$canonicalUrl = 'https://worklystaff.com/find-va';
 
 header(
     'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
