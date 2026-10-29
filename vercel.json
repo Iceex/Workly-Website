@@ -26,10 +26,6 @@
       "dest": "/assets/$1"
     },
     {
-      "src": "^/opcache-status\\.php$",
-      "dest": "/api/opcache-status.php"
-    },
-    {
       "src": "^/$",
       "dest": "/api/index.php"
     },
@@ -58,21 +54,11 @@
         {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
+        },
         {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
-        }
-      ]
-    },
-    {
-      "source": "/(.*)",
-      "headers": [
+        },
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
