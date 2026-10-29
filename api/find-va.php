@@ -13,14 +13,6 @@ $requestedCat = $_GET['cat'] ?? 'All';
 $requestedAvail = $_GET['avail'] ?? 'All';
 ?>
 
-<!-- Skeleton section -->
-    <div id="page-skeleton" aria-hidden="true">
-        <div class="skeleton-block skeleton-heading"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-section"></div>
-    </div>
-
 <div class="page-header-banner">
   <div class="site-container">
     <span class="kicker-badge">Curated Talent Roster · 10 Verified Profiles</span>
@@ -91,7 +83,10 @@ $requestedAvail = $_GET['avail'] ?? 'All';
           data-tools="<?= strtolower(htmlspecialchars(implode(' ', $va['tools']), ENT_QUOTES, 'UTF-8')) ?>"
         >
           <div class="va-card-header">
-            <img src="<?= htmlspecialchars($va['avatar'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?>" class="va-card-avatar">
+            <div class="media-loader is-loading va-card-avatar-loader">
+              <div class="skeleton-placeholder"></div>
+            <img src="<?= htmlspecialchars($va['avatar'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?>" class="va-card-avatar media-content" loading="lazy">
+              </div>
             <div class="va-card-title-group">
               <div class="va-card-name-row">
                 <h3 class="va-card-name"><?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?></h3>

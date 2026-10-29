@@ -26,14 +26,6 @@ $currentPage = "find-va";
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
-<!-- Skeleton section -->
-    <div id="page-skeleton" aria-hidden="true">
-        <div class="skeleton-block skeleton-heading"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-section"></div>
-    </div>
-
 
 <!-- Top Breadcrumbs -->
 <div class="breadcrumb-bar">
@@ -62,11 +54,14 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <!-- Video Player Viewport -->
 <div class="video-screen-viewport" id="videoViewport">
   <button class="video-play-btn" id="playVideoBtn" aria-label="Play video preview"></button>
-    <video controlsList="nodownload" preload="metadata" poster="">
+  <div class="media-loader is-loading">
+    <div class="skeleton-placeholder"></div>  
+  <video controlsList="nodownload" preload="metadata" poster="" class="media-content">
         <source
             src="<?= htmlspecialchars($selectedVa['videoInfo']['videoUrl'], ENT_QUOTES, 'UTF-8') ?>"
             type="video/mp4">
     </video>
+      </div>
           <div class="video-overlay-scrim">
             <div class="video-top-details">
               <span><?= htmlspecialchars($selectedVa['videoInfo']['title'], ENT_QUOTES, 'UTF-8') ?></span>

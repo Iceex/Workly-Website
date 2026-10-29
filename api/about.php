@@ -10,15 +10,6 @@ $pageDescription = "Learn why ambitious founders, agencies, and medical practice
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
-<!-- Skeleton section -->
-    <div id="page-skeleton" aria-hidden="true">
-        <div class="skeleton-block skeleton-heading"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-line"></div>
-        <div class="skeleton-block skeleton-section"></div>
-    </div>
-
-<div id="page-content" data-page-content>
 <div class="page-header-banner">
   <div class="site-container">
     <span class="kicker-badge">Our Mission</span>
@@ -111,7 +102,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <p>Book a discovery consultation on Calendly and review candidate profiles within 24 hours.</p>
     </div>
     <a href="./#calendly-section" class="btn btn-primary btn-large">Schedule Strategy Call</a>
-    </div>
   </div>
 </div>
+
 <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
