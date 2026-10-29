@@ -63,7 +63,7 @@ $currentPage = $currentPage ?? "home";
       <!-- Zone 1: Brand Wordmark & Emblem -->
     <a href="./" class="brand-link">
       <img src="assets/logo.png" alt="Workly Logo" class="brand-logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/favicon.ico'">
-      <span class="brand-title">Workly<span class="brand-accent">.</span></span>
+      <span class="brand-title">Workly</span>
     </a>
 
     <!-- Mobile Hamburger Toggle Button (Aesthetic 3-bar button) -->
@@ -86,7 +86,7 @@ $currentPage = $currentPage ?? "home";
 
     <!-- Zone 3: Primary Action CTA -->
     <div class="nav-cta">
-      <a href="./#calendly-section" class="btn btn-primary">Book a Discovery Call</a>
+      <a href="./#calendly-section" class="btn btn-primary">Book a Time</a>
     </div>
   </div>
 </header>
@@ -135,9 +135,9 @@ $currentPage = $currentPage ?? "home";
       <div class="drawer-link-content">
         <div class="drawer-title-row">
           <span class="drawer-link-title">Find a VA</span>
-          <span class="drawer-chip-badge">Top 1%</span>
+          <span class="drawer-chip-badge">Experienced</span>
         </div>
-        <span class="drawer-link-sub">10 Pre-vetted bilingual experts</span>
+        <span class="drawer-link-sub">Pre-vetted bilingual experts</span>
       </div>
       <svg class="drawer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </a>
@@ -179,7 +179,7 @@ $currentPage = $currentPage ?? "home";
   <div class="drawer-footer">
     <a href="./#calendly-section" class="btn btn-primary btn-block">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-      <span>Book a Discovery Call</span>
+      <span>Book a Time</span>
     </a>
   </div>
 </aside>

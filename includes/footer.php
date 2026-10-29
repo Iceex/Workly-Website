@@ -7,7 +7,7 @@
       <div class="footer-col footer-col-wide">
         <div class="footer-brand">
           <img src="assets/logo.png" alt="Workly" class="footer-logo" style="height: 36px; width: auto; max-height: 36px; object-fit: contain;" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/favicon.ico'">
-          <span class="footer-title">Workly<span class="brand-accent">.</span></span>
+          <span class="footer-title">Workly</span>
         </div>
         <p class="footer-desc">
           Connecting high-growth businesses worldwide with pre-vetted, top 1% bilingual virtual assistants. Scale operations, reclaim executive focus, and cut staffing overhead by up to 70%.
