@@ -153,8 +153,11 @@ $featuredList = array_filter($virtualAssistants, function($v) {
       <?php foreach ($featuredList as $va): ?>
         <div class="va-card">
           <div class="va-card-header">
-            <img src="<?= htmlspecialchars($va['avatar'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?>" class="va-card-avatar">
-            <div class="va-card-title-group">
+            <div class="media-loader is-loading va-card-avatar-loader">
+              <div class="skeleton-placeholder"></div>
+            <img src="<?= htmlspecialchars($va['avatar'], ENT_QUOTES, 'UTF-8') ?>" alt="<?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?>" class="va-card-avatar media-content" loading="lazy">
+              </div>
+              <div class="va-card-title-group">
               <div class="va-card-name-row">
                 <h3 class="va-card-name"><?= htmlspecialchars($va['name'], ENT_QUOTES, 'UTF-8') ?></h3>
                 <span class="badge-rating">★ <?= htmlspecialchars($va['rating'], ENT_QUOTES, 'UTF-8') ?></span>
