@@ -18,6 +18,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         <div class="skeleton-block skeleton-section"></div>
     </div>
 
+<div id="page-content" data-page-content>
 <div class="page-header-banner">
   <div class="site-container">
     <span class="kicker-badge">Our Mission</span>
@@ -110,7 +111,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
       <p>Book a discovery consultation on Calendly and review candidate profiles within 24 hours.</p>
     </div>
     <a href="./#calendly-section" class="btn btn-primary btn-large">Schedule Strategy Call</a>
+    </div>
   </div>
 </div>
-
 <?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
