@@ -10,6 +10,14 @@ $pageDescription = "Legal agreement and terms of service for clients engaging vi
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 
+<!-- Skeleton section -->
+    <div id="page-skeleton" aria-hidden="true">
+        <div class="skeleton-block skeleton-heading"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-section"></div>
+    </div>
+
 <div class="page-header-banner">
   <div class="site-container">
     <span class="kicker-badge">Legal Documentation</span>

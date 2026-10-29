@@ -14,6 +14,15 @@ $featuredList = array_filter($virtualAssistants, function($v) {
 });
 ?>
 
+<!-- Skeleton section -->
+    <div id="page-skeleton" aria-hidden="true">
+        <div class="skeleton-block skeleton-heading"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-section"></div>
+    </div>
+
+
 <!-- Hero Section -->
 <section class="hero-section">
   <div class="hero-bg-glow"></div>

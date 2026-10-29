@@ -13,6 +13,14 @@ $requestedCat = $_GET['cat'] ?? 'All';
 $requestedAvail = $_GET['avail'] ?? 'All';
 ?>
 
+<!-- Skeleton section -->
+    <div id="page-skeleton" aria-hidden="true">
+        <div class="skeleton-block skeleton-heading"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-section"></div>
+    </div>
+
 <div class="page-header-banner">
   <div class="site-container">
     <span class="kicker-badge">Curated Talent Roster · 10 Verified Profiles</span>

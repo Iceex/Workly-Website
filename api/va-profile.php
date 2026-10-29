@@ -26,6 +26,14 @@ $currentPage = "find-va";
 
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
+<!-- Skeleton section -->
+    <div id="page-skeleton" aria-hidden="true">
+        <div class="skeleton-block skeleton-heading"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-line"></div>
+        <div class="skeleton-block skeleton-section"></div>
+    </div>
+
 
 <!-- Top Breadcrumbs -->
 <div class="breadcrumb-bar">

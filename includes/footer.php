@@ -80,5 +80,6 @@
 
 <!-- Workly JavaScript (Relative path works at domain root or any subfolder) -->
 <script src="assets/js/main.js"></script>
+<script src="assets/js/skeleton.js"></script>
 </body>
 </html>
