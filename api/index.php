@@ -7,15 +7,15 @@ $currentPage = "home";
 $pageTitle = "Workly – Elite Bilingual Virtual Assistant Talent Platform";
 $pageDescription = "Hire vetted, top 1% bilingual virtual assistants for IT, Marketing, Legal, Insurance, Healthcare, Operations, and Real Estate.";
 
+header(
+    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
+);
+
 require_once dirname(__DIR__) . '/includes/header.php';
 
 $featuredList = array_filter($virtualAssistants, function($v) {
     return !empty($v['featured']);
 });
-
-header(
-    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
-);
 
 ?>
 

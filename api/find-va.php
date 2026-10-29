@@ -7,14 +7,15 @@ $currentPage = "find-va";
 $pageTitle = "Find a Virtual Assistant – Workly Directory";
 $pageDescription = "Search and filter our verified bilingual virtual assistants by availability (Full-time or Part-time) and industry domain (IT, Marketing, Legal, Healthcare, Real Estate, Insurance, and Operations).";
 
+header(
+    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
+);
+
 require_once dirname(__DIR__) . '/includes/header.php';
 
 $requestedCat = $_GET['cat'] ?? 'All';
 $requestedAvail = $_GET['avail'] ?? 'All';
 
-header(
-    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
-);
 
 ?>
 

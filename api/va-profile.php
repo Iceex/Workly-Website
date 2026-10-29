@@ -3,6 +3,11 @@
  * Workly - Virtual Assistant Detailed Profile
  * File: /php/va-profile.php
  */
+
+header(
+    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
+);
+
 require_once dirname(__DIR__) . '/data/vas.php';
 
 $requestedId = $_GET['id'] ?? 'va-1';
@@ -26,9 +31,6 @@ $currentPage = "find-va";
 
 require_once dirname(__DIR__) . '/includes/header.php';
 
-header(
-    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
-);
 
 
 ?>
