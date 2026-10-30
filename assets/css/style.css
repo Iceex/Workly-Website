@@ -226,7 +226,7 @@ button {
 .section-kicker {
   display: inline-block;
   font-size: clamp(10px, 2vw, 11px);
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--primary);
@@ -235,7 +235,7 @@ button {
 
 .section-title {
   font-size: clamp(1.5rem, 4.5vw, 2.35rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.2;
   color: var(--text-dark);
@@ -371,7 +371,7 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
+  font-weight: 700;
   font-size: clamp(18px, 4vw, 23px);
   letter-spacing: -0.03em;
   cursor: pointer;
@@ -540,7 +540,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .drawer-title {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text-dark);
 }
@@ -578,7 +578,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .drawer-section-label {
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
@@ -657,7 +657,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .drawer-chip-badge {
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 1px 6px;
   border-radius: 9999px;
   background: var(--bg-lilac);
@@ -750,7 +750,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .page-title {
   font-size: clamp(1.65rem, 4.8vw, 2.45rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.025em;
   color: var(--text-dark);
   margin-bottom: 10px;
@@ -786,7 +786,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .hero-title {
   font-size: clamp(1.85rem, 5.2vw, 3.25rem);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.03em;
   margin-bottom: 16px;
@@ -820,7 +820,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 .metric-item strong {
   display: block;
   font-size: clamp(15px, 2.5vw, 18px);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
   line-height: 1.2;
 }
@@ -915,7 +915,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .cat-card h3 {
   font-size: clamp(15px, 2.5vw, 17px);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -1077,7 +1077,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .roles-label {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--text-muted);
   margin-right: 4px;
@@ -1188,7 +1188,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .va-card-name {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.25;
   color: var(--text-dark);
 }
@@ -1310,7 +1310,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .step-card h3 {
   font-size: clamp(16px, 2.5vw, 18px);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -1348,7 +1348,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .calendly-title {
   font-size: clamp(1.7rem, 4.5vw, 2.35rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.03em;
   margin-bottom: 10px;
   text-wrap: balance;
@@ -1446,7 +1446,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .cta-banner-section h2 {
   font-size: clamp(1.65rem, 4.5vw, 2.2rem);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 10px;
   text-wrap: balance;
 }
@@ -1507,7 +1507,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .pillar-card h3 {
   font-size: clamp(16px, 2.5vw, 19px);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 8px;
   color: var(--text-dark);
 }
@@ -1562,7 +1562,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .about-cta-banner h3 {
   font-size: clamp(18px, 3.5vw, 23px);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 6px;
 }
@@ -1602,7 +1602,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .legal-card h2 {
   font-size: clamp(16px, 3vw, 19px);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-dark);
   margin-bottom: 10px;
   padding-bottom: 6px;
@@ -1747,7 +1747,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 
 .summary-name {
   font-size: clamp(18px, 3.5vw, 24px);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 2px;
   line-height: 1.2;
 }
@@ -1980,7 +1980,7 @@ video {
 .topics-title {
   display: block;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   color: #94a3b8;
   margin-bottom: 6px;
@@ -2173,7 +2173,7 @@ video {
   align-items: center;
   gap: 10px;
   font-size: clamp(20px, 3.5vw, 23px);
-  font-weight: 800;
+  font-weight: 700;
   color: var(--white);
   margin-bottom: 12px;
 }
@@ -2207,7 +2207,7 @@ video {
 .footer-heading {
   color: var(--white);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 12px;
