@@ -1,7 +1,7 @@
 <?php
 
 $siteUrl = 'https://worklystaff.com';
-$logoUrl = $siteUrl . 'https://worklystaff.com/assets/logo.png';
+$logoUrl = $siteUrl . '/assets/logo.png';
 
 $pageTitle = $pageTitle ?? 'Workly – Elite Virtual Assistant Talent Platform';
 
@@ -43,6 +43,9 @@ $organizationSchema = [
 <meta property="og:description" content="<?= $escape($pageDescription) ?>">
 <meta property="og:url" content="<?= $escape($canonicalUrl) ?>">
 <meta property="og:image" content="<?= $escape($ogImage) ?>">
+<meta property="og:image:secure_url" content="<?= $escape($ogImage) ?>">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Workly - Virtual Assistant Platform">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
