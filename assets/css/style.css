@@ -2234,7 +2234,7 @@ video {
 .footer-social-list {
   display: flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 20px;
 }
 
 .social-link-item {
