@@ -60,7 +60,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
       <div class="hero-image-wrapper" id="remove-bottom">
         <div class="media-loader is-loading">
           <div class="skeleton-placeholder"></div>
-        <img src="assets/images/hero_remote_workspace_1793194428011.jpg" alt="Workly Remote Workspace" class="hero-img media-content" loading="lazy"></img></div>
+        <img src="assets/images/hero_remote_workspace_1793194428011.jpg" alt="Workly Remote Workspace" class="hero-img media-content"></img></div>
         <div class="hero-image-overlay">
           <span class="status-live">Synchronous US Timezones (EST, CST, PST)</span>
           <p>Equipped with high-speed fiber, noise-canceling headsets, and signed NDAs.</p>

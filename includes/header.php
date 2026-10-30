@@ -21,10 +21,7 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       <link rel="icon" type="image/png" href="<?= htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') ?>">
 
       <!-- Google Fonts -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+      <link rel="preload" href="/assets/fonts/plus-jakarta-sans/plus-jakarta-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 
       <!-- Google Tag Manager -->
       <script>
@@ -45,9 +42,10 @@ require_once dirname(__DIR__) . '/includes/seo.php';
 
 
   <!-- Workly Stylesheet (Relative path works at domain root or any subfolder) -->
+  <link rel="preload" as="image" href="/assets/images/hero_remote_workspace_1793194428011.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/skeleton.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
 </head>
 <body>
     <noscript>
