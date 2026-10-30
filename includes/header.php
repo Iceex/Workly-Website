@@ -44,7 +44,15 @@ require_once dirname(__DIR__) . '/includes/seo.php';
   <!-- Workly Stylesheet (Relative path works at domain root or any subfolder) -->
   <link rel="preload" as="image" href="/assets/images/hero_remote_workspace_1793194428011.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/skeleton.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+<link
+    rel="preload"
+    href="/assets/css/style.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+>
+<noscript>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</noscript>
   <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
 </head>
 <body>
