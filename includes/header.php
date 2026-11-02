@@ -17,7 +17,7 @@ require_once dirname(__DIR__) . '/includes/seo.php';
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+      <meta name="facebook-domain-verification" content="2gxrx7a43zuyv27gcvsbijo5bttpuf" />
       <link rel="icon" type="image/png" href="<?= htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') ?>">
 
       <!-- Google Fonts -->
