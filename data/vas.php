@@ -459,7 +459,7 @@ $virtualAssistants = [
             'Experienced in custom integrations and business process automation.',
             'Focuses on performance, maintainability and practical solutions.'
         ],
-        'tools' => ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'JavaScript', 'Vue.js', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'MySQL', 'PostgreSQL', 'REST APIs', 'Webhooks', 'Elementor', 'ACF', 'JetEngine', 'GSAP', 'Lenis', 'Figma', 'Photoshop', 'Git', 'GitHub', 'Docker']
+        'tools' => ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'JavaScript', 'Vue.js', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'MySQL', 'PostgreSQL', 'REST APIs', 'Webhooks', 'Elementor', 'ACF', 'JetEngine', 'GSAP', 'Lenis', 'Figma', 'Photoshop', 'Git', 'GitHub', 'Docker'],
         'videoInfo' => [
             'title' => 'Web Maintenance & Automation Workflow Demonstration',
             'duration' => '01:50',
