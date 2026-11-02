@@ -9,7 +9,7 @@ $pageTitle = $pageTitle ?? 'Workly – Elite Virtual Assistant Talent Platform';
 $pageDescription = $pageDescription ?? 'Connect with highly skilled bilingual virtual assistants delivering tailored expertise across multiple industries and business functions.';
 $organizationDescription = 'Workly connects businesses with highly skilled virtual assistants across multiple industries and business functions.';
 $canonicalUrl = $canonicalUrl ?? $siteUrl . '/';
-$ogImage = $ogImage ?? $logoUrl;
+
 $ogImage = $ogImage ?? $siteUrl . '/assets/og_workly.jpg';
 
 $robots = $robots ?? 'index, follow';
