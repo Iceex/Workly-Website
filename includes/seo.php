@@ -10,7 +10,7 @@ $pageDescription = $pageDescription ?? 'Connect with highly skilled bilingual vi
 $organizationDescription = 'Workly connects businesses with highly skilled virtual assistants across multiple industries and business functions.';
 $canonicalUrl = $canonicalUrl ?? $siteUrl . '/';
 
-$ogImage = $ogImage ?? $siteUrl . '/assets/og_workly.jpg';
+$ogImage = $ogImage ?? $siteUrl . '/assets/images/og_workly.jpg';
 
 $robots = $robots ?? 'index, follow';
 
