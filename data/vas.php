@@ -438,7 +438,7 @@ $virtualAssistants = [
         'hoursPerWeek' => 40,
         'hourlyRate' => 18,
         'experienceYears' => '5+',
-        'languages' => ['Spanish', 'English'],
+        'languages' => ['Spanish', 'English (B2)'],
         'timezone' => 'GMT-3',
         'tagline' => 'Full-Stack Developer building custom web applications, business solutions and intelligent automations.',
         'shortBio' => 'Full-Stack Developer with 5+ years of experience specializing in PHP, Laravel and WordPress. Skilled in building custom web applications, integrations and automated business solutions.',
@@ -460,7 +460,6 @@ $virtualAssistants = [
             'Focuses on performance, maintainability and practical solutions.'
         ],
         'tools' => ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'JavaScript', 'Vue.js', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'MySQL', 'PostgreSQL', 'REST APIs', 'Webhooks', 'Elementor', 'ACF', 'JetEngine', 'GSAP', 'Lenis', 'Figma', 'Photoshop', 'Git', 'GitHub', 'Docker']
-    ],
         'videoInfo' => [
             'title' => 'Web Maintenance & Automation Workflow Demonstration',
             'duration' => '01:50',
