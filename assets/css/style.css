@@ -576,6 +576,12 @@ body.mobile-drawer-open .mobile-side-drawer {
   justify-content: space-between;
 }
 
+.drawer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .drawer-section-label {
   font-size: 10px;
   font-weight: 700;

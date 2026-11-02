@@ -20,7 +20,6 @@ foreach ($virtualAssistants as $va) {
     }
 }
 
-// Fallback to first VA if invalid ID
 if (!$selectedVa) {
     $selectedVa = $virtualAssistants[0];
 }
@@ -35,7 +34,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 ?>
 
-<!-- Top Breadcrumbs -->
+
 <div class="breadcrumb-bar">
   <div class="site-container breadcrumb-flex">
     <a href="find-va" class="back-link"><span class="arrow-back">←</span> Return Back</a>
@@ -44,10 +43,10 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 <div class="site-container profile-container">
   <div class="profile-grid">
-    <!-- Left Column: Video Presentation (Primary Content) & In-Depth Bio -->
+
     <div class="profile-main-content">
 
-      <!-- PRIMARY CONTENT: Candidate Recorded Video Presentation -->
+
       <div class="video-container-card">
         <div class="video-card-header">
           <div class="video-status">
@@ -59,7 +58,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           <span class="video-note">HD 1080p Interview</span>
         </div>
 
-        <!-- Video Player Viewport -->
+
 <div class="video-screen-viewport" id="videoViewport">
   <button class="video-play-btn" id="playVideoBtn" aria-label="Play video preview"></button>
   <div class="media-loader is-loading">
@@ -78,7 +77,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
           </div>
 </div>
         
-        <!-- Topics Covered -->
+
         <div class="video-topics-strip">
           <span class="topics-title">Topics Covered in Presentation:</span>
           <div class="topics-list">
@@ -89,7 +88,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
       </div>
 
-      <!-- In-Depth Role Breakdown & Responsibilities -->
+
       <div class="profile-details-card">
         <h3>About <?= htmlspecialchars($selectedVa['name'], ENT_QUOTES, 'UTF-8') ?></h3>
         <p class="lead-bio">
@@ -120,7 +119,6 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </div>
       </div>
 
-      <!-- Verified Reviews -->
       <div class="profile-details-card">
         <div class="reviews-header">
           <div>
@@ -148,10 +146,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
       </div>
     </div>
 
-    <!-- Right Sidebar: Quick Booking & Specs -->
     <div class="profile-sidebar">
 
-      <!-- Profile Header Summary Card -->
        <div class="sidebar-card">
             <div class="summary-container">
               <div class="summary-name-row">
@@ -203,7 +199,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
         </a>
       </div>
 
-      <!-- Tools Box -->
+
       <div class="sidebar-card">
         <h4>Proficient Tools & Software</h4>
         <div class="tools-cloud">

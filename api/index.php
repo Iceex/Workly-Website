@@ -20,7 +20,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
 
 ?>
 
-<!-- Hero Section -->
+
 <section class="hero-section">
   <div class="hero-bg-glow"></div>
   <div class="site-container hero-grid">
@@ -70,7 +70,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
   </div>
 </section>
 
-<!-- 8 Industry Verticals Bento Section -->
+
 <section class="section-padding bg-light">
   <div class="site-container">
     <div class="section-header text-center">
@@ -141,7 +141,6 @@ $featuredList = array_filter($virtualAssistants, function($v) {
   </div>
 </section>
 
-<!-- Featured Virtual Assistants Spotlight -->
 <section class="section-padding">
   <div class="site-container">
     <div class="section-split-header">
@@ -206,7 +205,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
   </div>
 </section>
 
-<!-- How It Works Section -->
+
 <section id="how-it-works" class="section-padding bg-light">
   <div class="site-container">
     <div class="section-header text-center">
@@ -239,7 +238,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
   </div>
 </section>
 
-<!-- Calendly Integration Section -->
+
 <section id="calendly-section" class="calendly-section">
   <div class="site-container">
     <div class="calendly-header text-center">
@@ -250,12 +249,11 @@ $featuredList = array_filter($virtualAssistants, function($v) {
       </p>
     </div>
 
-    <!-- CALENDLY HTML AS SPECIFIED BY USER -->
+
     <?php require_once dirname(__DIR__) . '/includes/calendly-widget.php'; ?>
   </div>
 </section>
 
-<!-- FAQs Section -->
 <section id="faqs" class="section-padding">
   <div class="site-container faq-container">
     <div class="section-header text-center">
@@ -310,7 +308,6 @@ $featuredList = array_filter($virtualAssistants, function($v) {
   </div>
 </section>
 
-<!-- Final CTA Banner -->
 <section class="cta-banner-section">
   <div class="site-container text-center">
     <h2>Ready to Build Your Dedicated Remote Team?</h2>

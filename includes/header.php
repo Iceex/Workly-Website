@@ -20,10 +20,10 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       <meta name="facebook-domain-verification" content="2gxrx7a43zuyv27gcvsbijo5bttpuf" />
       <link rel="icon" type="image/png" href="<?= htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') ?>">
 
-      <!-- Google Fonts -->
+
       <link rel="preload" href="/assets/fonts/plus-jakarta-sans/plus-jakarta-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 
-      <!-- Google Tag Manager -->
+
       <script>
       (function(w,d,s,l,i){
           w[l]=w[l]||[];
@@ -41,7 +41,6 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       </script>
 
 
-  <!-- Workly Stylesheet (Relative path works at domain root or any subfolder) -->
   <link rel="preload" as="image" href="/assets/images/hero_remote_workspace_1793194428011.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/skeleton.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -56,17 +55,16 @@ require_once dirname(__DIR__) . '/includes/seo.php';
             style="display:none;visibility:hidden">
         </iframe>
     </noscript>
-<!-- Fixed Top Navigation Bar -->
+
 <header class="workly-navbar">
   <div class="nav-container">
     
-      <!-- Zone 1: Brand Wordmark & Emblem -->
+
     <a href="./" class="brand-link">
       <img src="assets/logo.png" alt="Workly Logo" class="brand-logo" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/favicon.ico'">
       <span class="brand-title">Workly</span>
     </a>
 
-    <!-- Mobile Hamburger Toggle Button (Aesthetic 3-bar button) -->
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu" aria-expanded="false">
       <span class="bar bar-1"></span>
       <span class="bar bar-2"></span>
@@ -75,7 +73,6 @@ require_once dirname(__DIR__) . '/includes/seo.php';
 
 
 
-    <!-- Zone 2: Navigation Links (Clean URLs for Desktop) -->
     <nav class="nav-links">
       <a href="./" class="<?= $currentPage === 'home' ? 'active' : '' ?>">Home</a>
       <a href="find-va" class="<?= $currentPage === 'find-va' ? 'active' : '' ?>">Find a VA</a>
@@ -84,22 +81,19 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       <a href="./#faqs">FAQs</a>
     </nav>
 
-    <!-- Zone 3: Primary Action CTA -->
+
     <div class="nav-cta">
       <a href="./#calendly-section" class="btn btn-primary">Book a Time</a>
     </div>
   </div>
 </header>
 
-<!-- ==============================================================
-     AESTHETIC LEFT SLIDE-IN DRAWER & BACKDROP BLUR OVERLAY
-     ============================================================== -->
-<!-- 1. Background Blur Scrim Overlay -->
+
 <div class="mobile-drawer-overlay" id="mobileDrawerOverlay" aria-hidden="true"></div>
 
-<!-- 2. Left Slide-In Drawer -->
+
 <aside class="mobile-side-drawer" id="mobileSideDrawer" aria-label="Mobile Navigation">
-  <!-- Drawer Header -->
+
   <div class="drawer-header">
     <div class="drawer-brand">
       <img src="assets/logo.png" alt="Workly Logo" class="drawer-logo">
@@ -113,10 +107,10 @@ require_once dirname(__DIR__) . '/includes/seo.php';
     </button>
   </div>
 
-  <!-- Drawer Body Navigation Links -->
   <div class="drawer-body">
     <div class="drawer-section-label">Main Navigation</div>
 
+    <div class="drawer-top">
     <a href="./" class="drawer-link <?= $currentPage === 'home' ? 'active' : '' ?>">
       <div class="drawer-icon-box">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
@@ -174,8 +168,8 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       </div>
       <svg class="drawer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </a>
+    </div>
 
-  <!-- Drawer Footer CTA -->
   <div class="drawer-footer">
     <a href="./#calendly-section" class="btn btn-primary btn-block">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>

@@ -1,9 +1,9 @@
 </main>
-<!-- Master Footer -->
+
 <footer class="workly-footer">
   <div class="footer-container">
     <div class="footer-grid">
-      <!-- Col 1: Brand & Overview -->
+
       <div class="footer-col footer-col-wide">
         <div class="footer-brand">
           <img src="assets/logo.png" alt="Workly" class="footer-logo" style="height: 36px; width: auto; max-height: 36px; object-fit: contain;" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/favicon.ico'">
@@ -19,7 +19,6 @@
         </div>
       </div>
 
-      <!-- Col 2: Verticals -->
       <div class="footer-col">
         <h4 class="footer-heading">Talent Verticals</h4>
         <ul class="footer-links">
@@ -32,7 +31,6 @@
         </ul>
       </div>
 
-      <!-- Col 3: Navigation (Clean URLs) -->
       <div class="footer-col">
         <h4 class="footer-heading">Navigation</h4>
         <ul class="footer-links">
@@ -44,21 +42,18 @@
         </ul>
       </div>
 
-      <!-- Col 4: Social Links (Empty with # as requested) -->
       <div class="footer-col">
         <h4 class="footer-heading">Connect With Us</h4>
           <div class="footer-social-list">
-              <!-- WhatsApp -->
+
               <a href="#" class="social-link-item" aria-label="WhatsApp">
                   <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
               </a>
 
-              <!-- Instagram -->
               <a href="#" class="social-link-item" aria-label="Instagram">
                   <i class="fa-brands fa-instagram" aria-hidden="true"></i>
               </a>
 
-              <!-- LinkedIn -->
               <a href="#" class="social-link-item" aria-label="LinkedIn">
                   <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
@@ -66,7 +61,7 @@
       </div>
     </div>
 
-    <!-- Sub-footer -->
+
     <div class="footer-bottom">
       <p>© <?= date('Y') ?> Workly Talent Group Inc. All rights reserved.</p>
       <div class="footer-legal-links">
@@ -78,7 +73,6 @@
   </div>
 </footer>
 
-<!-- Workly JavaScript (Relative path works at domain root or any subfolder) -->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/skeleton.js" defer></script>
 </body>

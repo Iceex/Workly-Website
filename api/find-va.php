@@ -30,9 +30,9 @@ $requestedAvail = $_GET['avail'] ?? 'All';
   </div>
 </div>
 
-<!-- Main Catalog Container with STICKY FILTER -->
+
 <div class="catalog-container">
-  <!-- Sticky Filter Bar: stuck to top of this container and ends with container -->
+
   <div class="sticky-filter-wrapper" id="stickyFilter">
     <div class="site-container">
       <div class="filter-top-row">
@@ -46,7 +46,6 @@ $requestedAvail = $_GET['avail'] ?? 'All';
           >
         </div>
 
-        <!-- Availability Filter -->
         <div class="filter-segmented-control" id="availTabs">
           <span class="seg-indicator" aria-hidden="true"></span>
           <button class="seg-btn active" data-avail="All">All Hours</button>
@@ -54,13 +53,11 @@ $requestedAvail = $_GET['avail'] ?? 'All';
           <button class="seg-btn" data-avail="Part-time">Part-time (20-25h)</button>
         </div>
 
-        <!-- Results Counter -->
         <div class="filter-counter">
           Showing <strong id="visibleCount"><?= count($virtualAssistants) ?></strong> of <?= count($virtualAssistants) ?> assistants
         </div>
       </div>
 
-      <!-- Category Filter Pills -->
       <div class="filter-roles-scroller" id="categoryChips">
         <span class="roles-label">Roles:</span>
         <button class="role-chip active" data-cat="All">All</button>
@@ -76,7 +73,6 @@ $requestedAvail = $_GET['avail'] ?? 'All';
     </div>
   </div>
 
-  <!-- Cards Grid -->
   <div class="site-container catalog-cards-padding">
     <div class="va-cards-grid" id="vaCardsContainer">
       <?php foreach ($virtualAssistants as $va): ?>
@@ -135,7 +131,6 @@ $requestedAvail = $_GET['avail'] ?? 'All';
       <?php endforeach; ?>
     </div>
 
-    <!-- Empty State -->
     <div id="noResultsBox" class="no-results-box" style="display: none;">
       <h3>No Virtual Assistants Found</h3>
       <p>No assistants match the selected criteria. Try resetting filters.</p>
