@@ -10,60 +10,89 @@
 $virtualAssistants = [
     [
         'id' => 'va-1',
-        'slug' => 'lari-pico',
-        'name' => 'Lari Pico',
-        'role' => 'Executive & Operations Administrative VA',
+        'slug' => 'lariany-pico',
+        'name' => 'Lariany Pico',
+        'role' => 'Virtual Assistant & Administrative Support Specialist',
         'category' => 'Administrative',
-        'secondaryRoles' => ['Management', 'Operations'],
+        'secondaryRoles' => ['Marketing', 'Healthcare', 'Management'],
         'availability' => 'Full-time',
         'hoursPerWeek' => 40,
-        'hourlyRate' => 15,
+        'hourlyRate' => 18,
         'rating' => 4.9,
-        'reviewCount' => 38,
-        'experienceYears' => 6,
-        'languages' => ['English', 'Spanish'],
-        'timezone' => 'EST / CST Compatible (US Eastern)',
-        'avatar' => 'assets/images/va_portrait_sarah_1793194427374.jpg',
-        'tagline' => 'High-caliber executive calendar management, inbox zero, and cross-functional operations.',
-        'shortBio' => 'Former executive assistant at mid-sized consulting firms, specializing in high-velocity executive schedules, vendor coordination, and board meeting briefings.',
-        'fullBio' => 'Lari has over 6 years of dedicated experience supporting C-level executives and fast-growing founders. She takes complete ownership of your daily rhythm—from dynamic calendar triage and inbox prioritization to organizing complex travel itineraries and coordinating team-wide weekly standups. Known for calm under pressure and meticulous discretion.',
+        'reviewCount' => 28,
+        'experienceYears' => 7,
+        'languages' => ['Spanish', 'English'],
+        'timezone' => 'GMT-3',
+        'avatar' => 'https://i.pravatar.cc/400?img=47',
+        'tagline' => 'Reliable Virtual Assistant specializing in administrative operations, customer support, appointment setting, and CRM management.',
+        'shortBio' => 'Detail-oriented Virtual Assistant with 7 years of experience in administrative support, customer service, finance operations, and appointment setting. Skilled at managing daily operations, maintaining organized workflows, and delivering professional customer experiences across multiple industries.',
+        'fullBio' => 'I am a dedicated Virtual Assistant with approximately 7 years of professional experience supporting administrative operations, customer service, finance processes, and business development activities. My background includes working with marketing agencies, healthcare practices, promotional products companies, and independent businesses. I have hands-on experience managing calendars, coordinating appointments, handling customer inquiries, processing purchase orders, supporting supplier payments, managing billing and accounts receivable, following up on outstanding balances, and maintaining accurate customer records. I also specialize in appointment setting and lead management, including outbound communication, lead follow-ups, CRM updates, appointment confirmations, and coordination between prospects and internal teams. Throughout my experience, I have worked with different teams and business owners to keep daily operations organized, improve communication, and ensure tasks are completed consistently. I am comfortable working remotely, adapting to different business processes, following established procedures, and managing multiple responsibilities with attention to detail. My goal is to help businesses save time, maintain efficient operations, and provide dependable administrative and customer support.',
         'keyResponsibilities' => [
-            'Autonomous email inbox screening, sorting, and draft preparation',
-            'Complex calendar scheduling, timezone conversions, and board meeting prep',
-            'Travel logistics: flights, accommodations, ground transfers, and itemized expense reports',
-            'Vendor management, invoicing verification, and procurement follow-up',
-            'Meeting minutes, action item distribution, and accountability tracking'
+            'Manage administrative tasks, business documentation, data entry, and digital records with accuracy and attention to detail.',
+            'Coordinate appointments, manage calendars, schedule meetings, and handle appointment confirmations and rescheduling.',
+            'Provide professional customer service through phone calls, email, and text messaging, addressing inquiries and following up with customers.',
+            'Manage CRM activities, update lead records, track opportunities, and maintain consistent follow-up communication.',
+            'Support appointment-setting operations, including outbound calls, lead nurturing, objection handling, and appointment coordination.',
+            'Assist with financial and administrative processes, including purchase orders, supplier payments, billing, accounts receivable, collections, and credit applications.',
+            'Coordinate with internal teams, healthcare offices, and business partners to maintain organized workflows and ensure timely task completion.'
         ],
         'whyTheyExcel' => [
-            'Proactive foresight: anticipates executive needs 48 hours before deadlines',
-            'Absolute discretion with confidential financial and strategic documents',
-            'Exceptional written English with polished executive tone'
+            'Versatile industry experience: Background in marketing agencies, healthcare practices, customer service, finance, and general administration.',
+            'Strong organizational skills: Experienced in managing multiple priorities, calendars, customer records, and administrative workflows in remote environments.',
+            'Customer-focused communication: Able to handle customer inquiries, follow-ups, appointment coordination, and sensitive conversations with professionalism and empathy.',
+            'Operational reliability: Comfortable following SOPs, maintaining accurate information, tracking pending tasks, and coordinating with different departments.',
+            'Adaptability and problem-solving: Quick to understand new processes, work with different CRM platforms, and adjust to changing business requirements.'
         ],
-        'tools' => ['Google Workspace', 'Slack', 'Notion', 'Asana', 'QuickBooks Online', 'Expensify', 'Zoom'],
+        'tools' => [
+            'Follow Up Boss',
+            'GoHighLevel',
+            'Salesforce',
+            'Monday.com',
+            'Google Sheets',
+            'Google Calendar',
+            'Microsoft Outlook',
+            'Calendly',
+            'Zoom',
+            'Google Chat',
+            'GMass',
+            'CRM Platforms',
+            'Microsoft Office'
+        ],
         'videoInfo' => [
-            'videoUrl' => '/assets/video/sample_video-720p.mp4',
-            'title' => 'Executive Assistant Introduction & Workflow Walkthrough',
-            'duration' => '01:45',
+            'title' => 'Meet Lariany – Virtual Assistant & Administrative Support Specialist',
+            'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'assets/images/va_portrait_sarah_1793194427374.jpg',
-            'topicsCovered' => ['Executive workflow setup', 'Sample inbox management strategy', 'Confidentiality assurance']
+            'placeholderPoster' => 'https://i.pravatar.cc/400?img=47',
+            'topicsCovered' => [
+                'Administrative Support and Customer Service',
+                'CRM Management and Appointment Setting',
+                'Remote Operations and Business Coordination'
+            ]
         ],
         'reviews' => [
             [
-                'clientName' => 'Arthur Bradley',
-                'clientRole' => 'CEO & Founder',
-                'company' => 'Apex Media Ventures',
-                'rating' => 5,
-                'date' => 'October 2026',
-                'comment' => 'Lari revolutionized my workday. I went from spending 3 hours on calendar mess and emails to zero. She is sharp, prompt, and treats my business as her own.'
+                'clientName' => 'Emily Carter',
+                'clientRole' => 'Operations Manager',
+                'company' => 'BrightPath Business Solutions',
+                'rating' => 5.0,
+                'date' => '2026-08-15',
+                'comment' => 'Lariany is highly organized, dependable, and proactive. She handles administrative tasks and scheduling efficiently, allowing our team to focus on other priorities. Her attention to detail and communication make her a valuable support professional.'
             ],
             [
-                'clientName' => 'Rachel Simmons',
-                'clientRole' => 'Managing Director',
-                'company' => 'Beacon Strategic Advisory',
-                'rating' => 5,
-                'date' => 'August 2026',
-                'comment' => 'Flawless organizational skills. Lari handled our quarterly investor summits without a single hiccup.'
+                'clientName' => 'Michael Thompson',
+                'clientRole' => 'Healthcare Practice Manager',
+                'company' => 'CarePoint Medical Group',
+                'rating' => 4.9,
+                'date' => '2026-09-10',
+                'comment' => 'Excellent communication and customer service skills. Lariany understands the importance of patient follow-ups, appointment coordination, and keeping CRM records updated. She is professional, consistent, and attentive to detail.'
+            ],
+            [
+                'clientName' => 'Sarah Mitchell',
+                'clientRole' => 'Marketing Director',
+                'company' => 'GrowthBridge Marketing',
+                'rating' => 5.0,
+                'date' => '2026-10-05',
+                'comment' => 'A reliable team player with strong administrative and lead management skills. Lariany adapts quickly to new processes, follows instructions carefully, and maintains consistent communication. Her support makes daily operations much smoother.'
             ]
         ],
         'featured' => true
@@ -148,7 +177,7 @@ $virtualAssistants = [
                 'comment' => 'Demo review: Jose demonstrated strong communication and follow-through. His experience with legal support tasks and case management platforms made him a valuable addition to the administrative workflow.'
             ]
         ],
-        'featured' => false
+        'featured' => true
     ],
     [
         'id' => 'va-3',
@@ -539,11 +568,11 @@ $virtualAssistants = [
     ],
     [
         'id' => 'va-10',
-        'slug' => 'maria-marcano',
+        'slug' => 'helen-',
         'name' => 'Maria Marcano',
         'role' => 'Multi-Channel Paid Ads & Social Media VA',
         'category' => 'Marketing',
-        'secondaryRoles' => ['Administrative', 'Real Estate'],
+        'secondaryRoles' => ['Administrative', 'Legal'],
         'availability' => 'Part-time',
         'hoursPerWeek' => 25,
         'hourlyRate' => 17,
