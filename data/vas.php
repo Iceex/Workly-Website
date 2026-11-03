@@ -72,52 +72,83 @@ $virtualAssistants = [
         'id' => 'va-2',
         'slug' => 'jose-villegas',
         'name' => 'Jose Villegas',
-        'role' => 'DevOps & IT Cloud Support VA',
-        'category' => 'IT',
-        'secondaryRoles' => ['Administrative', 'Management'],
+        'role' => 'Bilingual Legal Virtual Assistant',
+        'category' => 'Legal',
+        'secondaryRoles' => ['Administrative', 'Insurance'],
         'availability' => 'Full-time',
         'hoursPerWeek' => 40,
-        'hourlyRate' => 22,
-        'rating' => 4.95,
-        'reviewCount' => 42,
-        'experienceYears' => 7,
-        'languages' => ['English', 'Spanish'],
-        'timezone' => 'PST / MST Compatible (US Pacific)',
-        'avatar' => 'assets/images/va_portrait_marcus_1793194428958.jpg',
-        'tagline' => 'Cloud infrastructure maintenance, CI/CD pipeline monitoring, and IT helpdesk management.',
-        'shortBio' => 'Experienced tech VA handling server uptime, Docker container deployments, DNS configurations, and employee IT onboarding workflows.',
-        'fullBio' => 'Villegas brings 7 years of hands-on infrastructure and technical support background. He bridges the gap between software engineers and day-to-day IT operations, monitoring AWS/GCP workloads, handling user access provisioning, security patch updates, and database backup verification.',
+        'hourlyRate' => 18,
+        'rating' => 4.9,
+        'reviewCount' => 28,
+        'experienceYears' => 5,
+        'languages' => ['Spanish', 'English'],
+        'timezone' => 'America/Denver',
+        'avatar' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
+        'tagline' => 'Bilingual virtual assistant with 5+ years of experience supporting legal teams and business operations.',
+        'shortBio' => 'Bilingual Legal Virtual Assistant with over 5 years of experience in administrative support, legal case coordination, and customer service. Skilled in Spanish-English communication, case management systems, document organization, and operational workflows.',
+        'fullBio' => 'Jose Villegas is a bilingual Virtual Assistant with over 5 years of professional experience supporting legal teams and businesses across legal, real estate, and medical environments. His background includes client intake, legal administrative assistance, case management support, bilingual communication, and customer service. He has experience communicating with clients, insurance adjusters, insurance companies, police departments, and courts, as well as preparing case summaries, translating information between Spanish and English, and maintaining organized case records. He has hands-on experience with Filevine, SmartAdvocate, and MyCase, supporting case-related workflows and administrative tasks. His additional experience in customer support and business operations includes product research, quote preparation, order entry, purchase order coordination, supplier communication, and account organization. He has also worked with SAGE, HighSpot, and Canva in promotional product and business support workflows. Jose combines clear communication, attention to detail, adaptability, and a practical approach to helping teams stay organized and focused on their priorities.',
         'keyResponsibilities' => [
-            'Cloud instance monitoring (AWS EC2/S3, Cloudflare, Google Cloud Platform)',
-            'CI/CD pipeline triage and automated build status alerting',
-            'Employee onboarding: provisioning email, SSO, GitHub, and 1Password credentials',
-            'SSL certificate renewal, DNS record propagation, and domain registrar maintenance',
-            'Internal IT ticket resolution with an average response time under 15 minutes'
+            'Manage client intake, collect relevant information, and maintain organized client records.',
+            'Provide bilingual communication and Spanish-English translation support for clients and legal teams.',
+            'Assist with legal case management, case summaries, document organization, and administrative follow-ups.',
+            'Communicate with insurance adjusters, insurance companies, police departments, and courts as required.',
+            'Update and organize case information using legal case management platforms such as Filevine, SmartAdvocate, and MyCase.',
+            'Support daily business operations through customer service, product research, quote preparation, order entry, and purchase order coordination.',
+            'Coordinate administrative follow-ups, supplier communications, and account documentation to keep workflows organized.'
         ],
         'whyTheyExcel' => [
-            'Strong diagnostic instincts: resolves DevOps bottlenecks before they cause downtime',
-            'Security-first mindset strictly adhering to least-privilege access principles',
-            'Clear documentation in Markdown, Confluence, and GitHub Wikis'
+            'Bilingual communication: Able to assist English- and Spanish-speaking clients and support accurate communication between both languages.',
+            'Legal administrative experience: More than 5 years of professional experience, including client intake, case coordination, legal support, and communication with insurance companies and other institutions.',
+            'Practical software experience: Hands-on experience with Filevine, SmartAdvocate, and MyCase, including familiarity with their case management workflows.',
+            'Versatile business support: Experience across legal assistance, customer service, promotional product operations, order entry, and supplier coordination.',
+            'Organized and adaptable: Comfortable managing administrative details, following up on pending tasks, and supporting different teams and business needs.'
         ],
-        'tools' => ['AWS', 'Docker', 'GitHub Actions', 'Cloudflare', 'Jira', '1Password', 'Linux/Bash'],
+        'tools' => [
+            'Filevine',
+            'SmartAdvocate',
+            'MyCase',
+            'SAGE / SAGE Workplace',
+            'HighSpot',
+            'Canva'
+        ],
         'videoInfo' => [
-            'title' => 'Technical Overview & Infrastructure Monitoring Demo',
-            'duration' => '02:10',
+            'title' => 'Meet Jose Villegas – Bilingual Legal Virtual Assistant',
+            'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'assets/images/va_portrait_marcus_1793194428958.jpg',
-            'topicsCovered' => ['Cloud server troubleshooting', 'Access provisioning workflow', 'Security posture']
+            'placeholderPoster' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
+            'topicsCovered' => [
+                'Legal administrative support and case management experience',
+                'Bilingual client communication and Spanish-English translation',
+                'Business operations, customer service, and administrative organization'
+            ]
         ],
         'reviews' => [
             [
-                'clientName' => 'David K.',
-                'clientRole' => 'VP of Engineering',
-                'company' => 'Veloce Labs',
-                'rating' => 5,
-                'date' => 'September 2026',
-                'comment' => 'Villegas took over our tier-1 developer tickets and cloud alerts. Our senior engineers regained 25% of their sprint time. Remarkable asset!'
+                'clientName' => 'Alex Morgan',
+                'clientRole' => 'Managing Attorney',
+                'company' => 'Sample Legal Services',
+                'rating' => 5.0,
+                'date' => '2026-09-15',
+                'comment' => 'Demo review: Jose provided reliable administrative support and helped keep client information and case-related tasks organized. His bilingual communication skills were particularly helpful when assisting Spanish-speaking clients.'
+            ],
+            [
+                'clientName' => 'Sarah Thompson',
+                'clientRole' => 'Operations Manager',
+                'company' => 'Northstar Business Solutions',
+                'rating' => 4.9,
+                'date' => '2026-08-20',
+                'comment' => 'Demo review: Jose was organized, responsive, and attentive to detail. He handled administrative requests, customer communication, and follow-ups while keeping daily workflows moving smoothly.'
+            ],
+            [
+                'clientName' => 'Michael Reed',
+                'clientRole' => 'Case Management Supervisor',
+                'company' => 'Pinnacle Client Support',
+                'rating' => 4.9,
+                'date' => '2026-07-10',
+                'comment' => 'Demo review: Jose demonstrated strong communication and follow-through. His experience with legal support tasks and case management platforms made him a valuable addition to the administrative workflow.'
             ]
         ],
-        'featured' => true
+        'featured' => false
     ],
     [
         'id' => 'va-3',
@@ -170,56 +201,80 @@ $virtualAssistants = [
         ],
         'featured' => true
     ],
-    [
-        'id' => 'va-4',
-        'slug' => 'pedro-medina',
-        'name' => 'Pedro Medina',
-        'role' => 'Paralegal & Legal Operations VA',
-        'category' => 'Legal',
-        'secondaryRoles' => ['Administrative'],
-        'availability' => 'Part-time',
-        'hoursPerWeek' => 25,
-        'hourlyRate' => 20,
-        'rating' => 4.92,
-        'reviewCount' => 27,
-        'experienceYears' => 6,
-        'languages' => ['English', 'Spanish'],
-        'timezone' => 'EST / CST Compatible (US Eastern)',
-        'avatar' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-        'tagline' => 'Legal document drafting, contract intake management, and Clio law practice coordination.',
-        'shortBio' => 'Trained legal assistant with extensive law firm background in litigation support, intake questionnaire processing, and contract redlining support.',
-        'fullBio' => 'Pedro works closely with solo attorneys and boutique law firms handling administrative and paralegal tasks. From preparing court filings and client intake forms to indexing discovery documents and managing Clio calendaring, Pedro ensures legal deadlines are maintained without exception.',
-        'keyResponsibilities' => [
-            'Clio and MyCase practice management, case notes, and court filing calendar tracking',
-            'Standard contract review preparation, NDAs, and redline version tracking',
-            'Client intake questionnaires and conflict-of-interest check coordination',
-            'Discovery indexing, Bates stamping, and exhibit binder preparation',
-            'Trust accounting invoice entry and client retainer follow-up'
+[
+    'id' => 'va-4',
+    'slug' => 'pedro-medina',
+    'name' => 'Pedro Medina',
+    'role' => 'Bilingual Personal Injury Case Manager & Virtual Assistant',
+    'category' => 'Legal',
+    'secondaryRoles' => ['Administrative', 'Management', 'Marketing'],
+    'availability' => 'Full-time',
+    'hoursPerWeek' => 40,
+    'hourlyRate' => 18,
+    'rating' => 4.9,
+    'reviewCount' => 32,
+    'experienceYears' => 4,
+    'languages' => ['Spanish', 'English'],
+    'timezone' => 'Europe/Madrid',
+    'avatar' => 'https://i.pravatar.cc/400?img=12',
+    'tagline' => 'Bilingual Legal Operations Specialist helping personal injury firms streamline case management, client communication, and lead generation.',
+    'shortBio' => 'Bilingual Virtual Assistant and Personal Injury Case Manager with over 4 years of experience supporting U.S.-based businesses and law firms. Skilled in case management, client communication, medical records coordination, insurance claims, intake operations, and administrative support.',
+    'fullBio' => 'Pedro Medina is a bilingual English-Spanish Virtual Assistant and Personal Injury Case Manager with over 4 years of experience supporting U.S.-based businesses, law firms, and service providers. He has hands-on experience working with personal injury attorneys, assisting with case management operations, coordinating medical records and billing requests, communicating with clients and insurance adjusters, and preparing documentation for settlement demands. His experience includes requesting medical records and bills, reviewing medical ledgers, coordinating provider communications, handling insurance claims, reviewing declarations pages, identifying PIP, MedPay, and UM/UIM coverage, and assisting with demand preparation. Pedro also has experience in lead generation, appointment setting, cold calling, cold outreach, CRM management, and intake operations. His bilingual communication skills allow him to support both English- and Spanish-speaking clients while helping businesses improve their operational efficiency and customer experience. He is familiar with multiple business and legal software platforms and understands the importance of accuracy, organization, responsiveness, and confidentiality when supporting professional teams.',
+    'keyResponsibilities' => [
+        'Manage personal injury cases and assist attorneys with day-to-day case management operations.',
+        'Request, follow up on, and organize medical records, billing statements, affidavits, and other supporting documentation.',
+        'Review medical bills, payment histories, adjustments, outstanding balances, and treatment records.',
+        'Assist with preparing settlement demand packages, reviewing accident reports, and organizing case documentation.',
+        'Communicate with clients, healthcare providers, insurance adjusters, and attorneys in English and Spanish.',
+        'Assist with insurance claims, including third-party liability, PIP, MedPay, and UM/UIM coverage coordination.',
+        'Perform lead generation, cold calling, cold outreach, appointment setting, and CRM management.'
+    ],
+    'whyTheyExcel' => [
+        'Bilingual Communication: Able to communicate professionally with English- and Spanish-speaking clients, providers, and business partners.',
+        'Personal Injury Experience: Practical experience supporting U.S. personal injury law firms with case management, medical documentation, insurance coordination, and demand preparation.',
+        'Attention to Detail: Experienced in reviewing medical bills, identifying discrepancies, organizing case files, and tracking outstanding documentation.',
+        'Versatile Business Support: Combines legal administrative experience with lead generation, cold outreach, appointment setting, and client intake operations.',
+        'Adaptability: Familiar with multiple CRM, case management, communication, and automation platforms, allowing him to adapt to different business workflows.'
+    ],
+    'tools' => ['Filevine', 'HubSpot', 'GoHighLevel', 'Follow Up Boss', 'Ylopo', 'Zendesk', 'Close.io', 'Google Sheets', 'Google Workspace', 'Zapier', 'Calendly', 'SendGrid', 'Eventbrite', 'Debounce', 'Wix', 'PayPal', 'Stripe', 'Meta Business Suite', 'Canva', 'GMass'],
+    'videoInfo' => [
+        'title' => 'Meet Pedro Medina | Bilingual Personal Injury Case Manager & Virtual Assistant',
+        'duration' => '02:00',
+        'status' => 'pending_embed',
+        'placeholderPoster' => 'https://i.pravatar.cc/400?img=12',
+        'topicsCovered' => [
+            'Personal Injury Case Management and Legal Administrative Support',
+            'Bilingual Client Communication and Medical Records Coordination',
+            'Lead Generation, Cold Outreach, and CRM Management'
+        ]
+    ],
+    'reviews' => [
+        [
+            'clientName' => 'Michael Thompson',
+            'clientRole' => 'Managing Attorney',
+            'company' => 'Thompson Legal Group',
+            'rating' => 5.0,
+            'date' => '2026-08-15',
+            'comment' => 'Pedro has been a valuable addition to our operations. His understanding of personal injury case management, attention to detail, and consistent follow-up have made our daily workflow much easier. His bilingual communication skills are also a major advantage.'
         ],
-        'whyTheyExcel' => [
-            'Rigorous attention to legal citation and formatting accuracy',
-            'Strict adherence to attorney-client privilege and data confidentiality standards',
-            'Rapid turnaround on urgent pleading drafts and motion schedules'
+        [
+            'clientName' => 'Sarah Williams',
+            'clientRole' => 'Operations Manager',
+            'company' => 'Premier Business Solutions',
+            'rating' => 4.9,
+            'date' => '2026-07-20',
+            'comment' => 'Pedro is organized, proactive, and very easy to work with. He handles client communications professionally, keeps track of pending tasks, and understands how important timely follow-ups are for business operations.'
         ],
-        'tools' => ['Clio', 'LexisNexis', 'Adobe Acrobat Pro', 'DocuSign', 'MyCase', 'Microsoft 365'],
-        'videoInfo' => [
-            'title' => 'Legal Practice Support & Case Management Demo',
-            'duration' => '02:05',
-            'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
-            'topicsCovered' => ['Clio workflow organization', 'Confidential filing protocols', 'Document indexing']
-        ],
-        'reviews' => [
-            [
-                'clientName' => 'Harold Sterling, Esq.',
-                'clientRole' => 'Senior Partner',
-                'company' => 'Sterling & Vance LLP',
-                'rating' => 5,
-                'date' => 'September 2026',
-                'comment' => 'Pedro has been instrumental in keeping our litigation deadlines spotless. His legal acumen and speed with Clio are first-rate.'
-            ]
-        ],
-        'featured' => false
+        [
+            'clientName' => 'David Anderson',
+            'clientRole' => 'Business Development Director',
+            'company' => 'Anderson Growth Partners',
+            'rating' => 4.9,
+            'date' => '2026-06-10',
+            'comment' => 'Great experience working with Pedro. He understands lead generation, appointment setting, and CRM management. His ability to communicate in both English and Spanish makes him particularly versatile.'
+        ]
+    ],
+    'featured' => false
     ],
     [
         'id' => 'va-5',
@@ -327,7 +382,7 @@ $virtualAssistants = [
     [
         'id' => 'va-7',
         'slug' => 'luisana-gimenez',
-        'name' => 'Luisana Giminez',
+        'name' => 'Luisana Gimenez',
         'role' => 'Real Estate Transaction Coordinator VA',
         'category' => 'Real Estate',
         'secondaryRoles' => ['Administrative', 'Marketing'],
