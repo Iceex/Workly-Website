@@ -61,14 +61,13 @@ $requestedAvail = $_GET['avail'] ?? 'All';
       <div class="filter-roles-scroller" id="categoryChips">
         <span class="roles-label">Roles:</span>
         <button class="role-chip active" data-cat="All">All</button>
-        <button class="role-chip" data-cat="IT">IT & Cloud</button>
+        <button class="role-chip" data-cat="Development">Development</button>
         <button class="role-chip" data-cat="Marketing">Marketing</button>
         <button class="role-chip" data-cat="Legal">Legal</button>
         <button class="role-chip" data-cat="Insurance">Insurance</button>
         <button class="role-chip" data-cat="Healthcare">Healthcare</button>
         <button class="role-chip" data-cat="Administrative">Administrative</button>
         <button class="role-chip" data-cat="Management">Management</button>
-        <button class="role-chip" data-cat="Real Estate">Real Estate</button>
       </div>
     </div>
   </div>
