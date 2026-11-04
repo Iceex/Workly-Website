@@ -293,7 +293,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
     'experienceYears' => 4,
     'languages' => ['Spanish', 'English'],
     'timezone' => 'Europe/Madrid',
-    'avatar' => 'https://i.pravatar.cc/400?img=12',
+    'avatar' => '/assets/va/lariany/pedro-profile.webp',
     'tagline' => 'Bilingual Legal Operations Specialist helping personal injury firms streamline case management, client communication, and lead generation.',
     'shortBio' => 'Bilingual Virtual Assistant and Personal Injury Case Manager with over 4 years of experience supporting U.S.-based businesses and law firms. Skilled in case management, client communication, medical records coordination, insurance claims, intake operations, and administrative support.',
     'fullBio' => 'Pedro Medina is a bilingual English-Spanish Virtual Assistant and Personal Injury Case Manager with over 4 years of experience supporting U.S.-based businesses, law firms, and service providers. He has hands-on experience working with personal injury attorneys, assisting with case management operations, coordinating medical records and billing requests, communicating with clients and insurance adjusters, and preparing documentation for settlement demands. His experience includes requesting medical records and bills, reviewing medical ledgers, coordinating provider communications, handling insurance claims, reviewing declarations pages, identifying PIP, MedPay, and UM/UIM coverage, and assisting with demand preparation. Pedro also has experience in lead generation, appointment setting, cold calling, cold outreach, CRM management, and intake operations. His bilingual communication skills allow him to support both English- and Spanish-speaking clients while helping businesses improve their operational efficiency and customer experience. He is familiar with multiple business and legal software platforms and understands the importance of accuracy, organization, responsiveness, and confidentiality when supporting professional teams.',
@@ -319,7 +319,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
         'title' => 'Meet Pedro Medina | Bilingual Personal Injury Case Manager & Virtual Assistant',
         'duration' => '02:00',
         'status' => 'pending_embed',
-        'placeholderPoster' => 'https://i.pravatar.cc/400?img=12',
+        'placeholderPoster' => '/assets/va/lariany/pedro-profile.webp',
         'topicsCovered' => [
             'Personal Injury Case Management and Legal Administrative Support',
             'Bilingual Client Communication and Medical Records Coordination',
