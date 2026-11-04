@@ -63,7 +63,7 @@ $virtualAssistants = [
             'title' => 'Meet Lariany – Virtual Assistant & Administrative Support Specialist',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://i.pravatar.cc/400?img=47',
+            'placeholderPoster' => '/assets/va/lariany/lari-profile.webp',
             'topicsCovered' => [
                 'Administrative Support and Customer Service',
                 'CRM Management and Appointment Setting',
@@ -276,7 +276,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
                 'comment' => 'What stands out about Jose is his ability to understand a business process and find practical ways to improve it. Whether working on Salesforce automation, coordinating with vendors, or resolving system issues, he approaches each task carefully and keeps everyone informed throughout the process.'
             ]
         ],
-        'featured' => false
+        'featured' => true
     ],
 [
     'id' => 'va-4',
