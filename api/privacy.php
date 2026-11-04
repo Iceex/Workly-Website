@@ -61,7 +61,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
     <section>
       <h2>5. Contact Our Privacy Team</h2>
-      <p>For data inquiries or deletion requests, contact privacy@workly.staff.</p>
+      <p>For data inquiries or deletion requests, contact admin@worklystaff.com</p>
     </section>
   </div>
 </div>

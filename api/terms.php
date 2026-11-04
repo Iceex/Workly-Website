@@ -62,7 +62,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
     <section>
       <h2>6. Contact Information</h2>
-      <p>For questions regarding these Terms, contact legal@workly.staff.</p>
+      <p>For questions regarding these Terms, contact admin@worklystaff.com</p>
     </section>
   </div>
 </div>
