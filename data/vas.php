@@ -113,7 +113,7 @@ $virtualAssistants = [
         'experienceYears' => 5,
         'languages' => ['Spanish', 'English'],
         'timezone' => 'America/Denver',
-        'avatar' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
+        'avatar' => 'https://i.pravatar.cc/400?img=52',
         'tagline' => 'Bilingual virtual assistant with 5+ years of experience supporting legal teams and business operations.',
         'shortBio' => 'Bilingual Legal Virtual Assistant with over 5 years of experience in administrative support, legal case coordination, and customer service. Skilled in Spanish-English communication, case management systems, document organization, and operational workflows.',
         'fullBio' => 'Jose Villegas is a bilingual Virtual Assistant with over 5 years of professional experience supporting legal teams and businesses across legal, real estate, and medical environments. His background includes client intake, legal administrative assistance, case management support, bilingual communication, and customer service. He has experience communicating with clients, insurance adjusters, insurance companies, police departments, and courts, as well as preparing case summaries, translating information between Spanish and English, and maintaining organized case records. He has hands-on experience with Filevine, SmartAdvocate, and MyCase, supporting case-related workflows and administrative tasks. His additional experience in customer support and business operations includes product research, quote preparation, order entry, purchase order coordination, supplier communication, and account organization. He has also worked with SAGE, HighSpot, and Canva in promotional product and business support workflows. Jose combines clear communication, attention to detail, adaptability, and a practical approach to helping teams stay organized and focused on their priorities.',
@@ -146,7 +146,7 @@ $virtualAssistants = [
             'title' => 'Meet Jose Villegas – Bilingual Legal Virtual Assistant',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=faces',
+            'placeholderPoster' => 'https://i.pravatar.cc/400?img=52',
             'topicsCovered' => [
                 'Legal administrative support and case management experience',
                 'Bilingual client communication and Spanish-English translation',
@@ -183,55 +183,100 @@ $virtualAssistants = [
     ],
     [
         'id' => 'va-3',
-        'slug' => 'helen-ninja',
-        'name' => 'Heleene Ninja',
-        'role' => 'Growth Marketing & Content Strategist VA',
-        'category' => 'Marketing',
-        'secondaryRoles' => ['Administrative', 'Management'],
+        'slug' => 'jose-david-urbina',
+        'name' => 'Jose David Urbina',
+        'role' => 'Salesforce Administrator & Operations Virtual Assistant',
+        'category' => 'Administrative',
+        'secondaryRoles' => ['Legal', 'Management'],
         'availability' => 'Full-time',
         'hoursPerWeek' => 40,
         'hourlyRate' => 18,
-        'rating' => 4.88,
-        'reviewCount' => 31,
-        'experienceYears' => 5,
+        'rating' => 4.9,
+        'reviewCount' => 28,
+        'experienceYears' => 0.75,
         'languages' => ['English', 'Spanish'],
-        'timezone' => 'EST / CST Compatible (US Eastern & Central)',
-        'avatar' => 'assets/images/va_portrait_elena_1793194428112.jpg',
-        'tagline' => 'Multi-channel organic growth, social calendar execution, and email nurture flows.',
-        'shortBio' => 'Bilingual marketing VA adept in turning brand objectives into structured editorial calendars, SEO-optimized blog copy, and HubSpot automation flows.',
-        'fullBio' => 'Helen is a dynamic growth marketing specialist who has managed content engines for B2B tech and e-commerce brands in the US and Latin America. She coordinates social campaigns across LinkedIn and Instagram, configures email newsletters, writes compelling copy, and tracks campaign analytics diligently.',
+        'timezone' => 'Europe/Madrid',
+        'avatar' => 'https://i.pravatar.cc/400?img=54',
+        'tagline' => 'Streamlining business operations through Salesforce automation, CRM management, and reliable administrative support.',
+        'shortBio' => 'Salesforce Administrator and Virtual Assistant with hands-on experience in CRM customization, workflow automation, technical troubleshooting, and business operations. I help real estate and service-based businesses optimize their processes, coordinate daily activities, and maintain efficient systems that support their teams.',
+        'fullBio' => 'I am a tech-focused Virtual Assistant specializing in Salesforce administration, workflow automation, and business operations support. My experience combines technical CRM management with hands-on administrative coordination, allowing me to help businesses improve their internal processes while keeping everyday operations organized and efficient.
+In the real estate industry, I work with Salesforce to manage and customize business processes across acquisitions, inventory, dispositions, and transaction coordination. My responsibilities include building and maintaining Salesforce Flows, configuring custom objects and fields, creating automated task reminders, managing record relationships, troubleshooting system issues, and supporting integrations with external platforms.
+I also work with Zapier to automate data transfers, connect business applications, troubleshoot integrations, and reduce repetitive administrative work. My technical responsibilities include maintaining CRM data quality, investigating duplicate records, supporting lead management processes, managing user access configurations, and improving activity tracking and reporting.
+Beyond CRM administration, I have practical experience in customer service and operational coordination for service-based businesses. This includes communicating with customers, coordinating appointments and service schedules, supporting team members, preparing estimates, following up on service requests, and helping resolve operational issues.
+I am also experienced in communicating with vendors, requesting and reviewing quotations, coordinating product proofs and order updates, tracking shipments, and maintaining professional communication throughout the purchasing process.
+My approach combines technical problem-solving with clear communication, attention to detail, and an understanding of how business teams operate. I focus on creating practical solutions that reduce manual work, improve organization, and help businesses deliver a more consistent experience to their customers.
+I am particularly well suited for companies seeking a Virtual Assistant who can take ownership of CRM administration, support operational workflows, troubleshoot technical issues, and communicate effectively with both internal teams and external clients.',
         'keyResponsibilities' => [
-            'End-to-end social media scheduling and community comment moderation',
-            'Newsletter design and copywriting in Klaviyo, Mailchimp, and HubSpot',
-            'SEO keyword research and on-page optimization for WordPress/Webflow',
-            'Brand asset production with Canva Pro and Figma templates',
-            'Weekly engagement and conversion reporting using Google Looker Studio'
+            'Administer and customize Salesforce CRM, including custom objects, fields, page layouts, record types, permissions, and data relationships.',
+            'Build, test, and maintain Salesforce Flows and Zapier automations for task creation, reminders, record updates, and operational workflows.',
+            'Troubleshoot CRM issues, investigate duplicate records, maintain data accuracy, and support integrations between Salesforce and external applications.',
+            'Support real estate acquisitions, inventory, dispositions, and transaction coordination through organized CRM workflows, reporting, and task management.',
+            'Manage customer communications, appointment coordination, scheduling updates, service requests, and administrative follow-ups.',
+            'Coordinate with vendors and suppliers to obtain quotations, review product proofs, communicate order requirements, and track deliveries.',
+            'Assist internal teams with technical support, process documentation, onboarding coordination, and improvements to daily operational procedures.'
         ],
         'whyTheyExcel' => [
-            'Native fluency in both English and Spanish, opening cross-border market reach',
-            'Analytical mindset that measures content performance against real pipeline metrics',
-            'Visual polish that strictly maintains brand guidelines and aesthetics'
+            'Hands-on Salesforce expertise: Practical experience configuring CRM structures, building record-triggered automations, maintaining data relationships, and troubleshooting real operational challenges.',
+            'Technical and operational versatility: Combines CRM administration and automation with customer support, vendor coordination, scheduling, and business process management.',
+            'Process improvement mindset: Identifies repetitive tasks, investigates workflow inefficiencies, and implements practical automations to improve consistency and reduce manual effort.',
+            'Cross-functional communication: Experienced in coordinating with management, sales teams, transaction coordinators, service professionals, customers, and external suppliers.',
+            'Detail-oriented problem solving: Comfortable investigating technical issues, reviewing field mappings, testing automation behavior, and following problems through to resolution.'
         ],
-        'tools' => ['HubSpot', 'Canva', 'Klaviyo', 'Buffer', 'Ahrefs', 'Figma', 'Google Analytics 4'],
+        'tools' => [
+            'Salesforce CRM',
+            'Salesforce Flow Builder',
+            'Salesforce Reports & Dashboards',
+            'Salesforce Data Loader',
+            'Salesforce Custom Objects & Fields',
+            'Salesforce User Permissions',
+            'Zapier',
+            'Zapier Webhooks',
+            'Code by Zapier',
+            'SmrtPhone',
+            'Google Calendar',
+            'Gmail',
+            'Google Sheets',
+            'Slack'
+        ],
         'videoInfo' => [
             'videoUrl' => '/assets/video/297986_medium.mp4',
-            'title' => 'Portfolio Presentation: Content & Email Campaign Strategy',
-            'duration' => '01:55',
+            'title' => 'Meet Jose David | Salesforce Administration & Business Operations',
+            'duration' => '02:05',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'assets/images/va_portrait_elena_1793194428112.jpg',
-            'topicsCovered' => ['Bilingual copy samples', 'HubSpot automation architecture', 'Social growth case studies']
+            'placeholderPoster' => 'https://i.pravatar.cc/400?img=54',
+            'topicsCovered' => [
+                'Salesforce CRM administration and workflow automation',
+                'Business operations and administrative support',
+                'CRM integrations, troubleshooting, and process optimization'
+            ]
         ],
         'reviews' => [
             [
-                'clientName' => 'Megan Thorne',
-                'clientRole' => 'CMO',
-                'company' => 'Lumina Skincare Global',
-                'rating' => 5,
-                'date' => 'October 2026',
-                'comment' => 'Helen increased our newsletter open rate from 21% to 37% within 90 days. Her dual English-Spanish content expanded our Miami and LatAm outreach.'
+                'clientName' => 'Michael Thompson',
+                'clientRole' => 'Operations Director',
+                'company' => 'Summit Property Solutions',
+                'rating' => 5.0,
+                'date' => '2026-09-18',
+                'comment' => 'Jose has a great understanding of how CRM systems connect with day-to-day operations. He helped us organize Salesforce workflows, improve task tracking, and troubleshoot issues that were slowing down our team. He communicates clearly and takes a thoughtful approach to solving problems.'
+            ],
+            [
+                'clientName' => 'Sarah Mitchell',
+                'clientRole' => 'Customer Experience Manager',
+                'company' => 'BrightSide Home Services',
+                'rating' => 4.9,
+                'date' => '2026-08-12',
+                'comment' => 'Jose brings a valuable combination of technical skills and customer service experience. He is organized, responsive, and comfortable handling scheduling changes, customer communication, and unexpected operational challenges. His attention to detail makes him a dependable part of any support team.'
+            ],
+            [
+                'clientName' => 'Daniel Brooks',
+                'clientRole' => 'Business Operations Manager',
+                'company' => 'Northstar Business Group',
+                'rating' => 5.0,
+                'date' => '2026-10-07',
+                'comment' => 'What stands out about Jose is his ability to understand a business process and find practical ways to improve it. Whether working on Salesforce automation, coordinating with vendors, or resolving system issues, he approaches each task carefully and keeps everyone informed throughout the process.'
             ]
         ],
-        'featured' => true
+        'featured' => false
     ],
 [
     'id' => 'va-4',
@@ -585,7 +630,7 @@ $virtualAssistants = [
     ],
     [
         'id' => 'va-10',
-        'slug' => 'helen-',
+        'slug' => 'maria-marcano',
         'name' => 'Maria Marcano',
         'role' => 'Multi-Channel Paid Ads & Social Media VA',
         'category' => 'Marketing',
