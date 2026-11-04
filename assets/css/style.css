@@ -501,7 +501,6 @@ button {
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   box-shadow: 16px 0 40px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
@@ -580,6 +579,7 @@ body.mobile-drawer-open .mobile-side-drawer {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  height: 100%;
 }
 
 .drawer-section-label {

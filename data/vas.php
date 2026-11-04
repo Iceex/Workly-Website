@@ -59,6 +59,7 @@ $virtualAssistants = [
             'Microsoft Office'
         ],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Meet Lariany – Virtual Assistant & Administrative Support Specialist',
             'duration' => '02:00',
             'status' => 'pending_embed',
@@ -141,6 +142,7 @@ $virtualAssistants = [
             'Canva'
         ],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Meet Jose Villegas – Bilingual Legal Virtual Assistant',
             'duration' => '02:00',
             'status' => 'pending_embed',
@@ -212,6 +214,7 @@ $virtualAssistants = [
         ],
         'tools' => ['HubSpot', 'Canva', 'Klaviyo', 'Buffer', 'Ahrefs', 'Figma', 'Google Analytics 4'],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Portfolio Presentation: Content & Email Campaign Strategy',
             'duration' => '01:55',
             'status' => 'pending_embed',
@@ -267,6 +270,7 @@ $virtualAssistants = [
     ],
     'tools' => ['Filevine', 'HubSpot', 'GoHighLevel', 'Follow Up Boss', 'Ylopo', 'Zendesk', 'Close.io', 'Google Sheets', 'Google Workspace', 'Zapier', 'Calendly', 'SendGrid', 'Eventbrite', 'Debounce', 'Wix', 'PayPal', 'Stripe', 'Meta Business Suite', 'Canva', 'GMass'],
     'videoInfo' => [
+        'videoUrl' => '/assets/video/297986_medium.mp4',
         'title' => 'Meet Pedro Medina | Bilingual Personal Injury Case Manager & Virtual Assistant',
         'duration' => '02:00',
         'status' => 'pending_embed',
@@ -338,6 +342,7 @@ $virtualAssistants = [
         ],
         'tools' => ['SimplePractice', 'Kareo', 'Epic EHR', 'Availity', 'DrChrono', 'RingCentral'],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'HIPAA Protocols & Medical Office Workflow Walkthrough',
             'duration' => '01:50',
             'status' => 'pending_embed',
@@ -359,51 +364,61 @@ $virtualAssistants = [
     [
         'id' => 'va-6',
         'slug' => 'jose-gregorio',
-        'name' => 'Jose Gregorio',
-        'role' => 'Insurance Claims & Policy VA',
-        'category' => 'Insurance',
-        'secondaryRoles' => ['Administrative', 'Legal'],
-        'availability' => 'Full-time',
-        'hoursPerWeek' => 40,
-        'hourlyRate' => 17,
-        'rating' => 4.87,
-        'reviewCount' => 22,
-        'experienceYears' => 4,
-        'languages' => ['English', 'Spanish'],
-        'timezone' => 'CST / EST Compatible (US Central)',
-        'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-        'tagline' => 'Policy endorsements, certificate of insurance (COI) generation, and claims processing.',
-        'shortBio' => 'Dedicated insurance virtual assistant supporting independent insurance agencies across commercial, auto, and property casualty lines.',
-        'fullBio' => 'Jose assists insurance brokers and underwriters with daily operational paperwork: issuing certificates of insurance (COIs) within 30 minutes, auditing renewal applications, processing policy endorsements, and cross-referencing carrier rating systems.',
+        'name' => 'José Gregorio',
+        'role' => 'Operations & General Manager',
+        'category' => 'Management',
+        'secondaryRoles' => ['Administrative', 'Marketing'],
+        'availability' => 'Part-time',
+        'hoursPerWeek' => 20,
+        'hourlyRate' => 18,
+        'rating' => 4.9,
+        'reviewCount' => 28,
+        'experienceYears' => 5,
+        'languages' => ['Spanish', 'English'],
+        'timezone' => 'GMT+1',
+        'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+        'tagline' => 'Experienced operations manager and administrative professional focused on efficiency and execution.',
+        'shortBio' => 'Operations coordinator and general manager with a strong background in team leadership, client support, and administrative controls.',
+        'fullBio' => 'Results-driven Operations Coordinator and General Manager with solid multi-year experience managing remote teams, human resources interviews, payroll administration, and customer relationship operations. Proven track record in scaling processes, optimizing pricing controls, and maintaining high operational standards across diverse digital platforms. Civil engineering background providing strong analytical, structural, and problem-solving capabilities.',
         'keyResponsibilities' => [
-            'Rapid Certificate of Insurance (COI) generation and distribution to insureds',
-            'Policy change requests (endorsements, loss payees, driver additions)',
-            'Renewal book review and comparative carrier quote extraction (EZLynx, Applied Epic)',
-            'First Notice of Loss (FNOL) documentation and adjuster status tracking',
-            'Direct carrier portal data entry and commission statement reconciliation'
+            'Supervising virtual and administrative teams to ensure daily operational efficiency',
+            'Managing human resources processes, including interview controls and employee training',
+            'Handling payroll administration, pricing controls, and inventory management',
+            'Facilitating direct client support and strategic communication',
+            'Executing CRM database management and appointment setting operations',
+            'Creating sales proposals and marketing operational workflows'
         ],
         'whyTheyExcel' => [
-            'In-depth knowledge of commercial P&C terminology and Acord forms',
-            'Zero-error standard on policy numbers and coverage limit certificates',
-            'Speed: 95% of routine COIs issued in under 30 minutes'
+            'Strong leadership and team supervision capabilities developed in managerial roles',
+            'Rigorous attention to detail and analytical mindset grounded in engineering background',
+            'Fluent communication skills for effective cross-departmental and client relations',
+            'Proactive problem-solving and rapid adaptability to new digital tools'
         ],
-        'tools' => ['Applied Epic', 'EZLynx', 'HawkSoft', 'Vertafore AMS360', 'Excel', 'Acord Forms'],
+        'tools' => ['Salesforce', 'Syncore', 'Follow Up Boss', 'Adobe Illustrator', 'Google Sheets'],
         'videoInfo' => [
             'videoUrl' => '/assets/video/297986_medium.mp4',
-            'title' => 'Insurance Operations & Acord Form Processing Video',
-            'duration' => '02:00',
+            'title' => 'Operations Management & Virtual Assistance Overview',
+            'duration' => '01:45',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
-            'topicsCovered' => ['COI turnaround process', 'Agency management software overview', 'Client satisfaction']
+            'placeholderPoster' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+            'topicsCovered' => ['Team Supervision', 'CRM & Operations Management', 'Client Communication']
         ],
         'reviews' => [
             [
-                'clientName' => 'Karen Whitaker',
-                'clientRole' => 'Principal Broker',
-                'company' => 'Whitaker Risk Partners',
-                'rating' => 5,
-                'date' => 'July 2026',
-                'comment' => 'Jose freed our producers to focus purely on selling. He handles all our Acord forms and certificates with flawless accuracy.'
+                'clientName' => 'Sarah Jenkins',
+                'clientRole' => 'Operations Director',
+                'company' => 'Swag Solutions Corp',
+                'rating' => 5.0,
+                'date' => '2025-11-14',
+                'comment' => 'José demonstrated exceptional organizational skills and leadership while managing our division. Highly reliable and professional.'
+            ],
+            [
+                'clientName' => 'Michael Vance',
+                'clientRole' => 'Managing Partner',
+                'company' => 'Promotional Growth LLC',
+                'rating' => 4.9,
+                'date' => '2026-01-20',
+                'comment' => 'Fantastic support with team training and operational workflows. His background really shows in how structured he approaches daily tasks.'
             ]
         ],
         'featured' => false
@@ -493,6 +508,7 @@ $virtualAssistants = [
         ],
         'tools' => ['Jira Software', 'Linear', 'ClickUp', 'Notion', 'Miro', 'Slack', 'Loom'],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Agile Delivery Framework & Project Management Walkthrough',
             'duration' => '02:15',
             'status' => 'pending_embed',
@@ -548,6 +564,7 @@ $virtualAssistants = [
         ],
         'tools' => ['PHP', 'Laravel', 'WordPress', 'WooCommerce', 'JavaScript', 'Vue.js', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'MySQL', 'PostgreSQL', 'REST APIs', 'Webhooks', 'Elementor', 'ACF', 'JetEngine', 'GSAP', 'Lenis', 'Figma', 'Photoshop', 'Git', 'GitHub', 'Docker'],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Web Maintenance & Automation Workflow Demonstration',
             'duration' => '01:50',
             'status' => 'pending_embed',
@@ -599,6 +616,7 @@ $virtualAssistants = [
         ],
         'tools' => ['Meta Ads Manager', 'Google Ads', 'Canva', 'Triple Whale', 'Google Sheets', 'Figma'],
         'videoInfo' => [
+            'videoUrl' => '/assets/video/297986_medium.mp4',
             'title' => 'Paid Media Execution & ROAS Dashboard Walkthrough',
             'duration' => '01:45',
             'status' => 'pending_embed',
