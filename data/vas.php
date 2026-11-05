@@ -23,7 +23,7 @@ $virtualAssistants = [
         'experienceYears' => 7,
         'languages' => ['Spanish', 'English'],
         'timezone' => 'GMT-3',
-        'avatar' => '/assets/va/lariany/lari-profile.webp',
+        'avatar' => '/assets/va/lariany-pico/lari-profile.webp',
         'tagline' => 'Reliable Virtual Assistant specializing in administrative operations, customer support, appointment setting, and CRM management.',
         'shortBio' => 'Detail-oriented Virtual Assistant with 7 years of experience in administrative support, customer service, finance operations, and appointment setting. Skilled at managing daily operations, maintaining organized workflows, and delivering professional customer experiences across multiple industries.',
         'fullBio' => 'I am a dedicated Virtual Assistant with approximately 7 years of professional experience supporting administrative operations, customer service, finance processes, and business development activities. My background includes working with marketing agencies, healthcare practices, promotional products companies, and independent businesses. I have hands-on experience managing calendars, coordinating appointments, handling customer inquiries, processing purchase orders, supporting supplier payments, managing billing and accounts receivable, following up on outstanding balances, and maintaining accurate customer records. I also specialize in appointment setting and lead management, including outbound communication, lead follow-ups, CRM updates, appointment confirmations, and coordination between prospects and internal teams. Throughout my experience, I have worked with different teams and business owners to keep daily operations organized, improve communication, and ensure tasks are completed consistently. I am comfortable working remotely, adapting to different business processes, following established procedures, and managing multiple responsibilities with attention to detail. My goal is to help businesses save time, maintain efficient operations, and provide dependable administrative and customer support.',
@@ -63,7 +63,7 @@ $virtualAssistants = [
             'title' => 'Meet Lariany – Virtual Assistant & Administrative Support Specialist',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/lariany/lari-profile.webp',
+            'placeholderPoster' => '/assets/va/lariany-pico/lari-profile.webp',
             'topicsCovered' => [
                 'Administrative Support and Customer Service',
                 'CRM Management and Appointment Setting',
@@ -113,7 +113,7 @@ $virtualAssistants = [
         'experienceYears' => 5,
         'languages' => ['Spanish', 'English'],
         'timezone' => 'America/Denver',
-        'avatar' => 'https://i.pravatar.cc/400?img=52',
+        'avatar' => '/assets/va/jose-villegas/jose-villegas.webp',
         'tagline' => 'Bilingual virtual assistant with 5+ years of experience supporting legal teams and business operations.',
         'shortBio' => 'Bilingual Legal Virtual Assistant with over 5 years of experience in administrative support, legal case coordination, and customer service. Skilled in Spanish-English communication, case management systems, document organization, and operational workflows.',
         'fullBio' => 'Jose Villegas is a bilingual Virtual Assistant with over 5 years of professional experience supporting legal teams and businesses across legal, real estate, and medical environments. His background includes client intake, legal administrative assistance, case management support, bilingual communication, and customer service. He has experience communicating with clients, insurance adjusters, insurance companies, police departments, and courts, as well as preparing case summaries, translating information between Spanish and English, and maintaining organized case records. He has hands-on experience with Filevine, SmartAdvocate, and MyCase, supporting case-related workflows and administrative tasks. His additional experience in customer support and business operations includes product research, quote preparation, order entry, purchase order coordination, supplier communication, and account organization. He has also worked with SAGE, HighSpot, and Canva in promotional product and business support workflows. Jose combines clear communication, attention to detail, adaptability, and a practical approach to helping teams stay organized and focused on their priorities.',
@@ -146,7 +146,7 @@ $virtualAssistants = [
             'title' => 'Meet Jose Villegas – Bilingual Legal Virtual Assistant',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://i.pravatar.cc/400?img=52',
+            'placeholderPoster' => '/assets/va/jose-villegas/jose-villegas.webp',
             'topicsCovered' => [
                 'Legal administrative support and case management experience',
                 'Bilingual client communication and Spanish-English translation',
@@ -196,7 +196,7 @@ $virtualAssistants = [
         'experienceYears' => 0.75,
         'languages' => ['English', 'Spanish'],
         'timezone' => 'Europe/Madrid',
-        'avatar' => 'https://i.pravatar.cc/400?img=54',
+        'avatar' => '/assets/va/jose-david/jose-david.webp',
         'tagline' => 'Streamlining business operations through Salesforce automation, CRM management, and reliable administrative support.',
         'shortBio' => 'Salesforce Administrator and Virtual Assistant with hands-on experience in CRM customization, workflow automation, technical troubleshooting, and business operations. I help real estate and service-based businesses optimize their processes, coordinate daily activities, and maintain efficient systems that support their teams.',
         'fullBio' => 'I am a tech-focused Virtual Assistant specializing in Salesforce administration, workflow automation, and business operations support. My experience combines technical CRM management with hands-on administrative coordination, allowing me to help businesses improve their internal processes while keeping everyday operations organized and efficient.
@@ -243,7 +243,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Meet Jose David | Salesforce Administration & Business Operations',
             'duration' => '02:05',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://i.pravatar.cc/400?img=54',
+            'placeholderPoster' => '/assets/va/jose-david/jose-david.webp',
             'topicsCovered' => [
                 'Salesforce CRM administration and workflow automation',
                 'Business operations and administrative support',
@@ -421,7 +421,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
         'experienceYears' => 5,
         'languages' => ['Spanish', 'English'],
         'timezone' => 'GMT+1',
-        'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+        'avatar' => '/assets/va/jose-gregorio/jose-gregorio.webp',
         'tagline' => 'Experienced operations manager and administrative professional focused on efficiency and execution.',
         'shortBio' => 'Operations coordinator and general manager with a strong background in team leadership, client support, and administrative controls.',
         'fullBio' => 'Results-driven Operations Coordinator and General Manager with solid multi-year experience managing remote teams, human resources interviews, payroll administration, and customer relationship operations. Proven track record in scaling processes, optimizing pricing controls, and maintaining high operational standards across diverse digital platforms. Civil engineering background providing strong analytical, structural, and problem-solving capabilities.',
@@ -445,7 +445,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Operations Management & Virtual Assistance Overview',
             'duration' => '01:45',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+            'placeholderPoster' => '/assets/va/jose-gregorio/jose-gregorio.webp',
             'topicsCovered' => ['Team Supervision', 'CRM & Operations Management', 'Client Communication']
         ],
         'reviews' => [
@@ -587,7 +587,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
         'experienceYears' => '5+',
         'languages' => ['Spanish', 'English'],
         'timezone' => 'GMT-3',
-        'avatar' => 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+        'avatar' => '/assets/va/abdallah-monroy/abdallah-monroy.webp',
         'tagline' => 'Full-Stack Developer building custom web applications, business solutions and intelligent automations.',
         'shortBio' => 'Full-Stack Developer with 5+ years of experience specializing in PHP, Laravel and WordPress. Skilled in building custom web applications, integrations and automated business solutions.',
         'fullBio' => 'Full-Stack Developer with over 5 years of experience designing, developing and maintaining web applications and business solutions. Specialized in PHP, Laravel and WordPress, with strong experience building custom plugins, WooCommerce functionality, dynamic websites and full-stack applications. Experienced in frontend development using JavaScript, Vue.js and React, as well as backend architecture, REST API integrations, webhooks, database management and business process automation. Beyond development, capable of analyzing business requirements, identifying technical opportunities and proposing practical solutions. Focused on clean code, performance, scalability and delivering reliable products that solve real business problems.',
@@ -613,7 +613,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Web Maintenance & Automation Workflow Demonstration',
             'duration' => '01:50',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+            'placeholderPoster' => '/assets/va/abdallah-monroy/abdallah-monroy.webp',
             'topicsCovered' => ['No-code automation examples', 'Speed tuning techniques', 'E-commerce fixes']
         ],
         'reviews' => [
