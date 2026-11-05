@@ -23,7 +23,7 @@ $virtualAssistants = [
         'experienceYears' => 7,
         'languages' => ['Spanish', 'English'],
         'timezone' => 'GMT-3',
-        'avatar' => '/assets/va/lariany-pico/lari-pico.webp',
+        'avatar' => '/assets/va/lariany-pico/lariany-pico.webp',
         'tagline' => 'Reliable Virtual Assistant specializing in administrative operations, customer support, appointment setting, and CRM management.',
         'shortBio' => 'Detail-oriented Virtual Assistant with 7 years of experience in administrative support, customer service, finance operations, and appointment setting. Skilled at managing daily operations, maintaining organized workflows, and delivering professional customer experiences across multiple industries.',
         'fullBio' => 'I am a dedicated Virtual Assistant with approximately 7 years of professional experience supporting administrative operations, customer service, finance processes, and business development activities. My background includes working with marketing agencies, healthcare practices, promotional products companies, and independent businesses. I have hands-on experience managing calendars, coordinating appointments, handling customer inquiries, processing purchase orders, supporting supplier payments, managing billing and accounts receivable, following up on outstanding balances, and maintaining accurate customer records. I also specialize in appointment setting and lead management, including outbound communication, lead follow-ups, CRM updates, appointment confirmations, and coordination between prospects and internal teams. Throughout my experience, I have worked with different teams and business owners to keep daily operations organized, improve communication, and ensure tasks are completed consistently. I am comfortable working remotely, adapting to different business processes, following established procedures, and managing multiple responsibilities with attention to detail. My goal is to help businesses save time, maintain efficient operations, and provide dependable administrative and customer support.',
@@ -63,7 +63,6 @@ $virtualAssistants = [
             'title' => 'Meet Lariany – Virtual Assistant & Administrative Support Specialist',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/lariany-pico/lari-pico.webp',
             'topicsCovered' => [
                 'Administrative Support and Customer Service',
                 'CRM Management and Appointment Setting',
@@ -146,7 +145,6 @@ $virtualAssistants = [
             'title' => 'Meet Jose Villegas – Bilingual Legal Virtual Assistant',
             'duration' => '02:00',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/jose-villegas/jose-villegas.webp',
             'topicsCovered' => [
                 'Legal administrative support and case management experience',
                 'Bilingual client communication and Spanish-English translation',
@@ -243,7 +241,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Meet Jose David | Salesforce Administration & Business Operations',
             'duration' => '02:05',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/jose-david/jose-david.webp',
             'topicsCovered' => [
                 'Salesforce CRM administration and workflow automation',
                 'Business operations and administrative support',
@@ -319,7 +316,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
         'title' => 'Meet Pedro Medina | Bilingual Personal Injury Case Manager & Virtual Assistant',
         'duration' => '02:00',
         'status' => 'pending_embed',
-        'placeholderPoster' => '/assets/va/pedro-medina/pedro-medina.webp',
         'topicsCovered' => [
             'Personal Injury Case Management and Legal Administrative Support',
             'Bilingual Client Communication and Medical Records Coordination',
@@ -391,7 +387,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'HIPAA Protocols & Medical Office Workflow Walkthrough',
             'duration' => '01:50',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
             'topicsCovered' => ['HIPAA compliance safeguards', 'Prior authorization tracking', 'Patient intake system']
         ],
         'reviews' => [
@@ -445,7 +440,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Operations Management & Virtual Assistance Overview',
             'duration' => '01:45',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/jose-gregorio/jose-gregorio.webp',
             'topicsCovered' => ['Team Supervision', 'CRM & Operations Management', 'Client Communication']
         ],
         'reviews' => [
@@ -505,7 +499,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Contract-to-Close System Demonstration',
             'duration' => '01:40',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
             'topicsCovered' => ['Transaction tracking timeline', 'Client disclosure compliance', 'Realtor time savings']
         ],
         'reviews' => [
@@ -557,7 +550,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Agile Delivery Framework & Project Management Walkthrough',
             'duration' => '02:15',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
             'topicsCovered' => ['Sprint cadence setup', 'Cross-functional alignment', 'Velocity metrics']
         ],
         'reviews' => [
@@ -613,7 +605,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Web Maintenance & Automation Workflow Demonstration',
             'duration' => '01:50',
             'status' => 'pending_embed',
-            'placeholderPoster' => '/assets/va/abdallah-monroy/abdallah-monroy.webp',
             'topicsCovered' => ['No-code automation examples', 'Speed tuning techniques', 'E-commerce fixes']
         ],
         'reviews' => [
@@ -665,7 +656,6 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
             'title' => 'Paid Media Execution & ROAS Dashboard Walkthrough',
             'duration' => '01:45',
             'status' => 'pending_embed',
-            'placeholderPoster' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
             'topicsCovered' => ['Meta campaign structure', 'Creative testing framework', 'Attribution metrics']
         ],
         'reviews' => [

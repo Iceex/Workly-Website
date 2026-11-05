@@ -63,7 +63,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
   <button class="video-play-btn" id="playVideoBtn" aria-label="Play video preview"></button>
   <div class="media-loader is-loading">
     <div class="skeleton-placeholder"></div>  
-  <video controlsList="nodownload" preload="metadata" poster="<?= htmlspecialchars($selectedVa['videoInfo']['placeholderPoster'], ENT_QUOTES, 'UTF-8') ?>" class="media-content">
+  <video controlsList="nodownload" preload="metadata" poster="<?= htmlspecialchars($selectedVa['avatar'], ENT_QUOTES, 'UTF-8') ?>" class="media-content">
         <source
             src="<?= htmlspecialchars($selectedVa['videoInfo']['videoUrl'], ENT_QUOTES, 'UTF-8') ?>"
             type="video/mp4">
