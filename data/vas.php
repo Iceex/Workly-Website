@@ -404,7 +404,7 @@ I am particularly well suited for companies seeking a Virtual Assistant who can 
     [
         'id' => 'va-6',
         'slug' => 'jose-gregorio',
-        'name' => 'José Gregorio',
+        'name' => 'Jose Gregorio',
         'role' => 'Operations & General Manager',
         'category' => 'Management',
         'secondaryRoles' => ['Administrative', 'Marketing'],

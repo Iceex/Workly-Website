@@ -1433,7 +1433,7 @@ body.mobile-drawer-open .mobile-side-drawer {
 }
 
 .faq-answer {
-  padding: 0 20px 18px;
+  padding: 10px 20px 18px;
   font-size: clamp(12px, 2vw, 13px);
   color: var(--text-muted);
   line-height: 1.6;
@@ -1856,13 +1856,6 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.video-poster-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.6);
 }
 
 .video-overlay-scrim {
