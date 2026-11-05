@@ -82,7 +82,7 @@ $featuredList = array_filter($virtualAssistants, function($v) {
     </div>
 
     <div class="categories-grid">
-      <a href="find-va?cat=IT" class="cat-card">
+      <a href="find-va?cat=Development" class="cat-card">
         <span class="cat-chip">DevOps & Cloud</span>
         <h3>IT & Cloud Support</h3>
         <p>AWS/GCP, Docker, CI/CD triage, and fast employee access provisioning.</p>
@@ -131,11 +131,11 @@ $featuredList = array_filter($virtualAssistants, function($v) {
         <span class="cat-link">View Project VAs →</span>
       </a>
 
-      <a href="find-va?cat=Real+Estate" class="cat-card">
+      <a href="find-va?cat=Accounting" class="cat-card">
         <span class="cat-chip">MLS & Escrow</span>
-        <h3>Real Estate Coordination</h3>
+        <h3>Accounting</h3>
         <p>Contract-to-close milestone tracking, buyer disclosures, and Follow Up Boss CRM.</p>
-        <span class="cat-link">View Real Estate VAs →</span>
+        <span class="cat-link">View Accounting VAs →</span>
       </a>
     </div>
   </div>

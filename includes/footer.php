@@ -22,12 +22,12 @@
       <div class="footer-col">
         <h4 class="footer-heading">Talent Verticals</h4>
         <ul class="footer-links">
-          <li><a href="find-va?cat=IT">IT & Cloud Support</a></li>
+          <li><a href="find-va?cat=Development">IT & Cloud Support</a></li>
           <li><a href="find-va?cat=Marketing">Growth Marketing</a></li>
           <li><a href="find-va?cat=Legal">Legal Operations</a></li>
           <li><a href="find-va?cat=Healthcare">Healthcare & EHR</a></li>
           <li><a href="find-va?cat=Insurance">Insurance & COI</a></li>
-          <li><a href="find-va?cat=Real+Estate">Real Estate Coordination</a></li>
+          <li><a href="find-va?cat=Accounting">Accounting</a></li>
         </ul>
       </div>
 
