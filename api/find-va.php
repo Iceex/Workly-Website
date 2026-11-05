@@ -68,6 +68,7 @@ $requestedAvail = $_GET['avail'] ?? 'All';
         <button class="role-chip" data-cat="Healthcare">Healthcare</button>
         <button class="role-chip" data-cat="Administrative">Administrative</button>
         <button class="role-chip" data-cat="Management">Management</button>
+        <button class="role-chip" data-cat="Accounting">Accounting</button>
       </div>
     </div>
   </div>
