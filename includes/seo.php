@@ -1,7 +1,7 @@
 <?php
 
 $siteUrl = 'https://worklystaff.com';
-$logoUrl = $siteUrl . '/assets/logo.png';
+$logoUrl = $siteUrl . '/assets/favicon.ico';
 
 
 $pageTitle = $pageTitle ?? 'Workly – Elite Virtual Assistant Talent Platform';
