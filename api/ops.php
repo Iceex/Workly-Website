@@ -1,190 +1,532 @@
 <?php
+/**
+ * Workly OPS - Operations Workspace Showcase
+ * File: /php/ops.php
+ */
+$currentPage     = "ops";
+$pageTitle       = "Workly OPS | A Better Way to Work Together";
+$pageDescription = "Workly OPS helps your virtual assistant organize tasks, coordinate projects, communicate clearly, and keep your business informed.";
+$canonicalUrl    = "https://worklystaff.com/ops";
 
-$currentPage = "ops";
-$pageTitle = 'Workly OPS | A better way to work together';
-$pageDescription = 'Workly OPS helps your virtual assistant organize tasks, coordinate projects, communicate clearly and keep your business informed.';
-$currentPage = 'ops';
-$canonicalUrl = 'https://worklystaff.com/ops';
+/**
+ * ============================================================================
+ * IMAGE URL CONFIGURATION
+ * Insert your image URLs below (e.g. 'assets/images/ops-dashboard.png' or full URL).
+ * Leave empty ('') to render the clean styled placeholder frames.
+ * ============================================================================
+ */
+$opsHeroVisualUrl   = ''; // Main hero showcase image URL
+$opsWorkspaceUrl    = ''; // Full workspace overview image URL
+$opsHandheldViewUrl = ''; // Compact companion view image URL
 
+header('Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400');
 
-header(
-    'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
-);
-
-require_once dirname(__DIR__) . '/includes/header.php';
-
+$headerPath = file_exists(__DIR__ . '/includes/header.php')
+    ? __DIR__ . '/includes/header.php'
+    : dirname(__DIR__) . '/includes/header.php';
+require_once $headerPath;
 ?>
 
-<head>
-    <link rel="stylesheet" href="assets/css/ops.css">
-</head>
+<link rel="stylesheet" href="assets/css/ops.css">
 
-<main class="ops-page">
-    <section class="ops-hero">
-        <div class="ops-container ops-hero-grid">
-            <div class="ops-hero-copy">
-                <span class="ops-eyebrow">The Workly advantage</span>
-                <h1>Great support.<br><span>Better organized.</span></h1>
-                <p>Meet OPS Workly, the workspace that helps your virtual assistant keep projects moving, communication clear and your business one step ahead.</p>
-                <div class="ops-hero-actions">
-                    <a class="ops-btn" href="/find-va">Find your VA <span aria-hidden="true">→</span></a>
-                    <a class="ops-btn ops-btn--light" href="#ops-platform">Explore the platform</a>
+<div class="ops-page">
+  <!-- 1. HERO SECTION -->
+  <section class="ops-hero">
+    <div class="ops-hero-grid-bg" aria-hidden="true"></div>
+    <div class="ops-container ops-hero-grid">
+      <div class="ops-hero-copy animate-entrance">
+        <span class="ops-eyebrow">The Workly Advantage</span>
+        <h1>Great support.<br><span class="ops-gradient-text">Better organized.</span></h1>
+        <p>
+          Meet Workly OPS, the dedicated operations workspace that helps your virtual assistant keep projects moving, communication clear, and your business one step ahead.
+        </p>
+
+        <div class="ops-hero-actions">
+          <a class="ops-btn ops-btn--primary" href="find-va">
+            <span>Find your VA</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a class="ops-btn ops-btn--light" href="#ops-platform">Explore the platform</a>
+        </div>
+
+        <div class="ops-proof">
+          <span>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            Clear task ownership
+          </span>
+          <span>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            Visible progress
+          </span>
+          <span>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            Transparent updates
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Slot -->
+      <div class="ops-hero-visual animate-entrance">
+        <div class="ops-window-chrome">
+          <div class="ops-window-dots" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="ops-window-label">Workly OPS — Shared Operations Hub</span>
+        </div>
+
+        <div class="ops-visual-viewport">
+          <?php if (!empty($opsHeroVisualUrl)): ?>
+            <img
+              src="<?= htmlspecialchars($opsHeroVisualUrl, ENT_QUOTES, 'UTF-8') ?>"
+              alt="Workly OPS weekly task organizer showing project stages and team progress"
+              class="ops-visual-img"
+            >
+          <?php else: ?>
+            <!-- Replace $opsHeroVisualUrl at the top of ops.php to render your image here -->
+            <div class="ops-image-slot" role="img" aria-label="Platform overview image slot">
+              <div class="ops-slot-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg>
+              </div>
+              <strong>Workspace Overview Preview</strong>
+              <span>Ready for platform image URL</span>
+            </div>
+          <?php endif; ?>
+        </div>
+
+        <div class="ops-float ops-float--one">
+          <span class="ops-float-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </span>
+          <div>
+            <strong>Work in progress</strong>
+            <small>Tasks stay on track</small>
+          </div>
+        </div>
+
+        <div class="ops-float ops-float--two">
+          <span class="ops-float-icon" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </span>
+          <div>
+            <strong>One shared workspace</strong>
+            <small>Your VA and projects, connected</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. MEET WORKLY OPS INTRO -->
+  <section class="ops-intro" id="ops-platform">
+    <div class="ops-container ops-intro-grid">
+      <div class="ops-intro-copy">
+        <span class="ops-eyebrow">Meet Workly OPS</span>
+        <h2>More than a task manager. A smarter way to work together.</h2>
+        <p>
+          OPS is the operations workspace that supports the day-to-day collaboration between your business and your Workly virtual assistant. It brings tasks, clients, schedules, and communication into one cohesive rhythm.
+        </p>
+        <p>
+          Your assistant spends less time switching between scattered tools and chasing missing context, and more time executing the high-impact work that moves your company forward.
+        </p>
+
+        <div class="ops-intro-note">
+          <span class="ops-note-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </span>
+          <div>
+            <strong>Built around your VA's workflow</strong>
+            <p>OPS gives your assistant a shared space to organize daily responsibilities and keep your leadership team informed at every stage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ops-mini-board" aria-label="Task workflow overview">
+        <div class="ops-mini-top">
+          <strong>Weekly task overview</strong>
+          <span class="ops-status-text">Workspace active</span>
+        </div>
+        <div class="ops-mini-columns">
+          <div class="ops-mini-col">
+            <strong>To do</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--accent"></span>
+              <b>Prepare campaign brief</b>
+              <small>Marketing · High priority</small>
+            </div>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar"></span>
+              <b>Review new requests</b>
+              <small>Operations</small>
+            </div>
+          </div>
+
+          <div class="ops-mini-col">
+            <strong>In progress</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--primary"></span>
+              <b>Update client records</b>
+              <small>68% complete</small>
+            </div>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--primary"></span>
+              <b>Weekly performance report</b>
+              <small>Due today</small>
+            </div>
+          </div>
+
+          <div class="ops-mini-col">
+            <strong>Completed</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--done"></span>
+              <b>Inbox organization</b>
+              <small>Delivered</small>
+            </div>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--done"></span>
+              <b>Vendor follow-ups</b>
+              <small>Verified</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. EVERYTHING CONNECTED (6 CAPABILITIES) -->
+  <section class="ops-benefits">
+    <div class="ops-container">
+      <div class="ops-heading">
+        <span class="ops-eyebrow">Everything Connected</span>
+        <h2>The tools your VA needs, in one workspace.</h2>
+        <p>OPS brings essential operational tools together so your assistant stays organized and your business stays informed without friction.</p>
+      </div>
+
+      <div class="ops-feature-grid">
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>
+          </span>
+          <h3>Task &amp; deliverable management</h3>
+          <p>Organize work by stage, set priorities and due dates, track subtasks, and follow each deliverable cleanly through completion.</p>
+        </article>
+
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          </span>
+          <h3>Calendar &amp; planning</h3>
+          <p>Keep schedules, important milestones, and recurring work commitments visible so your VA can plan every week with clarity.</p>
+        </article>
+
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+          </span>
+          <h3>Client workspace</h3>
+          <p>Keep client details, workflows, and assigned deliverables structured so responsibilities are always easy to follow.</p>
+        </article>
+
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </span>
+          <h3>Email hub</h3>
+          <p>Bring external communication right into the operational workflow so key client and vendor threads stay easy to manage.</p>
+        </article>
+
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+          </span>
+          <h3>Knowledge base</h3>
+          <p>Store SOPs, instructions, and reference guides in one place—reducing repeated questions and preserving institutional knowledge.</p>
+        </article>
+
+        <article class="ops-feature">
+          <span class="ops-feature-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </span>
+          <h3>People &amp; collaboration</h3>
+          <p>Support smooth coordination with clear team visibility, contextual comments, availability tracking, and shared working context.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. UNIFIED WORKSPACE SHOWCASE (FULL VIEW IMAGE SLOT) -->
+  <section class="ops-showcase">
+    <div class="ops-container ops-showcase-grid">
+      <div class="ops-showcase-copy">
+        <span class="ops-eyebrow">Full Command Center</span>
+        <h2>A clear view of what's happening across your work.</h2>
+        <p>
+          Give your virtual assistant a structured space to organize tasks, review priorities, and manage several deliverables at once. Work becomes effortless to follow because every item has a clear stage and next step.
+        </p>
+        <ul class="ops-list">
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Track every assignment seamlessly from backlog to completion.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Spot top priorities, upcoming deadlines, and overdue items early.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Keep client deliverables and daily responsibilities neatly organized.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Follow live progress without relying on scattered status messages.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ops-screen">
+        <div class="ops-visual-viewport ops-visual-viewport--screen">
+          <?php if (!empty($opsWorkspaceUrl)): ?>
+            <img
+              src="<?= htmlspecialchars($opsWorkspaceUrl, ENT_QUOTES, 'UTF-8') ?>"
+              alt="Workly OPS weekly task organizer overview"
+              class="ops-visual-img"
+            >
+          <?php else: ?>
+            <!-- Replace $opsWorkspaceUrl at the top of ops.php to render your full workspace image -->
+            <div class="ops-image-slot" role="img" aria-label="Operations workspace image slot">
+              <div class="ops-slot-icon" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <strong>Shared Operations View</strong>
+              <span>Ready for workspace image URL</span>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="ops-screen-caption">
+          <b>Weekly Task Organizer</b>
+          <span>Shared Workspace Overview</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ON-THE-GO WORKFLOW (COMPANION MOCKUP IMAGE SLOT) -->
+  <section class="ops-showcase ops-showcase--tint">
+    <div class="ops-container ops-showcase-grid ops-showcase-grid--reverse">
+      <div class="ops-handheld-stage">
+        <div class="ops-stage-bubble">
+          <strong>Stay up to date</strong>
+          <small>Check priorities and progress wherever you are.</small>
+        </div>
+
+        <div class="ops-phone" aria-label="Compact companion view preview">
+          <div class="ops-phone-screen">
+            <?php if (!empty($opsHandheldViewUrl)): ?>
+              <img
+                src="<?= htmlspecialchars($opsHandheldViewUrl, ENT_QUOTES, 'UTF-8') ?>"
+                alt="Workly OPS companion dashboard view"
+                class="ops-phone-img"
+              >
+            <?php else: ?>
+              <!-- Replace $opsHandheldViewUrl at the top of ops.php to insert your custom image URL -->
+              <div class="ops-phone-slot">
+                <div class="ops-phone-status">
+                  <span>9:41</span>
+                  <span>OPS</span>
                 </div>
-                <div class="ops-proof">
-                    <span><i class="ops-check">✓</i> Clear task ownership</span>
-                    <span><i class="ops-check">✓</i> Visible progress</span>
-                    <span><i class="ops-check">✓</i> Transparent updates</span>
+                <div class="ops-phone-placeholder-box">
+                  <div class="ops-slot-icon ops-slot-icon--sm" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                  </div>
+                  <strong>Compact Companion View</strong>
+                  <span>Ready for app preview URL</span>
                 </div>
-            </div>
-            <div class="ops-hero-visual">
-                <img src="<?= htmlspecialchars($opsScreenshot, ENT_QUOTES, 'UTF-8') ?>" alt="Workly OPS weekly task organizer dashboard showing task stages and project progress">
-                <div class="ops-float ops-float--one"><span class="ops-float-icon">✓</span><span>Work in progress<small>Tasks stay on track</small></span></div>
-                <div class="ops-float ops-float--two"><span class="ops-float-icon">↗</span><span>One shared workspace<small>Your VA and projects, connected</small></span></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ops-intro" id="ops-platform">
-        <div class="ops-container ops-intro-grid">
-            <div class="ops-intro-copy">
-                <span class="ops-eyebrow">Meet OPS Workly</span>
-                <h2>More than a task manager. A smarter way to work together.</h2>
-                <p>OPS is the operations workspace that supports the day-to-day work between your business and your Workly virtual assistant. It brings tasks, clients, schedules and communication into a more organized workflow.</p>
-                <p>Your VA spends less time switching between scattered tools and chasing information, and more time focused on the work that helps your business move forward.</p>
-                <div class="ops-intro-note">
-                    <span class="ops-note-icon">✦</span>
-                    <div><b>Built around your VA's workflow</b><p>OPS gives your assistant a shared place to organize responsibilities and keep you informed as work progresses.</p></div>
+                <div class="ops-phone-mini-preview">
+                  <div class="ops-phone-summary">
+                    <div class="ops-phone-stat"><small>Open tasks</small><b>08</b></div>
+                    <div class="ops-phone-stat"><small>Completed</small><b>12</b></div>
+                  </div>
+                  <div class="ops-phone-task">
+                    <div class="ops-phone-task-top"><span>HIGH PRIORITY</span><span>Today</span></div>
+                    <strong>Review campaign assets</strong>
+                    <div class="ops-progress"><span></span></div>
+                  </div>
                 </div>
-            </div>
-            <div class="ops-mini-board" aria-label="Illustration of a task workflow">
-                <div class="ops-mini-top"><b>Weekly task overview</b><span>● Workspace active</span></div>
-                <div class="ops-mini-columns">
-                    <div class="ops-mini-col"><strong>To do</strong><div class="ops-mini-card"><i></i><b>Prepare campaign brief</b><small>Marketing · High priority</small></div><div class="ops-mini-card"><i></i><b>Review new requests</b><small>Operations</small></div></div>
-                    <div class="ops-mini-col"><strong>In progress</strong><div class="ops-mini-card"><i></i><b>Update client records</b><small>68% complete</small></div><div class="ops-mini-card"><i></i><b>Weekly report</b><small>Due today</small></div></div>
-                    <div class="ops-mini-col"><strong>Completed</strong><div class="ops-mini-card"><i></i><b>Inbox organization</b><small>Delivered</small></div></div>
-                </div>
-            </div>
+              </div>
+            <?php endif; ?>
+          </div>
         </div>
-    </section>
 
-    <section class="ops-benefits">
-        <div class="ops-container">
-            <div class="ops-heading">
-                <span class="ops-eyebrow">Everything connected</span>
-                <h2>The tools your VA needs, in one workspace.</h2>
-                <p>OPS brings essential operational tools together so your assistant can stay organized and your business can stay informed.</p>
-            </div>
-            <div class="ops-feature-grid">
-                <article class="ops-feature"><span class="ops-feature-icon">▤</span><h3>Task & deliverable management</h3><p>Organize work by stage, set priorities and due dates, track subtasks and follow each deliverable through completion.</p></article>
-                <article class="ops-feature"><span class="ops-feature-icon">◷</span><h3>Calendar & planning</h3><p>Keep schedules, important dates and work commitments visible to help your VA plan the week.</p></article>
-                <article class="ops-feature"><span class="ops-feature-icon">◎</span><h3>Client workspace</h3><p>Keep client information and assigned work structured, making responsibilities easier to follow.</p></article>
-                <article class="ops-feature"><span class="ops-feature-icon">✉</span><h3>Email Hub</h3><p>Bring email communication into the workflow so relevant conversations are easier to access and manage.</p></article>
-                <article class="ops-feature"><span class="ops-feature-icon">▧</span><h3>Knowledge base</h3><p>Keep useful instructions and reference information available, reducing repeated questions and lost context.</p></article>
-                <article class="ops-feature"><span class="ops-feature-icon">✧</span><h3>People & collaboration</h3><p>Support coordination with team visibility, comments, leave information and shared working context.</p></article>
-            </div>
+        <div class="ops-stage-bubble ops-stage-bubble--bottom">
+          <strong>A more flexible rhythm</strong>
+          <small>Keep operations moving smoothly from anywhere.</small>
         </div>
-    </section>
+      </div>
 
-    <section class="ops-showcase">
-        <div class="ops-container ops-showcase-grid">
-            <div class="ops-showcase-copy">
-                <span class="ops-eyebrow">Desktop workspace</span>
-                <h2>A clear view of what's happening across your work.</h2>
-                <p>The desktop workspace gives your VA room to organize tasks, review priorities and manage several deliverables at once. Work is easier to follow because every item has a stage and a next step.</p>
-                <ul class="ops-list">
-                    <li><i class="ops-check">✓</i><span>Track work from backlog to completion.</span></li>
-                    <li><i class="ops-check">✓</i><span>Identify priorities, due dates and overdue items.</span></li>
-                    <li><i class="ops-check">✓</i><span>Keep client work and responsibilities organized.</span></li>
-                    <li><i class="ops-check">✓</i><span>Follow progress without relying on scattered updates.</span></li>
-                </ul>
-            </div>
-            <div class="ops-screen">
-                <img src="<?= htmlspecialchars($opsScreenshot, ENT_QUOTES, 'UTF-8') ?>" alt="Desktop view of the Workly OPS task organizer">
-                <div class="ops-screen-caption"><b>Weekly Task Organizer</b><span>Desktop workspace</span></div>
-            </div>
+      <div class="ops-showcase-copy">
+        <span class="ops-eyebrow">Connected Anywhere</span>
+        <h2>Keep the important things close, wherever work takes you.</h2>
+        <p>
+          OPS is built around continuous alignment. Critical priorities, daily deliverables, and project milestones remain accessible at a glance so you stay informed while your assistant handles the execution.
+        </p>
+        <ul class="ops-list">
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>See urgent priorities and upcoming deliverables at a glance.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Review task progress quickly without digging through long email threads.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span>Stay connected to your assistant's workflow throughout the day.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. VISIBILITY BUILDS TRUST (DARK SECTION) -->
+  <section class="ops-transparency">
+    <div class="ops-container">
+      <div class="ops-heading">
+        <span class="ops-eyebrow">Visibility Builds Trust</span>
+        <h2>Know what's moving forward. And what's next.</h2>
+        <p>A great working relationship requires more than completed tasks—it thrives on shared context, structured communication, and reliable updates.</p>
+      </div>
+
+      <div class="ops-transparency-grid">
+        <article class="ops-transparency-card">
+          <span class="ops-step-num">01</span>
+          <h3>Progress you can follow</h3>
+          <p>Clear stages, realistic due dates, and organized deliverables make ongoing initiatives effortless to track.</p>
+        </article>
+
+        <article class="ops-transparency-card">
+          <span class="ops-step-num">02</span>
+          <h3>Communication in context</h3>
+          <p>Comments, email workflows, and shared documentation live alongside each task to eliminate fragmented chats.</p>
+        </article>
+
+        <article class="ops-transparency-card">
+          <span class="ops-step-num">03</span>
+          <h3>Structured reporting</h3>
+          <p>Planning and reporting tools give leaders clear visibility into weekly output, upcoming priorities, and capacity.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. OPERATING RHYTHM & SNAPSHOT -->
+  <section class="ops-showcase">
+    <div class="ops-container ops-showcase-grid">
+      <div class="ops-showcase-copy">
+        <span class="ops-eyebrow">Built for Growth</span>
+        <h2>Less time coordinating. More time moving forward.</h2>
+        <p>
+          OPS establishes a dependable operating cadence between you and your virtual assistant. Instead of wondering what is being handled, you gain a transparent system for alignment.
+        </p>
+        <ul class="ops-list">
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span><b>Organization:</b> responsibilities and deliverables share a single source of truth.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span><b>Productivity:</b> your VA spends more time executing and less time searching for files.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span><b>Transparency:</b> progress, timelines, and decisions stay crystal clear.</span>
+          </li>
+          <li>
+            <i class="ops-check" aria-hidden="true">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </i>
+            <span><b>Consistency:</b> repeatable workflows keep operations running smoothly every week.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="ops-mini-board ops-mini-board--tint">
+        <div class="ops-mini-top">
+          <strong>Business workflow snapshot</strong>
+          <span class="ops-status-text">Aligned rhythm</span>
         </div>
-    </section>
-
-    <section class="ops-showcase ops-showcase--tint">
-        <div class="ops-container ops-showcase-grid ops-showcase-grid--reverse">
-            <div class="ops-mobile-stage">
-                <div class="ops-mobile-bubble">Stay up to date<small>Check priorities and progress wherever you are.</small></div>
-                <div class="ops-phone" aria-label="Illustrative mobile layout of a Workly OPS dashboard">
-                    <div class="ops-phone-screen">
-                        <div class="ops-phone-status"><span>9:41</span><span>● ● ●</span></div>
-                        <h4>Good morning</h4><p>Your workspace at a glance</p>
-                        <div class="ops-phone-summary">
-                            <div class="ops-phone-stat"><small>Open tasks</small><b>08</b></div>
-                            <div class="ops-phone-stat"><small>Completed</small><b>12</b></div>
-                        </div>
-                        <div class="ops-phone-task"><div class="ops-phone-task-top"><span>HIGH PRIORITY</span><span>Today</span></div><strong>Review campaign assets</strong><small>Marketing · Client project</small><div class="ops-progress"><span></span></div></div>
-                        <div class="ops-phone-task"><div class="ops-phone-task-top"><span>IN PROGRESS</span><span>Nov 24</span></div><strong>Prepare weekly update</strong><small>Operations · Deliverable</small><div class="ops-progress"><span style="width:45%"></span></div></div>
-                        <div class="ops-phone-task"><div class="ops-phone-task-top"><span>UP NEXT</span><span>Nov 25</span></div><strong>Organize client inbox</strong><small>Administration</small></div>
-                        <div class="ops-phone-nav"><b>Overview</b><span>Tasks</span><span>Calendar</span><span>Profile</span></div>
-                    </div>
-                </div>
-                <div class="ops-mobile-bubble ops-mobile-bubble--bottom">A more flexible workflow<small>Your VA can keep work organized beyond the desk.</small></div>
+        <div class="ops-mini-columns">
+          <div class="ops-mini-col">
+            <strong>Plan</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--accent"></span>
+              <b>Set weekly priorities</b>
+              <small>Clear direction</small>
             </div>
-            <div class="ops-showcase-copy">
-                <span class="ops-eyebrow">Mobile-friendly workflow</span>
-                <h2>Keep the important things close, wherever work takes you.</h2>
-                <p>OPS is designed around a connected workflow. The mobile presentation makes it easy to understand how key information can be surfaced in a compact view, while your VA continues managing the details in the workspace.</p>
-                <ul class="ops-list">
-                    <li><i class="ops-check">✓</i><span>See priorities and upcoming work at a glance.</span></li>
-                    <li><i class="ops-check">✓</i><span>Review task status without opening a full desktop board.</span></li>
-                    <li><i class="ops-check">✓</i><span>Stay connected to the workflow while away from your desk.</span></li>
-                </ul>
-                <p style="margin-top:18px;font-size:11px;">Mobile screen shown as a conceptual layout. Replace it with a real OPS mobile capture when available.</p>
+          </div>
+          <div class="ops-mini-col">
+            <strong>Execute</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--primary"></span>
+              <b>Manage deliverables</b>
+              <small>Visible progress</small>
             </div>
+          </div>
+          <div class="ops-mini-col">
+            <strong>Report</strong>
+            <div class="ops-mini-card">
+              <span class="ops-card-bar ops-card-bar--done"></span>
+              <b>Share updates</b>
+              <small>Aligned decisions</small>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="ops-transparency">
-        <div class="ops-container">
-            <div class="ops-heading">
-                <span class="ops-eyebrow">Visibility builds trust</span>
-                <h2>Know what's moving forward. And what's next.</h2>
-                <p>A good working relationship needs more than completed tasks. It needs shared context, clear communication and consistent updates.</p>
-            </div>
-            <div class="ops-transparency-grid">
-                <article class="ops-transparency-card"><span>01</span><h3>Progress you can follow</h3><p>Task stages, due dates and deliverables help make ongoing work easier to understand.</p></article>
-                <article class="ops-transparency-card"><span>02</span><h3>Communication in context</h3><p>Comments, email workflows and shared information help reduce disconnected conversations.</p></article>
-                <article class="ops-transparency-card"><span>03</span><h3>More structured reporting</h3><p>Calendar and reporting tools support clearer updates about activity, priorities and performance.</p></article>
-            </div>
-        </div>
-    </section>
+  <!-- 8. FINAL CTA -->
+  <section class="ops-cta">
+    <div class="ops-container ops-cta-inner">
+      <div class="ops-cta-copy">
+        <h2>Give your business the support it deserves.</h2>
+        <p>Work with a dedicated bilingual virtual assistant backed by a cleaner, more organized way to get things done.</p>
+      </div>
+      <a class="ops-btn ops-btn--primary" href="find-va">
+        <span>Find your virtual assistant</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+</div>
 
-    <section class="ops-showcase">
-        <div class="ops-container ops-showcase-grid">
-            <div class="ops-showcase-copy">
-                <span class="ops-eyebrow">A better experience for your business</span>
-                <h2>Less time coordinating. More time moving forward.</h2>
-                <p>OPS helps create a consistent operating rhythm between you and your VA. Instead of wondering what is being handled, you have a clearer way to understand the work and stay aligned on priorities.</p>
-                <ul class="ops-list">
-                    <li><i class="ops-check">✓</i><span><b>Organization:</b> responsibilities and deliverables have a shared place.</span></li>
-                    <li><i class="ops-check">✓</i><span><b>Productivity:</b> your VA can spend more time executing and less time searching for context.</span></li>
-                    <li><i class="ops-check">✓</i><span><b>Transparency:</b> progress and communication become easier to follow.</span></li>
-                    <li><i class="ops-check">✓</i><span><b>Consistency:</b> a repeatable workflow helps keep work moving.</span></li>
-                </ul>
-            </div>
-            <div class="ops-mini-board" style="background:linear-gradient(145deg,#fbf6ff,#f1fff9);">
-                <div class="ops-mini-top"><b>Business workflow snapshot</b><span>● Organized</span></div>
-                <div class="ops-mini-columns">
-                    <div class="ops-mini-col"><strong>Plan</strong><div class="ops-mini-card"><i></i><b>Set weekly priorities</b><small>Clear direction</small></div></div>
-                    <div class="ops-mini-col"><strong>Execute</strong><div class="ops-mini-card"><i></i><b>Manage deliverables</b><small>Visible progress</small></div></div>
-                    <div class="ops-mini-col"><strong>Report</strong><div class="ops-mini-card"><i></i><b>Share updates</b><small>Aligned decisions</small></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="ops-cta">
-        <div class="ops-container ops-cta-inner">
-            <div><h2>Give your business the support it deserves.</h2><p>Work with a dedicated virtual assistant backed by a more organized way to get things done.</p></div>
-            <a class="ops-btn" href="/find-va">Find your virtual assistant <span aria-hidden="true">→</span></a>
-        </div>
-    </section>
-</main>
-
-
-<?php require_once dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php
+$footerPath = file_exists(__DIR__ . '/includes/footer.php')
+    ? __DIR__ . '/includes/footer.php'
+    : dirname(__DIR__) . '/includes/footer.php';
+require_once $footerPath;
+?>
