@@ -943,6 +943,11 @@ a#ops-nav {
   color: var(--primary);
 }
 
+.va-card[data-href] {
+  cursor: pointer;
+}
+
+
 
 /* ==============================================================
    DIRECTORY & STICKY FILTER (Full Mobile & Tablet Adaptability)
