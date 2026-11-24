@@ -1,3 +1,13 @@
+<?php
+
+$siteUrl = 'https://worklystaff.com';
+$pageUrl = $siteUrl . '/whatsapp-preview-test';
+
+$title = 'WhatsApp Preview Test | Workly';
+$description = 'Testing Open Graph link previews for Workly.';
+$image = $siteUrl . '/assets/images/og_workly.jpg';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
