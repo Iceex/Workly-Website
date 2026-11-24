@@ -1,7 +1,7 @@
 /**
  * Workly OPS - Interactive Operations Showcase Script
- * Drives viewport reveals, sticky scroll parallax, multi-cursor team collaboration,
- * 3D desktop perspective rig, benchmark comparison, and vertical category switcher.
+ * Drives viewport reveals, sticky scroll parallax, multi-cursor team coordination,
+ * 3D desktop perspective rig, 1-click report feedback, and vertical switcher.
  * File: /php/assets/js/ops.js
  */
 document.addEventListener('DOMContentLoaded', function () {
@@ -77,25 +77,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var comparePresets = {
     with: {
       turn: '2.6h',
-      turnSub: 'Same-shift execution with live priority queues',
+      turnSub: 'Simple 1-click task progression & live alerts',
       sla: '94.8%',
-      slaSub: 'Measured across BrightPath & Northstar pods',
-      rework: '3.2%',
-      reworkSub: 'Subtask checklists verified prior to handoff',
-      inbox: '18m',
-      inboxSub: 'Auto-labeled client threads inside Email Hub',
-      summary: 'Result: Up to 3.4x faster client response and predictable weekly output.'
+      slaSub: 'Actively supervised by a Workly Team Leader',
+      rework: '1 Click',
+      reworkSub: 'Weekly/monthly email dispatched to Client & Lead',
+      inbox: 'Real-Time',
+      inboxSub: 'Meetings & threads tied to VA & Client CRM',
+      summary: 'Result: Consistent deliverable quality, transparent time logs, and proactive Team Leader supervision.'
     },
     without: {
       turn: '11.4h',
       turnSub: 'Delayed replies buried across Slack, email, and sheets',
       sla: '71.0%',
-      slaSub: 'No shared deadline alerts or PTO handoff tracking',
-      rework: '24.5%',
-      reworkSub: 'Missing briefs trigger repeated rounds of revisions',
-      inbox: '4.2h',
-      inboxSub: 'Unstructured threads shared over manual screenshots',
-      summary: 'Ad-hoc workflows lose hours daily chasing status instead of shipping work.'
+      slaSub: 'No Team Leader oversight or deadline escalation alerts',
+      rework: 'Manual',
+      reworkSub: 'Hours spent compiling spreadsheets every Friday',
+      inbox: 'Fragmented',
+      inboxSub: 'Disconnected calendars, emails, and missing task notes',
+      summary: 'Ad-hoc workflows lose hours daily chasing updates instead of executing deliverables.'
     }
   };
 
@@ -175,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Subtle vertical parallax on sticky float layers during scroll
   var stickyLayers = document.querySelectorAll('[data-sticky-parallax]');
   if (stickySection && stickyLayers.length > 0 && !prefersReducedMotion) {
     var stickyRaf = null;
@@ -202,11 +201,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ========================================================================
-     5. COLLABORATIVE MULTI-CURSOR SUITE (3 CURSORS ACTUALLY WORKING TOGETHER)
+     5. COLLABORATIVE MULTI-CURSOR SUITE (Kanban, Comments, Alerts & 1-Click Reports)
      ======================================================================== */
   var collabStage = document.getElementById('opsCollabStage');
   var collabStatus = document.getElementById('opsCollabStatus');
   var collabToggle = document.getElementById('opsCollabToggle');
+  var collabReportBtn = document.getElementById('opsCollabReportBtn');
+  var reportDispatchBanner = document.getElementById('opsReportDispatchBanner');
 
   var zoneTodo = document.getElementById('opsZoneTodo');
   var zoneProg = document.getElementById('opsZoneProg');
@@ -222,8 +223,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var barBanner = document.getElementById('opsBarBanner');
   var pctBanner = document.getElementById('opsPctBanner');
+  var noteBanner = document.getElementById('opsNoteBanner');
   var barCrm = document.getElementById('opsBarCrm');
   var pctCrm = document.getElementById('opsPctCrm');
+  var noteCrm = document.getElementById('opsNoteCrm');
 
   var cursorLead = document.getElementById('opsCursorLead');
   var cursorEthan = document.getElementById('opsCursorEthan');
@@ -238,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '96.2% On-Time SLA',
       turn: '2.1h Avg',
       curve: 'M8 54 Q 70 26, 140 12 T 272 14',
-      area: 'M8 54 Q 70 26, 140 12 T 272 14 L 272 74 L 8 74 Z',
+      area: 'M8 54 Q 70 26, 140 12 T 272 14 L 272 70 L 8 70 Z',
       dotX: '140',
       dotY: '12'
     },
@@ -246,15 +249,15 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '95.1% On-Time SLA',
       turn: '2.4h Avg',
       curve: 'M8 58 Q 75 34, 140 20 T 272 16',
-      area: 'M8 58 Q 75 34, 140 20 T 272 16 L 272 74 L 8 74 Z',
+      area: 'M8 58 Q 75 34, 140 20 T 272 16 L 272 70 L 8 70 Z',
       dotX: '140',
       dotY: '20'
     },
     '30d': {
       sla: '94.8% On-Time SLA',
       turn: '2.6h Avg',
-      curve: 'M8 62 Q 70 28, 140 16 T 272 22',
-      area: 'M8 62 Q 70 28, 140 16 T 272 22 L 272 74 L 8 74 Z',
+      curve: 'M8 58 Q 70 26, 140 16 T 272 20',
+      area: 'M8 58 Q 70 26, 140 16 T 272 20 L 272 70 L 8 70 Z',
       dotX: '140',
       dotY: '16'
     }
@@ -292,16 +295,19 @@ document.addEventListener('DOMContentLoaded', function () {
     if (stage === 'todo' && zoneTodo) {
       zoneTodo.appendChild(taskBanner);
       if (barBanner) barBanner.style.width = '40%';
-      if (pctBanner) pctBanner.textContent = '40% · Ethan Brooks';
+      if (pctBanner) pctBanner.textContent = '40% · Click to advance';
+      if (noteBanner) noteBanner.textContent = 'Note: Match Q4 hex · 2 comments';
     } else if (stage === 'progress' && zoneProg) {
       zoneProg.appendChild(taskBanner);
       if (barBanner) barBanner.style.width = '72%';
-      if (pctBanner) pctBanner.textContent = '72% · In Progress';
+      if (pctBanner) pctBanner.textContent = '72% · Ethan updating';
+      if (noteBanner) noteBanner.textContent = 'Comment (@Jordan): Draft uploaded · 3 comments';
     } else if (stage === 'done' && zoneDone) {
       zoneDone.appendChild(taskBanner);
       taskBanner.classList.add('is-complete');
       if (barBanner) barBanner.style.width = '100%';
-      if (pctBanner) pctBanner.textContent = '100% · Signed Off';
+      if (pctBanner) pctBanner.textContent = '100% · TL Signed Off';
+      if (noteBanner) noteBanner.textContent = 'Note: QA Verified · 4 comments';
     }
     syncColumnCounts();
   }
@@ -313,11 +319,13 @@ document.addEventListener('DOMContentLoaded', function () {
       zoneProg.appendChild(taskCrm);
       if (barCrm) barCrm.style.width = '75%';
       if (pctCrm) pctCrm.textContent = '75% · Olivia Carter';
+      if (noteCrm) noteCrm.textContent = 'Note: TL QA checked · 4 comments';
     } else if (stage === 'done' && zoneDone) {
       zoneDone.appendChild(taskCrm);
       taskCrm.classList.add('is-complete');
       if (barCrm) barCrm.style.width = '100%';
-      if (pctCrm) pctCrm.textContent = '100% · Signed Off';
+      if (pctCrm) pctCrm.textContent = '100% · Client Emailed';
+      if (noteCrm) noteCrm.textContent = 'Note: Approved by Jordan · 5 comments';
     }
     syncColumnCounts();
   }
@@ -325,10 +333,38 @@ document.addEventListener('DOMContentLoaded', function () {
   function setPto19(approved) {
     if (!ptoTarget || !pto19Label || !ptoStatusText) return;
     ptoTarget.classList.toggle('is-approved', approved);
-    pto19Label.textContent = approved ? 'Approved' : 'Approve';
+    pto19Label.textContent = approved ? 'Approved' : 'Review';
     ptoStatusText.textContent = approved
-      ? 'Nov 19: Ethan Approved (Covered by Olivia)'
-      : 'Nov 19: Ethan Pending Review';
+      ? 'Nov 19 Approved · Olivia Assigned Backup'
+      : 'Nov 19: Team Leader Review';
+  }
+
+  function triggerOneClickReport(isAuto) {
+    if (collabReportBtn) {
+      collabReportBtn.textContent = 'Report Sent ✓';
+      collabReportBtn.classList.add('is-sent');
+      if (!isAuto) {
+        setTimeout(function () {
+          collabReportBtn.textContent = '1-Click Send Report';
+          collabReportBtn.classList.remove('is-sent');
+        }, 2500);
+      }
+    }
+    if (reportDispatchBanner) {
+      reportDispatchBanner.textContent = '✓ Weekly Report sent to lucas@brightpath.com & jordan@worklystaff.com';
+      reportDispatchBanner.classList.add('is-dispatched');
+    }
+  }
+
+  function resetReportDispatch() {
+    if (collabReportBtn) {
+      collabReportBtn.textContent = '1-Click Send Report';
+      collabReportBtn.classList.remove('is-sent');
+    }
+    if (reportDispatchBanner) {
+      reportDispatchBanner.textContent = 'Linked Emails: lucas@brightpath.com · jordan@worklystaff.com';
+      reportDispatchBanner.classList.remove('is-dispatched');
+    }
   }
 
   function pulseCursor(el) {
@@ -339,24 +375,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 340);
   }
 
-  // Interactive handlers for visitor clicks inside Collaborative Suite
   document.querySelectorAll('#opsBenchmarkTabs .ops-seg-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       setBenchmark(btn.getAttribute('data-tf'));
     });
   });
 
+  if (collabReportBtn) {
+    collabReportBtn.addEventListener('click', function () {
+      triggerOneClickReport(false);
+      if (collabStatus) {
+        collabStatus.textContent = 'Weekly SLA report emailed to Client & Team Leader in 1 click';
+      }
+    });
+  }
+
   document.querySelectorAll('#opsPtoDays .ops-pto-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       if (btn === ptoTarget) {
         setPto19(!ptoTarget.classList.contains('is-approved'));
       } else if (ptoStatusText) {
-        ptoStatusText.textContent = 'Nov ' + btn.getAttribute('data-pto');
+        ptoStatusText.textContent = btn.getAttribute('data-pto');
       }
     });
   });
 
-  // Allow clicking task cards directly to advance their Kanban column!
   [taskBanner, taskCrm, taskReport].forEach(function (card) {
     if (!card) return;
     card.addEventListener('click', function () {
@@ -376,21 +419,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Synchronized 3-Cursor Choreography
+  // Synchronized 3-Cursor Team Collaboration Sequence
   var collabPlaying = !prefersReducedMotion;
   var collabInterval = null;
   var collabStepIdx = 0;
 
   var collabSequence = [
     function () {
-      if (cursorLead) { cursorLead.style.left = '14%'; cursorLead.style.top = '36%'; }
-      if (cursorEthan) { cursorEthan.style.left = '20%'; cursorEthan.style.top = '48%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '44%'; cursorOlivia.style.top = '42%'; }
+      resetReportDispatch();
+      if (cursorLead) { cursorLead.style.left = '14%'; cursorLead.style.top = '38%'; }
+      if (cursorEthan) { cursorEthan.style.left = '22%'; cursorEthan.style.top = '50%'; }
+      if (cursorOlivia) { cursorOlivia.style.left = '46%'; cursorOlivia.style.top = '42%'; }
       setTimeout(function () {
         pulseCursor(cursorEthan);
         setBannerState('progress');
         setBenchmark('30d');
-        if (collabStatus) collabStatus.textContent = 'Ethan moved Fix marketing banner to In Progress (72%)';
+        if (collabStatus) collabStatus.textContent = 'Ethan added @Jordan comment & moved task to In Progress (1 click)';
       }, 450);
     },
     function () {
@@ -403,31 +447,34 @@ document.addEventListener('DOMContentLoaded', function () {
         setPto19(true);
         setCrmState('done');
         setBenchmark('14d');
-        if (collabStatus) collabStatus.textContent = 'Jordan approved Nov 19 PTO · Olivia completed CRM Retainer Audit';
+        if (collabStatus) collabStatus.textContent = 'Jordan approved alert coverage · Olivia closed CRM Retainer Audit';
       }, 450);
     },
     function () {
-      if (cursorLead) { cursorLead.style.left = '66%'; cursorLead.style.top = '28%'; }
-      if (cursorEthan) { cursorEthan.style.left = '58%'; cursorEthan.style.top = '46%'; }
+      if (cursorLead) { cursorLead.style.left = '70%'; cursorLead.style.top = '48%'; }
+      if (cursorEthan) { cursorEthan.style.left = '58%'; cursorEthan.style.top = '44%'; }
       if (cursorOlivia) { cursorOlivia.style.left = '78%'; cursorOlivia.style.top = '22%'; }
       setTimeout(function () {
+        pulseCursor(cursorLead);
         pulseCursor(cursorEthan);
         setBannerState('done');
         setBenchmark('7d');
-        if (collabStatus) collabStatus.textContent = 'Pod 100% synced · Weekly SLA benchmark verified at 96.2%';
+        triggerOneClickReport(true);
+        if (collabStatus) collabStatus.textContent = 'Jordan triggered 1-Click Weekly Report to Client & Team Leader emails';
       }, 450);
     },
     function () {
-      if (cursorLead) { cursorLead.style.left = '12%'; cursorLead.style.top = '24%'; }
-      if (cursorEthan) { cursorEthan.style.left = '16%'; cursorEthan.style.top = '36%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '40%'; cursorOlivia.style.top = '36%'; }
+      if (cursorLead) { cursorLead.style.left = '12%'; cursorLead.style.top = '26%'; }
+      if (cursorEthan) { cursorEthan.style.left = '16%'; cursorEthan.style.top = '38%'; }
+      if (cursorOlivia) { cursorOlivia.style.left = '42%'; cursorOlivia.style.top = '38%'; }
       setTimeout(function () {
         pulseCursor(cursorLead);
+        resetReportDispatch();
         setBannerState('todo');
         setCrmState('progress');
         setPto19(false);
         setBenchmark('30d');
-        if (collabStatus) collabStatus.textContent = 'New sprint deliverables dispatched across team pod...';
+        if (collabStatus) collabStatus.textContent = 'Team Leader Jordan dispatched next sprint tasks with notes...';
       }, 450);
     }
   ];
@@ -439,7 +486,7 @@ document.addEventListener('DOMContentLoaded', function () {
     collabInterval = setInterval(function () {
       collabSequence[collabStepIdx]();
       collabStepIdx = (collabStepIdx + 1) % collabSequence.length;
-    }, 2600);
+    }, 2700);
   }
 
   function stopCollabLoop() {
@@ -478,6 +525,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var scene3d = document.getElementById('ops3dScene');
   var rig3d = document.getElementById('ops3dRig');
   var addr3d = document.getElementById('ops3dAddress');
+  var send3dReportBtn = document.getElementById('ops3dSendReport');
+  var send3dReportNote = document.getElementById('ops3dReportNote');
 
   function switch3dView(viewKey) {
     document.querySelectorAll('#ops3dViews .ops-seg-btn').forEach(function (b) {
@@ -505,6 +554,21 @@ document.addEventListener('DOMContentLoaded', function () {
       switch3dView(nav.getAttribute('data-3d-nav'));
     });
   });
+
+  if (send3dReportBtn) {
+    send3dReportBtn.addEventListener('click', function () {
+      send3dReportBtn.textContent = 'Report Dispatched ✓';
+      if (send3dReportNote) {
+        send3dReportNote.textContent = 'Emailed to Client & Team Leader!';
+      }
+      setTimeout(function () {
+        send3dReportBtn.textContent = 'Send Weekly Report';
+        if (send3dReportNote) {
+          send3dReportNote.textContent = 'Weekly/Monthly to Client & Lead';
+        }
+      }, 2600);
+    });
+  }
 
   document.querySelectorAll('#ops3dModes .ops-seg-btn').forEach(function (modeBtn) {
     modeBtn.addEventListener('click', function () {
@@ -554,106 +618,106 @@ document.addEventListener('DOMContentLoaded', function () {
   var categoryData = {
     it: {
       tag: 'IT & Technical Operations',
-      title: 'Tier-1 ticket triage, QA logging, and cloud documentation',
-      desc: 'Technical VAs track incoming helpdesk escalations inside structured Kanban queues, attach system logs, and maintain predictable SLA response windows.',
+      title: 'Tier-1 ticket triage, task notes, and SLA oversight',
+      desc: 'Technical VAs track incoming helpdesk escalations in Kanban boards, add troubleshooting notes and comments, and keep response times transparent with Team Leader supervision.',
       items: [
-        'Helpdesk triage & ticket routing with clear response SLAs',
-        'SOP documentation & Knowledge Base maintenance',
-        'Daily QA verification checklists before handoff'
+        '1-click ticket status updates with threaded Team Leader comments',
+        'Real-time calendar escalation calls synced with IT leads',
+        'Weekly 1-click SLA performance reports emailed to stakeholders'
       ],
       speed: '45m',
       sla: '96.2%',
-      modules: 'Tasks · Email Hub · SLA Reports',
+      modules: 'Kanban · Notes · 1-Click Reports',
       cta: 'Find IT Support VAs →',
       href: 'find-va'
     },
     marketing: {
       tag: 'Digital Marketing',
-      title: 'Campaign launches, asset QA, and social sprint tracking',
-      desc: 'Creative and marketing VAs organize launch assets, ad variations, and newsletter approvals without missing campaign drop dates.',
+      title: 'Campaign orchestration, review comments, and asset QA',
+      desc: 'Marketing VAs move launch cards across simple Kanban columns, attach draft notes, and get instant Team Leader sign-off before campaign release.',
       items: [
-        'Multi-channel campaign calendar & creative QA tracking',
-        'Vendor, sponsor, and inbox outreach neatly labeled by account',
-        'Weekly conversion & deliverable velocity reporting'
+        'Multi-stage campaign boards with threaded feedback & asset notes',
+        'Synced client email & real-time kickoff calendar meetings',
+        'Monthly turnaround & deliverable velocity reports in 1 click'
       ],
       speed: '1.9h',
       sla: '94.8%',
-      modules: 'Kanban · Email Hub · Retainer CRM',
+      modules: 'Task Comments · Email Sync · CRM',
       cta: 'Find Marketing VAs →',
       href: 'find-va'
     },
     legal: {
       tag: 'Legal Support',
-      title: 'Case intake coordination, document prep, and deadline control',
-      desc: 'Legal assistants maintain airtight audit trails across discovery requests, client intake follow-ups, and court or filing reminders.',
+      title: 'Matter intake tracking, filing alerts, and Team Leader review',
+      desc: 'Legal VAs manage intake notes, client emails, and strict court filing deadlines inside an organized VA & Client CRM with real-time alerts.',
       items: [
-        'Structured intake workflows with priority deadline alerts',
-        'Synchronized client correspondence linked to matter folders',
-        'Monthly billing & retainer hour utilization summaries'
+        'Deadline alerts monitored jointly by the VA and Team Leader',
+        'Client email correspondence & meeting schedules synced to CRM matters',
+        '1-click weekly status & time utilization reports for partners'
       ],
       speed: '1.5h',
       sla: '97.4%',
-      modules: 'Tasks · Client CRM · Document SOPs',
+      modules: 'VA & Client CRM · Alerts · Reports',
       cta: 'Find Legal VAs →',
       href: 'find-va'
     },
     insurance: {
       tag: 'Insurance Operations',
-      title: 'Policy renewals, claims follow-ups, and carrier coordination',
-      desc: 'Dedicated insurance VAs stay ahead of renewal windows, underwriter requests, and policy endorsements with zero dropped follow-ups.',
+      title: 'Policy renewals, carrier threads, and zero-gap coordination',
+      desc: 'Insurance VAs filter carrier and policyholder emails, log renewal status updates in simple clicks, and rely on supervised coverage queues.',
       items: [
-        'Automated renewal pipeline checklists 30/60/90 days ahead',
-        'Labeled carrier & policyholder Email Hub threads',
-        'Backup PTO coverage ensuring continuous desk responsiveness'
+        'Kanban renewal tracking with status tags and underwriting notes',
+        'Real-time calendar reminders & Team Leader escalation alerts',
+        'Weekly or monthly productivity digests emailed automatically'
       ],
       speed: '1.2h',
       sla: '95.9%',
-      modules: 'Kanban · Email Hub · PTO Coverage',
+      modules: 'Email Hub · Calendar Sync · SLA',
       cta: 'Find Insurance VAs →',
       href: 'find-va'
     },
     healthcare: {
       tag: 'Healthcare Administration',
-      title: 'Patient scheduling, verification, and back-office billing queues',
-      desc: 'Healthcare admin VAs streamline appointment confirmations, insurance verification tasks, and clinic inbox triage accurately.',
+      title: 'Scheduling sync, verification queues, and supervised speed',
+      desc: 'Healthcare admin VAs coordinate patient calendars in real time, log insurance verification notes, and follow supervised SLA targets.',
       items: [
-        'Daily verification & intake queues prioritized by visit date',
-        'Structured shift handoff & approved backup coverage',
-        'Turnaround visibility across high-volume clinic requests'
+        'Real-time calendar appointment sync & intake alert routing',
+        'Simple 1-click Kanban queues designed for high-volume desks',
+        'Supervised shift coverage & verified weekly turnaround metrics'
       ],
       speed: '35m',
       sla: '98.1%',
-      modules: 'Tasks · Calendar · PTO Coverage',
+      modules: 'Real-Time Calendar · Notes · Alerts',
       cta: 'Find Healthcare VAs →',
       href: 'find-va'
     },
     management: {
       tag: 'Operations & Executive Admin',
-      title: 'Executive inbox zero, bookkeeping prep, and weekly KPI reporting',
-      desc: 'Bilingual executive VAs unify leadership calendars, vendor billing reconciliations, and cross-team deliverable tracking.',
+      title: 'Executive inbox zero, bookkeeping, and 1-click executive digests',
+      desc: 'Executive VAs handle daily inbox & calendar synchronization while Team Leaders guarantee spotless monthly reconciliations and leadership reports.',
       items: [
-        'Executive inbox triage & daily summary briefings',
-        'Month-end bookkeeping checks & retainer tracking',
-        'One-click leadership SLA & productivity scorecards'
+        'Unified inbox & real-time Google Calendar meeting coordination',
+        'Detailed task comments & audit-ready notes per client account',
+        '1-click weekly/monthly executive reports linked to Client & Lead'
       ],
       speed: '1.6h',
       sla: '96.5%',
-      modules: 'Overview · Email Hub · Executive PDFs',
+      modules: 'Full Suite · CRM · 1-Click Reports',
       cta: 'Find Executive VAs →',
       href: 'find-va'
     },
     realestate: {
       tag: 'Real Estate Coordination',
-      title: 'Transaction coordination, listing prep, and lead follow-through',
-      desc: 'Real estate VAs track inspection dates, escrow checklists, MLS updates, and buyer/seller inquiries seamlessly.',
+      title: 'Contract-to-close checklists, vendor sync, and fast follow-up',
+      desc: 'Transaction coordinators manage escrow tasks, attach inspection notes, and keep agents updated through automated email reports.',
       items: [
-        'Contract-to-close milestone boards with subtask checklists',
-        'Unified buyer, lender, and title Email Hub communication',
-        'Instant sync across agents and property managers'
+        'Escrow & listing Kanban boards with comment threads per property',
+        'Real-time showing & closing calendar sync across agents & VAs',
+        'Instant Team Leader alerts on upcoming contingency deadlines'
       ],
       speed: '50m',
       sla: '95.4%',
-      modules: 'Tasks · Client CRM · Email Hub',
+      modules: 'Kanban · Calendar Sync · Client CRM',
       cta: 'Find Real Estate VAs →',
       href: 'find-va'
     }
