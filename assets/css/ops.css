@@ -281,7 +281,7 @@ body:has(.ops-page) {
   overflow: hidden;
   border-radius: 32px;
   border: 1px solid rgba(136, 34, 206, 0.16);
-  padding: clamp(44px, 6vw, 50px) clamp(18px, 4vw, 30px) 0;
+  padding: clamp(24px, 6vw, 0px) clamp(18px, 4vw, 30px) 0;
   background:
     radial-gradient(circle at 50% 60%, rgba(174, 9, 233, 0.2) 0%, rgba(136, 34, 206, 0.08) 44%, transparent 74%),
     linear-gradient(180deg, #FBF3FF 0%, #f4e3ff 56%, #ebd0fd 100%);
