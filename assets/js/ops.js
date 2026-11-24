@@ -1,7 +1,7 @@
 /**
  * Workly OPS - Interactive Operations Showcase Script
- * Drives viewport reveals, sticky scroll parallax, multi-cursor team coordination,
- * 3D desktop perspective rig, 1-click report feedback, and vertical switcher.
+ * Drives Bento controls, multi-cursor team coordination, sticky walkthrough,
+ * 3D desktop platform explorer, benchmark comparison, and industry switcher.
  * File: /php/assets/js/ops.js
  */
 document.addEventListener('DOMContentLoaded', function () {
@@ -36,40 +36,93 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ========================================================================
-     2. HERO FLOATING ELEMENTS POINTER PARALLAX
+     2. BENTO CARD CONTROLS (1-Click Task Filter & CRM/SLA Toggle)
      ======================================================================== */
-  var heroBanner = document.querySelector('.ops-hero-banner');
-  var heroFloaters = document.querySelectorAll('.ops-hero-stage [data-parallax]');
+  var mgmtData = {
+    all: {
+      title: 'Month-End Bookkeeping',
+      pct: '68%',
+      bar: '68%',
+      client: 'BrightPath Digital · Note + 2 comments · TL Supervised'
+    },
+    todo: {
+      title: 'Fix Marketing Banner',
+      pct: '40%',
+      bar: '40%',
+      client: 'BrightPath Digital · High priority · Assigned to Ethan'
+    },
+    progress: {
+      title: 'Client CRM Retainer Audit',
+      pct: '78%',
+      bar: '78%',
+      client: 'Northstar Consulting · Note checked by Team Leader'
+    },
+    done: {
+      title: 'Weekly SLA Client Report',
+      pct: '100%',
+      bar: '100%',
+      client: 'Emailed to Client & Team Leader · 1-Click verified'
+    }
+  };
 
-  if (heroBanner && heroFloaters.length > 0 && !prefersReducedMotion && isFinePointer) {
-    var heroRaf = null;
-    var hx = 0;
-    var hy = 0;
-
-    heroBanner.addEventListener('mousemove', function (e) {
-      var rect = heroBanner.getBoundingClientRect();
-      hx = (e.clientX - rect.left) / rect.width - 0.5;
-      hy = (e.clientY - rect.top) / rect.height - 0.5;
-
-      if (!heroRaf) {
-        heroRaf = requestAnimationFrame(function () {
-          heroFloaters.forEach(function (el) {
-            var depth = parseFloat(el.getAttribute('data-parallax') || '16');
-            el.style.setProperty('--px', (hx * depth).toFixed(1) + 'px');
-            el.style.setProperty('--py', (hy * depth).toFixed(1) + 'px');
-          });
-          heroRaf = null;
-        });
-      }
-    });
-
-    heroBanner.addEventListener('mouseleave', function () {
-      heroFloaters.forEach(function (el) {
-        el.style.setProperty('--px', '0px');
-        el.style.setProperty('--py', '0px');
+  document.querySelectorAll('#opsMgmtFilter .ops-chip').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('#opsMgmtFilter .ops-chip').forEach(function (b) {
+        b.classList.remove('active');
       });
+      btn.classList.add('active');
+      var info = mgmtData[btn.getAttribute('data-stage')] || mgmtData.all;
+      var t = document.getElementById('opsMgmtTitle');
+      var p = document.getElementById('opsMgmtPct');
+      var b = document.getElementById('opsMgmtBar');
+      var c = document.getElementById('opsMgmtClient');
+      if (t) t.textContent = info.title;
+      if (p) p.textContent = info.pct;
+      if (b) b.style.width = info.bar;
+      if (c) c.textContent = info.client;
     });
-  }
+  });
+
+  var crmModeData = {
+    retainer: {
+      bpLabel: '68.0 / 100h',
+      bpPct: '68%',
+      nsLabel: '52.5 / 80h',
+      nsPct: '65.6%',
+      total: '120.5h',
+      rate: '66.9%'
+    },
+    sla: {
+      bpLabel: '93.0% On-Time',
+      bpPct: '93%',
+      nsLabel: '96.5% On-Time',
+      nsPct: '96.5%',
+      total: '2.6h Avg',
+      rate: '94.8%'
+    }
+  };
+
+  document.querySelectorAll('#opsCrmToggle .ops-chip').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('#opsCrmToggle .ops-chip').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      var d = crmModeData[btn.getAttribute('data-mode')] || crmModeData.retainer;
+      var bpL = document.getElementById('opsBpLabel');
+      var bpB = document.getElementById('opsBpBar');
+      var nsL = document.getElementById('opsNsLabel');
+      var nsB = document.getElementById('opsNsBar');
+      var tot = document.getElementById('opsCrmTotal');
+      var rte = document.getElementById('opsCrmRate');
+      if (bpL) bpL.textContent = d.bpLabel;
+      if (bpB) bpB.style.width = d.bpPct;
+      if (nsL) nsL.textContent = d.nsLabel;
+      if (nsB) nsB.style.width = d.nsPct;
+      if (tot) tot.textContent = d.total;
+      if (rte) rte.textContent = d.rate;
+    });
+  });
 
   /* ========================================================================
      3. CONCEPT SECTION: WITH WORKLY OPS VS AD-HOC CHATS BENCHMARK
@@ -138,70 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ========================================================================
-     4. STICKY IMMERSIVE PARALLAX WORKFLOW
-     ======================================================================== */
-  var stickySection = document.getElementById('opsStickySection');
-  var stickySteps = document.querySelectorAll('#opsStickySteps .ops-sticky-step');
-  var stickyPanels = document.querySelectorAll('#opsStickyStage .ops-sticky-panel');
-
-  function activateStickyStep(idx) {
-    stickySteps.forEach(function (s) {
-      s.classList.toggle('active', s.getAttribute('data-sticky-step') === String(idx));
-    });
-    stickyPanels.forEach(function (p, i) {
-      p.classList.toggle('active', i === Number(idx));
-    });
-  }
-
-  stickySteps.forEach(function (stepBtn) {
-    stepBtn.addEventListener('click', function () {
-      activateStickyStep(stepBtn.getAttribute('data-sticky-step'));
-    });
-  });
-
-  if (stickySection && 'IntersectionObserver' in window) {
-    var stepObs = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            activateStickyStep(entry.target.getAttribute('data-sticky-step'));
-          }
-        });
-      },
-      { threshold: 0.55, rootMargin: '-15% 0px -25% 0px' }
-    );
-    stickySteps.forEach(function (step) {
-      stepObs.observe(step);
-    });
-  }
-
-  var stickyLayers = document.querySelectorAll('[data-sticky-parallax]');
-  if (stickySection && stickyLayers.length > 0 && !prefersReducedMotion) {
-    var stickyRaf = null;
-    window.addEventListener(
-      'scroll',
-      function () {
-        if (!stickyRaf) {
-          stickyRaf = requestAnimationFrame(function () {
-            var rect = stickySection.getBoundingClientRect();
-            var vh = window.innerHeight || 800;
-            if (rect.bottom > 0 && rect.top < vh) {
-              var progress = Math.max(-1, Math.min(1, (vh * 0.5 - rect.top) / rect.height - 0.5));
-              var offset = (progress * 18).toFixed(1);
-              stickyLayers.forEach(function (layer) {
-                layer.style.setProperty('--sp', offset + 'px');
-              });
-            }
-            stickyRaf = null;
-          });
-        }
-      },
-      { passive: true }
-    );
-  }
-
-  /* ========================================================================
-     5. COLLABORATIVE MULTI-CURSOR SUITE (Kanban, Comments, Alerts & 1-Click Reports)
+     4. COLLABORATIVE MULTI-CURSOR SUITE (Kanban, Comments, Alerts & 1-Click Reports)
      ======================================================================== */
   var collabStage = document.getElementById('opsCollabStage');
   var collabStatus = document.getElementById('opsCollabStatus');
@@ -419,7 +409,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Synchronized 3-Cursor Team Collaboration Sequence
   var collabPlaying = !prefersReducedMotion;
   var collabInterval = null;
   var collabStepIdx = 0;
@@ -517,6 +506,50 @@ document.addEventListener('DOMContentLoaded', function () {
       { threshold: 0.2 }
     );
     collabObs.observe(collabStage);
+  }
+
+  /* ========================================================================
+     5. LONG-RUNWAY STICKY WALKTHROUGH (Real dwell scroll transition)
+     ======================================================================== */
+  var stickySection = document.getElementById('opsStickySection');
+  var stickySteps = document.querySelectorAll('#opsStickySteps .ops-sticky-step');
+  var stickyPanels = document.querySelectorAll('#opsStickyStage .ops-sticky-panel');
+  var stickyProgress = document.getElementById('opsStickyProgress');
+
+  function activateStickyStep(idx) {
+    var stepNum = Number(idx);
+    stickySteps.forEach(function (s) {
+      s.classList.toggle('active', s.getAttribute('data-sticky-step') === String(stepNum));
+    });
+    stickyPanels.forEach(function (p, i) {
+      p.classList.toggle('active', i === stepNum);
+    });
+    if (stickyProgress) {
+      var widths = ['33%', '67%', '100%'];
+      stickyProgress.style.width = widths[stepNum] || '33%';
+    }
+  }
+
+  stickySteps.forEach(function (stepBtn) {
+    stepBtn.addEventListener('click', function () {
+      activateStickyStep(stepBtn.getAttribute('data-sticky-step'));
+    });
+  });
+
+  if (stickySection && 'IntersectionObserver' in window) {
+    var stepObs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            activateStickyStep(entry.target.getAttribute('data-sticky-step'));
+          }
+        });
+      },
+      { threshold: 0.45, rootMargin: '-22% 0px -22% 0px' }
+    );
+    stickySteps.forEach(function (step) {
+      stepObs.observe(step);
+    });
   }
 
   /* ========================================================================
