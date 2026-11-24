@@ -7,9 +7,7 @@ $currentPage     = "ops";
 $pageTitle       = "Workly OPS | VA & Client CRM, Task Orchestration & Real-Time Sync";
 $pageDescription = "Organize VA workflows with Kanban orchestration, task comments and notes, Team Leader supervision, real-time email & calendar sync, time analytics, and 1-click client reports.";
 $canonicalUrl    = "https://worklystaff.com/ops";
-$ogImage = 'https://worklystaff.com/assets/images/og_workly.jpg';
 
-require_once __DIR__ . '/../includes/seo.php';
 
 /**
  * ============================================================================

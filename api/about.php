@@ -7,9 +7,7 @@ $currentPage = "about";
 $pageTitle = 'About Workly | Our Company';
 $pageDescription = 'Discover Workly and our virtual assistant services.';
 $canonicalUrl = 'https://worklystaff.com/about';
-$ogImage = 'https://worklystaff.com/assets/images/og_workly.jpg';
 
-require_once __DIR__ . '/../includes/seo.php';
 
 header(
     'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'

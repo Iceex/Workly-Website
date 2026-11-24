@@ -7,9 +7,7 @@ $currentPage = "home";
 $pageTitle = "Workly – Elite Bilingual Virtual Assistant Talent Platform";
 $pageDescription = "Connect with highly skilled bilingual virtual assistants delivering tailored expertise across multiple industries and business functions.";
 $canonicalUrl = 'https://worklystaff.com';
-$ogImage = 'https://worklystaff.com/assets/images/og_workly.jpg';
 
-require_once __DIR__ . '/../includes/seo.php';
 header(
     'Cache-Control: public, max-age=120, s-maxage=3600, stale-while-revalidate=86400'
 );
