@@ -1,33 +1,35 @@
 <?php
 /**
- * Workly OPS - Interactive Operations Workspace Showcase
+ * Workly OPS - Connected Operations Platform Showcase
  * File: /php/ops.php
  */
 $currentPage     = "ops";
-$pageTitle       = "Workly OPS | Instant Sync & Operational Visibility";
-$pageDescription = "Organize VA deliverables, monitor real-time SLA performance graphs, manage client retainers, and unify email threads in one connected workspace.";
+$pageTitle       = "Workly OPS | Connected Operations & Real-Time SLA Visibility";
+$pageDescription = "See how Workly OPS unifies VA tasks, live turnaround graphs, client retainers, PTO coverage, and inbox threads to boost deliverable quality and speed.";
 $canonicalUrl    = "https://worklystaff.com/ops";
 
 /**
  * ============================================================================
- * MOCKUP MEDIA URLS (Images, GIFs, or Videos)
+ * SCREEN MEDIA SLOTS (Images, GIFs, or Videos)
  * Insert any relative path (e.g. 'assets/media/ops-demo.mp4') or full URL.
  * Supports:
- *   - Video (.mp4, .webm, .mov, .ogg) -> Plays inside the mockup screen
- *   - Image / GIF (.png, .jpg, .webp, .gif, .svg) -> Renders inside the mockup
- *   - Empty ('') -> Displays the live interactive Workly OPS UI inside the mockup
+ *   - Video (.mp4, .webm, .mov, .ogg)
+ *   - Image / GIF (.png, .jpg, .webp, .gif, .svg)
+ *   - Empty ('') -> Renders the interactive Workly OPS workspace interface
  * ============================================================================
  */
 $opsMedia = [
-    'hero_center'     => '', // Hero centered iPhone 16+ screen (image / gif / video)
-    'wide_frame'      => '', // Wide Kanban & velocity showcase (image / gif / video)
-    'slate_analytics' => '', // Analytics & PTO benchmarks showcase (image / gif / video)
-    'banner_phone'    => '', // Protruding Email Hub iPhone 16+ screen (image / gif / video)
+    'hero_center'     => '', // Hero centered iPhone 16+ screen
+    'slate_analytics' => '', // Collaborative Multi-Cursor Suite canvas
+    'desktop_3d'      => '', // Interactive 3D desktop platform screen
+    'banner_phone'    => '', // Protruding Email Hub iPhone 16+ screen
+    'wide_frame'      => '', // Legacy alias fallback for desktop_3d if needed
 ];
 
-// Automatically resolve asset paths whether ops.php is in root or a subfolder
+// Automatically resolve asset paths whether ops.php runs at root or in /php/
 $assetPrefix = file_exists(__DIR__ . '/assets/logo.png') ? 'assets/' : '../assets/';
 $opsLogoPath = $assetPrefix . 'logo.png';
+$logoEsc     = htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8');
 
 if (!function_exists('ops_render_media_or_fallback')) {
     function ops_render_media_or_fallback(string $url, string $alt, string $fallbackHtml): string
@@ -37,8 +39,8 @@ if (!function_exists('ops_render_media_or_fallback')) {
             return $fallbackHtml;
         }
 
-        $pathOnly = parse_url($cleanUrl, PHP_URL_PATH) ?? '';
-        $ext = strtolower(pathinfo($pathOnly, PATHINFO_EXTENSION));
+        $pathOnly   = parse_url($cleanUrl, PHP_URL_PATH) ?? '';
+        $ext        = strtolower(pathinfo($pathOnly, PATHINFO_EXTENSION));
         $escapedUrl = htmlspecialchars($cleanUrl, ENT_QUOTES, 'UTF-8');
         $escapedAlt = htmlspecialchars($alt, ENT_QUOTES, 'UTF-8');
 
@@ -70,7 +72,7 @@ require_once $headerPath;
 <div class="ops-page">
 
   <!-- ================================================================
-       1. NEAR-FULLWIDTH HERO BANNER (Floating Elements + iPhone 16+)
+       1. NEAR-FULLWIDTH HERO BANNER (Floating Cards + Slim iPhone 16+)
        ================================================================ -->
   <section class="ops-hero-section">
     <div class="ops-hero-wrap">
@@ -80,29 +82,30 @@ require_once $headerPath;
         </div>
 
         <div class="ops-hero-header animate-entrance">
-          <div class="ops-eyebrow">
-            <img src="<?= htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8') ?>" alt="Workly" class="ops-inline-logo">
-            <span>Workly OPS · Instant Sync &amp; Connectivity</span>
+          <div class="ops-kicker">
+            <img src="<?= $logoEsc ?>" alt="Workly" class="ops-inline-logo">
+            <span>Workly OPS</span>
+            <span aria-hidden="true">·</span>
+            <span>Instant Sync &amp; Connectivity</span>
           </div>
           <h1>One connected workspace<br>for <span class="ops-gradient-text">seamless VA operations</span></h1>
           <p>
-            Track deliverables, monitor VA turnaround &amp; SLA benchmarks, balance client retainers, and centralize team email—all synchronized in real time.
+            Organize VA deliverables, monitor real-time SLA performance, balance client retainers, and centralize team email threads so every request finishes faster with zero guesswork.
           </p>
           <div class="ops-hero-actions">
-            <a class="ops-btn ops-btn--dark" href="find-va">
+            <a class="ops-btn ops-btn--primary" href="find-va">
               <span>Find Your VA</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a class="ops-btn ops-btn--glass" href="#ops-capabilities">Explore Capabilities</a>
+            <a class="ops-btn ops-btn--glass" href="#ops-concept">How OPS Works</a>
           </div>
         </div>
 
-        <!-- Centered iPhone 16+ Showcase + Continuous Floating Elements -->
+        <!-- Centered Slim iPhone 16+ + Continuous Floating Cards -->
         <div class="ops-hero-stage">
 
-          <!-- Floating Card Top-Left: Active VA Deliverable -->
           <div class="ops-float-card ops-float-card--tl" data-parallax="18">
-            <div class="ops-float-badge ops-float-badge--amber">To Do · High</div>
+            <span class="ops-float-meta-line">To Do · High Priority</span>
             <strong>Fix marketing banner</strong>
             <div class="ops-float-meta">
               <span>BrightPath Digital</span>
@@ -111,30 +114,26 @@ require_once $headerPath;
             <div class="ops-mini-bar"><span style="width:40%"></span></div>
           </div>
 
-          <!-- Floating Card Bottom-Left: Email Hub -->
           <div class="ops-float-card ops-float-card--bl" data-parallax="-14">
             <div class="ops-float-row">
               <span class="ops-avatar-pill">EB</span>
               <div>
                 <strong>Email Hub · 6 Unread</strong>
-                <small>Ethan Brooks replied to client</small>
+                <small>Ethan Brooks replied to client brief</small>
               </div>
             </div>
           </div>
 
-          <!-- Floating Card Top-Right: SLA Benchmark -->
           <div class="ops-float-card ops-float-card--tr" data-parallax="-20">
-            <div class="ops-float-badge ops-float-badge--emerald">Pod On-Time SLA</div>
-            <strong>94.8% · 2.6h Avg</strong>
+            <span class="ops-float-meta-line ops-meta-ok">Pod On-Time SLA</span>
+            <strong>94.8% · 2.6h Turnaround</strong>
             <small>Ethan 93.0% · Olivia 96.5%</small>
           </div>
 
-          <!-- Floating Pill Bottom-Right: Client Utilization -->
-          <div class="ops-float-pill ops-float-pill--br" data-parallax="15">
-            <span class="ops-pill-avatars">
-              <i>OC</i><i>EB</i>
-            </span>
-            <span>Client Retainers · <b>66.9% Used</b></span>
+          <div class="ops-float-card ops-float-card--br" data-parallax="15">
+            <span class="ops-float-meta-line">Retainer Capacity</span>
+            <strong>120.5 / 180h Used (66.9%)</strong>
+            <small>BrightPath 68% · Northstar 65.6%</small>
           </div>
 
           <!-- Centered Slim iPhone 16+ Frame -->
@@ -143,7 +142,6 @@ require_once $headerPath;
               <div class="ops-phone-island" aria-hidden="true"></div>
               <div class="ops-phone-viewport">
                 <?php
-                $logoEsc = htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8');
                 $heroPhoneFallback = '
                   <div class="ops-app-phone-ui">
                     <div class="ops-app-statusbar">
@@ -166,7 +164,7 @@ require_once $headerPath;
                         </div>
                         <div>
                           <strong>Email Hub · BrightPath Digital</strong>
-                          <small>Re: Campaign assets &amp; SLA approved</small>
+                          <small>Campaign assets &amp; SLA approved</small>
                         </div>
                       </div>
                       <div class="ops-app-notif ops-app-notif--deep">
@@ -190,12 +188,11 @@ require_once $headerPath;
                     </div>
                   </div>
                 ';
-                echo ops_render_media_or_fallback($opsMedia['hero_center'], 'Workly OPS live assistant feed', $heroPhoneFallback);
+                echo ops_render_media_or_fallback($opsMedia['hero_center'], 'Workly OPS assistant activity stream', $heroPhoneFallback);
                 ?>
               </div>
             </div>
 
-            <!-- Overlapping Front Action Cards -->
             <div class="ops-hero-overlay-stack">
               <div class="ops-overlay-card ops-overlay-card--primary">
                 <span class="ops-overlay-icon">
@@ -213,7 +210,7 @@ require_once $headerPath;
                 </span>
                 <div class="ops-overlay-text">
                   <strong>Team SLA Summary · 94.8% On-Time</strong>
-                  <small>Real-time VA velocity &amp; deliverable metrics</small>
+                  <small>Live deliverable velocity &amp; QA metrics</small>
                 </div>
                 <span class="ops-overlay-chevron">›</span>
               </div>
@@ -226,227 +223,426 @@ require_once $headerPath;
   </section>
 
   <!-- ================================================================
-       2. ASYMMETRIC 4-CARD BENTO GRID (4 Distinct Platform Capabilities)
+       2. PLATFORM CONCEPT — WHY WORKLY OPS IMPROVES QUALITY & SPEED
        ================================================================ -->
-  <section class="ops-bento-section" id="ops-capabilities">
+  <section class="ops-concept-section" id="ops-concept">
     <div class="ops-container">
-      <div class="ops-section-heading">
-        <span class="ops-eyebrow">Platform Pillars</span>
-        <h2>Everything your VA needs, built into one rhythm</h2>
-        <p>Four core capabilities working in instant sync—eliminating scattered spreadsheets, blind spots, and manual follow-ups.</p>
-      </div>
-
-      <!-- Row 1: Wide Card (Instant Sync) + Compact Card (Task Stage Control) -->
-      <div class="ops-bento-row ops-bento-row--wide-left">
-
-        <!-- CARD 1 (Wide): Instant Sync Hub -->
-        <article class="ops-bento-card ops-card--lilac">
-          <div class="ops-bento-split">
-            <div class="ops-bento-copy">
-              <span class="ops-card-tag">Instant Sync</span>
-              <h3>Unified Workspace</h3>
-              <p>Tasks, client accounts, team availability, and inbox threads update simultaneously—zero status chasing.</p>
-              <a href="#ops-interactive-suite" class="ops-text-link">Explore live suite →</a>
-            </div>
-
-            <div class="ops-sync-diagram" aria-label="Instant sync network visualization">
-              <div class="ops-sync-ring"></div>
-              <div class="ops-sync-core">
-                <img src="<?= htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8') ?>" alt="Workly" class="ops-sync-logo">
-              </div>
-              <div class="ops-sync-node ops-sync-node--1"><span>Tasks</span></div>
-              <div class="ops-sync-node ops-sync-node--2"><span>Email Hub</span></div>
-              <div class="ops-sync-node ops-sync-node--3"><span>Client CRM</span></div>
-              <div class="ops-sync-node ops-sync-node--4"><span>SLA &amp; PTO</span></div>
-            </div>
+      <div class="ops-concept-grid ops-reveal">
+        <div class="ops-concept-copy">
+          <div class="ops-kicker ops-kicker--subtle">
+            <span>The OPS Method</span>
+            <span aria-hidden="true">·</span>
+            <span>Quality &amp; Response Speed</span>
           </div>
-        </article>
+          <h2>Talent alone stalls without structured execution.</h2>
+          <p>
+            Most remote setups break down in scattered chat messages, unclear handoffs, and blind turnaround times. Workly OPS gives your dedicated VA and leadership team a single operational cadence—cutting response delays and preventing rework before deliverables ever ship.
+          </p>
 
-        <!-- CARD 2 (Compact): Task Stage Control -->
-        <article class="ops-bento-card ops-card--mint">
-          <div class="ops-bento-copy">
-            <span class="ops-card-tag">Kanban Flow</span>
-            <h3>Task Control</h3>
-            <p>Track subtasks, priorities, and completion progress by stage.</p>
-          </div>
-
-          <div class="ops-mgmt-chips" id="opsMgmtFilter">
-            <button type="button" class="ops-chip active" data-stage="all">All</button>
-            <button type="button" class="ops-chip" data-stage="todo">To Do</button>
-            <button type="button" class="ops-chip" data-stage="progress">In Progress</button>
-            <button type="button" class="ops-chip" data-stage="done">Completed</button>
-          </div>
-
-          <div class="ops-mgmt-preview" id="opsMgmtCard">
-            <div class="ops-mgmt-top">
-              <strong id="opsMgmtTitle">Month-End Bookkeeping</strong>
-              <span class="ops-badge-pct" id="opsMgmtPct">68%</span>
-            </div>
-            <div class="ops-progress-track">
-              <div class="ops-progress-fill" id="opsMgmtBar" style="width: 68%;"></div>
-            </div>
-            <small id="opsMgmtClient">BrightPath Digital · Assigned to Ethan Brooks</small>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Row 2: Compact Card (VA Performance Graph + Multi-Stop Cursor) + Wide Card (Client CRM & Capacity) -->
-      <div class="ops-bento-row ops-bento-row--wide-right">
-
-        <!-- CARD 3 (Compact): VA Completion & Turnaround Graph + Interactive Named Cursor -->
-        <article class="ops-bento-card ops-card--ivory">
-          <div class="ops-bento-copy">
-            <span class="ops-card-tag">Performance Analytics</span>
-            <h3>VA Completion &amp; SLA</h3>
-            <p>Measure completion rates, turnaround speed, and on-time SLA across every assistant.</p>
-          </div>
-
-          <div class="ops-graph-stage" id="opsGraphStage">
-            <div class="ops-graph-header">
-              <div class="ops-graph-legend">
-                <span><i class="dot-purple"></i>Completion</span>
-                <span><i class="dot-green"></i>On-Time SLA</span>
-              </div>
-              <span class="ops-gkpi-pill">Pod SLA: <b>94.8%</b></span>
-            </div>
-
-            <!-- Combo Bar + Turnaround Curve inspired by Dashboard Screenshot -->
-            <div class="ops-combo-chart">
-              <div class="ops-gcol ops-gcol--ethan">
-                <div class="ops-gbar-pair">
-                  <span class="bar-p" style="height: 36%;"></span>
-                  <span class="bar-g" style="height: 93%;"></span>
-                </div>
-                <small>Ethan B.</small>
-              </div>
-              <div class="ops-gcol ops-gcol--peak">
-                <div class="ops-gbar-pair">
-                  <span class="bar-p" style="height: 72%;"></span>
-                  <span class="bar-g" style="height: 95%;"></span>
-                </div>
-                <small>Pod Avg</small>
-              </div>
-              <div class="ops-gcol ops-gcol--olivia">
-                <div class="ops-gbar-pair">
-                  <span class="bar-p" style="height: 58%;"></span>
-                  <span class="bar-g" style="height: 97%;"></span>
-                </div>
-                <small>Olivia C.</small>
+          <div class="ops-concept-pillars">
+            <div class="ops-pillar-item">
+              <span class="ops-pillar-num">01</span>
+              <div>
+                <strong>Zero-Ambiguity Briefs</strong>
+                <p>Every task enters with client context, subtasks, and due-date SLAs attached—eliminating back-and-forth clarifications.</p>
               </div>
             </div>
-
-            <!-- Dynamic Tooltip driven by Scripted Mouse -->
-            <div class="ops-graph-tooltip" id="opsGraphTooltip">
-              <strong class="tt-name">Ethan Brooks</strong>
-              <span class="tt-role">Marketing</span>
-              <div class="tt-metrics">
-                <b class="tt-sla">93.0% SLA</b>
-                <small class="tt-turn">2.6h Turnaround</small>
+            <div class="ops-pillar-item">
+              <span class="ops-pillar-num">02</span>
+              <div>
+                <strong>2.6h Average Turnaround Guardrails</strong>
+                <p>Real-time SLA alerts flag stalled deliverables early so your VA resolves bottlenecks before client deadlines slip.</p>
               </div>
             </div>
-
-            <!-- Multi-Waypoint Animated Mouse with Name -->
-            <div class="ops-named-cursor ops-js-cursor" id="opsGraphCursor" aria-hidden="true">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#AE09E9" stroke="#ffffff" stroke-width="1.8"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
-              <span>Jordan · Lead</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 4 (Wide): Client CRM & Retainer Utilization -->
-        <article class="ops-bento-card ops-card--slate">
-          <div class="ops-bento-split">
-            <div class="ops-bento-copy">
-              <span class="ops-card-tag">Client CRM &amp; Retainers</span>
-              <h3>Account Capacity</h3>
-              <p>Track contracted hours, consumed deliverables, and assigned VAs per client account.</p>
-              <div class="ops-mgmt-chips" id="opsCrmToggle">
-                <button type="button" class="ops-chip active" data-mode="retainer">Retainer Usage</button>
-                <button type="button" class="ops-chip" data-mode="sla">SLA Health</button>
-              </div>
-            </div>
-
-            <div class="ops-crm-mini-panel">
-              <div class="ops-crm-kpis">
-                <div><small>Consumed / Avg</small><strong id="opsCrmTotal">120.5h</strong></div>
-                <div><small>Portfolio Rate</small><strong class="ops-text-purple" id="opsCrmRate">66.9%</strong></div>
-              </div>
-              <div class="ops-crm-mini-row">
-                <div class="ops-crm-row-top">
-                  <strong>BrightPath Digital</strong>
-                  <span id="opsBpLabel">68.0 / 100h</span>
-                </div>
-                <div class="ops-progress-track"><div class="ops-progress-fill" id="opsBpBar" style="width: 68%;"></div></div>
-                <small>Assigned VA: Ethan Brooks · Active</small>
-              </div>
-              <div class="ops-crm-mini-row">
-                <div class="ops-crm-row-top">
-                  <strong>Northstar Consulting</strong>
-                  <span id="opsNsLabel">52.5 / 80h</span>
-                </div>
-                <div class="ops-progress-track"><div class="ops-progress-fill" id="opsNsBar" style="width: 65.6%;"></div></div>
-                <small>Assigned VA: Olivia Carter · Active</small>
+            <div class="ops-pillar-item">
+              <span class="ops-pillar-num">03</span>
+              <div>
+                <strong>Continuous PTO Coverage</strong>
+                <p>Approved time-off calendars automatically pair backup VAs with client workflows for uninterrupted quality.</p>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
+        <div class="ops-compare-card">
+          <div class="ops-compare-head">
+            <div>
+              <strong>Operational Impact Benchmark</strong>
+              <small>Toggle between ad-hoc chat workflows and Workly OPS</small>
+            </div>
+            <div class="ops-segmented" id="opsCompareToggle" role="tablist" aria-label="Workflow comparison">
+              <button type="button" class="ops-seg-btn active" data-compare="with" aria-selected="true">With Workly OPS</button>
+              <button type="button" class="ops-seg-btn" data-compare="without" aria-selected="false">Ad-Hoc Chats</button>
+            </div>
+          </div>
+
+          <div class="ops-compare-metrics">
+            <div class="ops-cmp-stat">
+              <small>Avg Response Turnaround</small>
+              <strong id="opsCmpTurn">2.6h</strong>
+              <span id="opsCmpTurnSub">Same-shift execution with live priority queues</span>
+            </div>
+            <div class="ops-cmp-stat">
+              <small>On-Time Deliverable SLA</small>
+              <strong id="opsCmpSla" class="ops-text-accent">94.8%</strong>
+              <span id="opsCmpSlaSub">Measured across BrightPath &amp; Northstar pods</span>
+            </div>
+            <div class="ops-cmp-stat">
+              <small>Rework &amp; Revision Rate</small>
+              <strong id="opsCmpRework">3.2%</strong>
+              <span id="opsCmpReworkSub">Subtask checklists verified prior to handoff</span>
+            </div>
+            <div class="ops-cmp-stat">
+              <small>Inbox Triage Speed</small>
+              <strong id="opsCmpInbox">18m</strong>
+              <span id="opsCmpInboxSub">Auto-labeled client threads inside Email Hub</span>
+            </div>
+          </div>
+
+          <div class="ops-compare-foot">
+            <span id="opsCmpSummary">Result: Up to 3.4x faster client response and predictable weekly output.</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       3. WIDE WORKSPACE SHOWCASE — KANBAN & DELIVERABLE VELOCITY
+       3. STICKY IMMERSIVE PARALLAX WORKFLOW SECTION
        ================================================================ -->
-  <section class="ops-feature-banner">
+  <section class="ops-sticky-section" id="opsStickySection">
     <div class="ops-container">
-      <div class="ops-wide-card ops-wide-card--lavender">
-        <div class="ops-wide-grid">
-          <div class="ops-wide-copy">
-            <span class="ops-eyebrow">Kanban &amp; 30-Day Velocity</span>
-            <h2>Every deliverable tracked from backlog to sign-off</h2>
-            <p>
-              Organize work across Backlog, To Do, In Progress, and Completed while automatically aggregating daily due-versus-completed velocity.
-            </p>
-            <ul class="ops-clean-list">
-              <li><span class="ops-check-badge">✓</span><span>4-column Kanban distribution by status or VA assignee</span></li>
-              <li><span class="ops-check-badge">✓</span><span>Priority alerts &amp; subtask progress bars on every card</span></li>
-              <li><span class="ops-check-badge">✓</span><span>30-day deliverable velocity chart for leadership clarity</span></li>
-            </ul>
-            <a class="ops-btn ops-btn--primary" href="find-va">Match With a VA</a>
+      <div class="ops-section-heading">
+        <div class="ops-kicker ops-kicker--subtle">
+          <span>Operational Flow</span>
+          <span aria-hidden="true">·</span>
+          <span>Sticky Live Walkthrough</span>
+        </div>
+        <h2>Follow a deliverable from intake to executive sign-off</h2>
+        <p>Scroll or click each step to watch how Workly OPS keeps context, execution, and reporting synchronized.</p>
+      </div>
+
+      <div class="ops-sticky-grid">
+        <!-- Left Scrollable Narrative Chapters -->
+        <div class="ops-sticky-steps" id="opsStickySteps">
+          <button type="button" class="ops-sticky-step active" data-sticky-step="0">
+            <span class="ops-step-index">01 · Dispatch</span>
+            <h3>Requests land with priority &amp; client context</h3>
+            <p>Incoming client emails or retainer requests convert straight into structured Kanban cards with subtasks, due windows, and assigned VA ownership.</p>
+          </button>
+
+          <button type="button" class="ops-sticky-step" data-sticky-step="1">
+            <span class="ops-step-index">02 · Execution</span>
+            <h3>Email Hub &amp; subtasks update side-by-side</h3>
+            <p>Your VA works inside one unified queue—checking off subtasks, replying on labeled client threads, and logging retainer hours automatically.</p>
+          </button>
+
+          <button type="button" class="ops-sticky-step" data-sticky-step="2">
+            <span class="ops-step-index">03 · Verification</span>
+            <h3>SLA metrics &amp; retainer health update live</h3>
+            <p>Completed deliverables feed 30-day velocity charts, per-VA turnaround benchmarks, and leadership-ready CSV or PDF SLA reports.</p>
+          </button>
+        </div>
+
+        <!-- Right Sticky Parallax Stage -->
+        <div class="ops-sticky-stage-col">
+          <div class="ops-sticky-stage" id="opsStickyStage">
+            <div class="ops-sticky-bg-glow" aria-hidden="true"></div>
+
+            <!-- Layer 0: Dispatch -->
+            <div class="ops-sticky-panel active" id="opsStickyPanel0">
+              <div class="ops-st-header">
+                <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
+                <strong>Step 01 · Structured Deliverable Dispatch</strong>
+                <span class="ops-st-status">Queue Synced</span>
+              </div>
+              <div class="ops-st-card">
+                <small>BrightPath Digital · Marketing Pod</small>
+                <h4>Launch Q4 Campaign Landing Assets</h4>
+                <p>Subtasks: Hero copy check (done) · Banner QA (in progress) · Client approval</p>
+                <div class="ops-st-progress">
+                  <div class="ops-progress-track"><div class="ops-progress-fill" style="width: 40%;"></div></div>
+                  <span>40% · SLA Window: 3.0h remaining</span>
+                </div>
+              </div>
+              <div class="ops-st-float-layer" data-sticky-parallax>
+                <strong>Auto-Assigned: Ethan Brooks</strong>
+                <small>Client Retainer: 68.0 / 100h · Active</small>
+              </div>
+            </div>
+
+            <!-- Layer 1: Execution -->
+            <div class="ops-sticky-panel" id="opsStickyPanel1">
+              <div class="ops-st-header">
+                <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
+                <strong>Step 02 · Email Hub &amp; Subtask Progress</strong>
+                <span class="ops-st-status">In Execution</span>
+              </div>
+              <div class="ops-st-card">
+                <small>Northstar Consulting · Inbox Thread #24</small>
+                <h4>Client CRM Retainer Audit &amp; Reply</h4>
+                <p>Ethan attached updated spreadsheet and moved thread from Unread to Client-Ready.</p>
+                <div class="ops-st-progress">
+                  <div class="ops-progress-track"><div class="ops-progress-fill" style="width: 78%;"></div></div>
+                  <span>78% · Zero missed client replies</span>
+                </div>
+              </div>
+              <div class="ops-st-float-layer" data-sticky-parallax>
+                <strong>Olivia Carter · Parallel Review</strong>
+                <small>Cross-checked financial rows in 1.8h</small>
+              </div>
+            </div>
+
+            <!-- Layer 2: Verification -->
+            <div class="ops-sticky-panel" id="opsStickyPanel2">
+              <div class="ops-st-header">
+                <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
+                <strong>Step 03 · SLA Scorecards &amp; Sign-Off</strong>
+                <span class="ops-st-status ops-st-ok">Verified · 100%</span>
+              </div>
+              <div class="ops-st-card">
+                <small>Executive SLA Summary · Nov 2026</small>
+                <h4>Month-End Bookkeeping &amp; Assets Shipped</h4>
+                <p>Completed ahead of deadline—automatically logged into 30-day Pod Velocity &amp; PDF exports.</p>
+                <div class="ops-st-progress">
+                  <div class="ops-progress-track"><div class="ops-progress-fill ops-fill-ok" style="width: 100%;"></div></div>
+                  <span>94.8% Pod On-Time SLA · 2.6h Avg Turnaround</span>
+                </div>
+              </div>
+              <div class="ops-st-float-layer" data-sticky-parallax>
+                <strong>Report Export Ready</strong>
+                <small>CSV &amp; Executive SLA PDF synced</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       4. COLLABORATIVE MULTI-CURSOR SUITE — TEAM TASKS, BENCHMARKS & PTO
+       ================================================================ -->
+  <section class="ops-collab-section" id="ops-collab">
+    <div class="ops-container">
+      <div class="ops-section-heading">
+        <div class="ops-kicker ops-kicker--subtle">
+          <span>Live Multi-Cursor Suite</span>
+          <span aria-hidden="true">·</span>
+          <span>Coordinated Execution</span>
+        </div>
+        <h2>Watch your team coordinate tasks, SLAs, and coverage together</h2>
+        <p>Multiple cursors operate in real time across Kanban columns, performance benchmarks, and PTO schedules—click any element yourself to test every workflow.</p>
+      </div>
+
+      <div class="ops-collab-shell ops-reveal" id="opsCollabStage">
+        <!-- Toolbar -->
+        <div class="ops-collab-topbar">
+          <div class="ops-collab-brand">
+            <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
+            <div>
+              <strong>Workly OPS · Weekly Pod Suite</strong>
+              <small id="opsCollabStatus">Ethan moving Marketing Banner to In Progress...</small>
+            </div>
           </div>
 
-          <!-- Wide Browser Frame (Reads $opsMedia['wide_frame']) -->
-          <div class="ops-wide-device">
-            <div class="ops-browser-frame">
-              <div class="ops-browser-top">
-                <div class="ops-browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="ops-browser-bar">ops.worklystaff.com / tasks</div>
+          <div class="ops-collab-controls">
+            <div class="ops-segmented ops-segmented--light" id="opsBenchmarkTabs">
+              <button type="button" class="ops-seg-btn" data-tf="7d">7D</button>
+              <button type="button" class="ops-seg-btn" data-tf="14d">14D</button>
+              <button type="button" class="ops-seg-btn active" data-tf="30d">30D</button>
+            </div>
+            <button type="button" class="ops-collab-playbtn" id="opsCollabToggle" aria-pressed="true">Pause Live Team</button>
+          </div>
+        </div>
+
+        <!-- Functional Collaborative Workspace Body -->
+        <div class="ops-collab-workspace">
+          <!-- Kanban Columns (Real cards move between columns!) -->
+          <div class="ops-collab-kanban">
+            <div class="ops-collab-col" data-col="todo">
+              <div class="ops-col-title">
+                <span>To Do</span>
+                <b id="opsCountTodo">1</b>
               </div>
-              <div class="ops-browser-viewport">
+              <div class="ops-col-dropzone" id="opsZoneTodo">
+                <article class="ops-task-card" id="opsTaskBanner" data-task="banner">
+                  <div class="ops-task-meta">High · BrightPath Digital</div>
+                  <strong>Fix marketing banner</strong>
+                  <div class="ops-task-bar"><span id="opsBarBanner" style="width: 40%;"></span></div>
+                  <small id="opsPctBanner">40% · Ethan Brooks</small>
+                </article>
+              </div>
+            </div>
+
+            <div class="ops-collab-col" data-col="progress">
+              <div class="ops-col-title">
+                <span>In Progress</span>
+                <b id="opsCountProg">1</b>
+              </div>
+              <div class="ops-col-dropzone" id="opsZoneProg">
+                <article class="ops-task-card" id="opsTaskCrm" data-task="crm">
+                  <div class="ops-task-meta">Medium · Northstar</div>
+                  <strong>Client CRM Retainer Audit</strong>
+                  <div class="ops-task-bar"><span id="opsBarCrm" style="width: 75%;"></span></div>
+                  <small id="opsPctCrm">75% · Olivia Carter</small>
+                </article>
+              </div>
+            </div>
+
+            <div class="ops-collab-col" data-col="done">
+              <div class="ops-col-title">
+                <span>Completed</span>
+                <b id="opsCountDone">1</b>
+              </div>
+              <div class="ops-col-dropzone" id="opsZoneDone">
+                <article class="ops-task-card is-complete" id="opsTaskReport" data-task="report">
+                  <div class="ops-task-meta ops-meta-ok">Verified · Bookkeeping</div>
+                  <strong>Month-End Reconciliation</strong>
+                  <div class="ops-task-bar"><span id="opsBarReport" style="width: 100%;"></span></div>
+                  <small id="opsPctReport">100% · Signed Off</small>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Panel: Live Velocity Graph & Interactive PTO Approval -->
+          <div class="ops-collab-side">
+            <div class="ops-bench-box">
+              <div class="ops-bench-head">
+                <div>
+                  <small>Team Performance &amp; SLA</small>
+                  <strong id="opsCollabSlaVal">94.8% On-Time SLA</strong>
+                </div>
+                <span class="ops-bench-turn" id="opsCollabTurnVal">2.6h Avg</span>
+              </div>
+              <svg viewBox="0 0 280 76" class="ops-collab-svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="opsCollabGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#AE09E9" stop-opacity="0.22"/>
+                    <stop offset="100%" stop-color="#AE09E9" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path id="opsCollabArea" d="M8 62 Q 70 28, 140 16 T 272 22 L 272 74 L 8 74 Z" fill="url(#opsCollabGrad)"/>
+                <path id="opsCollabCurve" d="M8 62 Q 70 28, 140 16 T 272 22" fill="none" stroke="#AE09E9" stroke-width="2.5" stroke-linecap="round"/>
+                <circle id="opsCollabDot" cx="140" cy="16" r="4.5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
+              </svg>
+              <div class="ops-va-bars">
+                <div><span>Ethan B.</span><b>93.0% SLA</b></div>
+                <div><span>Olivia C.</span><b>96.5% SLA</b></div>
+              </div>
+            </div>
+
+            <div class="ops-pto-box">
+              <div class="ops-pto-head">
+                <strong>Team PTO &amp; Backup Coverage</strong>
+                <small id="opsPtoStatusText">Nov 19: Ethan Pending</small>
+              </div>
+              <div class="ops-pto-days" id="opsPtoDays">
+                <button type="button" class="ops-pto-btn is-approved" data-pto="17 · Ethan Approved (Covered by Olivia)">
+                  <span>Tue 17</span>
+                  <b>Approved</b>
+                </button>
+                <button type="button" class="ops-pto-btn is-approved" data-pto="18 · Ethan Approved (Covered by Olivia)">
+                  <span>Wed 18</span>
+                  <b>Approved</b>
+                </button>
+                <button type="button" class="ops-pto-btn" id="opsPtoTarget" data-pto="19 · Ethan Approved (Covered by Olivia)">
+                  <span>Thu 19</span>
+                  <b id="opsPto19Label">Approve</b>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Simultaneous Collaborating Cursors -->
+          <div class="ops-named-cursor ops-collab-cursor ops-cursor--lead" id="opsCursorLead" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#0f172a" stroke="#ffffff" stroke-width="1.8"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
+            <span>Jordan · Client Lead</span>
+          </div>
+
+          <div class="ops-named-cursor ops-collab-cursor ops-cursor--ethan" id="opsCursorEthan" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#AE09E9" stroke="#ffffff" stroke-width="1.8"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
+            <span>Ethan · VA</span>
+          </div>
+
+          <div class="ops-named-cursor ops-collab-cursor ops-cursor--olivia" id="opsCursorOlivia" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#10b981" stroke="#ffffff" stroke-width="1.8"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
+            <span>Olivia · VA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       5. INTERACTIVE 3D DESKTOP PLATFORM SHOWCASE
+       ================================================================ -->
+  <section class="ops-3d-section" id="ops-3d-platform">
+    <div class="ops-container">
+      <div class="ops-section-heading">
+        <div class="ops-kicker ops-kicker--subtle">
+          <span>3D Workspace Explorer</span>
+          <span aria-hidden="true">·</span>
+          <span>Spatial Desktop View</span>
+        </div>
+        <h2>Inspect every layer of the Workly OPS command center</h2>
+        <p>Move your pointer across the 3D workstation, separate UI depth layers, or switch core platform modules below.</p>
+      </div>
+
+      <div class="ops-3d-toolbar">
+        <div class="ops-segmented" id="ops3dViews" role="tablist" aria-label="Platform Views">
+          <button type="button" class="ops-seg-btn active" data-3d-view="tasks">Tasks Board</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="clients">Client CRM</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="analytics">SLA Analytics</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="email">Email Hub</button>
+        </div>
+
+        <div class="ops-segmented" id="ops3dModes" role="tablist" aria-label="3D Perspective Modes">
+          <button type="button" class="ops-seg-btn active" data-3d-mode="tilt">3D Interactive</button>
+          <button type="button" class="ops-seg-btn" data-3d-mode="exploded">Exploded Layers</button>
+          <button type="button" class="ops-seg-btn" data-3d-mode="flat">Front Focus</button>
+        </div>
+      </div>
+
+      <div class="ops-3d-scene" id="ops3dScene">
+        <div class="ops-3d-rig is-tilt" id="ops3dRig">
+
+          <!-- Base Z Layer: Window Chrome + Sidebar -->
+          <div class="ops-3d-layer ops-3d-layer--base">
+            <div class="ops-browser-top">
+              <div class="ops-browser-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="ops-browser-bar" id="ops3dAddress">ops.worklystaff.com / tasks</div>
+            </div>
+
+            <div class="ops-3d-body">
+              <aside class="ops-3d-sidebar">
+                <div class="ops-mock-logo">
+                  <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
+                  <span>Workly</span>
+                </div>
+                <button type="button" class="ops-3d-nav active" data-3d-nav="tasks">Tasks</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="clients">Client CRM</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="analytics">SLA Reports</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="email">Email Hub <em>6</em></button>
+              </aside>
+
+              <!-- Mid Z Layer: Active View Canvas (or $opsMedia['desktop_3d']) -->
+              <div class="ops-3d-layer ops-3d-layer--canvas">
                 <?php
-                $logoEsc = htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8');
-                $wideFallback = '
-                  <div class="ops-mock-app">
-                    <aside class="ops-mock-sidebar">
-                      <div class="ops-mock-logo">
-                        <img src="' . $logoEsc . '" alt="Workly" class="ops-mock-brand-img">
-                        <span>Workly</span>
-                      </div>
-                      <span>Overview</span>
-                      <span class="active">Tasks</span>
-                      <span>Clients</span>
-                      <span>Email Hub <em>6</em></span>
-                    </aside>
-                    <div class="ops-mock-main">
+                $desktopUrl = $opsMedia['desktop_3d'] !== '' ? $opsMedia['desktop_3d'] : $opsMedia['wide_frame'];
+                $desktop3dFallback = '
+                  <div class="ops-3d-views-wrap" id="ops3dScreen">
+                    <!-- View 1: Tasks Kanban -->
+                    <div class="ops-3d-view active" id="ops3dView-tasks">
                       <div class="ops-mock-header">
                         <strong>Weekly Task Organizer</strong>
-                        <span class="ops-mock-cta">+ New Deliverable</span>
+                        <span class="ops-mock-cta">33.3% Complete</span>
                       </div>
                       <div class="ops-mock-kanban">
                         <div class="ops-mock-col">
-                          <label>To Do · 33.3%</label>
+                          <label>To Do · 1</label>
                           <div class="ops-mock-card">
                             <span class="tag tag-high">High</span>
                             <b>Fix marketing banner</b>
@@ -455,125 +651,90 @@ require_once $headerPath;
                           </div>
                         </div>
                         <div class="ops-mock-col">
-                          <label>In Progress · 33.3%</label>
+                          <label>In Progress · 1</label>
                           <div class="ops-mock-card">
                             <span class="tag tag-med">Active</span>
-                            <b>Client CRM Update</b>
-                            <small>Ethan B. · 78%</small>
+                            <b>CRM Pipeline Sync</b>
+                            <small>Olivia C. · 78%</small>
                             <i><em style="width:78%"></em></i>
                           </div>
                         </div>
                         <div class="ops-mock-col">
-                          <label>Completed · 33.3%</label>
+                          <label>Completed · 1</label>
                           <div class="ops-mock-card">
                             <span class="tag tag-ok">Done</span>
-                            <b>Bookkeeping Sync</b>
+                            <b>Bookkeeping Close</b>
                             <small>Verified · 100%</small>
                             <i><em style="width:100%"></em></i>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ';
-                echo ops_render_media_or_fallback($opsMedia['wide_frame'], 'Workly OPS Weekly Task Organizer', $wideFallback);
-                ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ================================================================
-       4. TABLET / SLATE SHOWCASE — TEAM BENCHMARKS, GRAPHS & PTO COVERAGE
-       (Multi-Waypoint Animated Mouse Touring Real Dashboard Graphs)
-       ================================================================ -->
-  <section class="ops-feature-banner">
-    <div class="ops-container">
-      <div class="ops-wide-card ops-wide-card--sand">
-        <div class="ops-wide-grid ops-wide-grid--reverse">
-
-          <!-- Sleek Slate Frame (Reads $opsMedia['slate_analytics']) -->
-          <div class="ops-slate-device">
-            <div class="ops-slate-bezel">
-              <div class="ops-slate-camera" aria-hidden="true"></div>
-              <div class="ops-slate-viewport">
-                <?php
-                $analyticsFallback = '
-                  <div class="ops-slate-ui" id="opsSlateStage">
-                    <div class="ops-slate-top">
-                      <div>
-                        <strong>Team Performance &amp; VA Benchmarks</strong>
-                        <small id="opsSlateReadout">30D Productivity Curve · 94.8% Pod On-Time SLA</small>
+                    <!-- View 2: Client CRM -->
+                    <div class="ops-3d-view" id="ops3dView-clients">
+                      <div class="ops-mock-header">
+                        <strong>Client CRM &amp; Retainers</strong>
+                        <span class="ops-mock-cta">66.9% Portfolio Used</span>
                       </div>
-                      <div class="ops-slate-pills">
-                        <span data-slate-el="tab-roles">VA Roles</span>
-                        <span data-slate-el="tab-trends" class="is-hovered">Productivity</span>
-                      </div>
-                    </div>
-
-                    <!-- Productivity Spline Graph -->
-                    <div class="ops-slate-chart">
-                      <svg viewBox="0 0 320 74" class="ops-spline-svg" aria-hidden="true">
-                        <defs>
-                          <linearGradient id="opsSlateGrad" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stop-color="#0284c7" stop-opacity="0.22"/>
-                            <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
-                          </linearGradient>
-                        </defs>
-                        <path d="M12 64 Q 88 22, 162 14 T 308 62 L 308 72 L 12 72 Z" fill="url(#opsSlateGrad)"/>
-                        <path d="M12 64 Q 88 22, 162 14 T 308 62" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round"/>
-                        <circle cx="162" cy="14" r="5" fill="#AE09E9" stroke="#fff" stroke-width="2" data-slate-el="peak-point"/>
-                      </svg>
-                    </div>
-
-                    <!-- Bottom Split: Kanban Distribution + Team PTO Approval -->
-                    <div class="ops-slate-bottom">
-                      <div class="ops-slate-mini-box">
-                        <span>Kanban Distribution</span>
-                        <div class="ops-mini-dist">
-                          <i class="d-purple" style="height:70%"></i>
-                          <i class="d-blue" style="height:70%"></i>
-                          <i class="d-green" style="height:82%" data-slate-el="kanban-done"></i>
+                      <div class="ops-3d-crm-rows">
+                        <div class="ops-3d-crm-row">
+                          <div><b>BrightPath Digital</b><small>Lucas Bennett · Assigned VA: Ethan Brooks</small></div>
+                          <div class="ops-3d-usage"><span>68.0 / 100h</span><i><em style="width:68%"></em></i></div>
                         </div>
-                      </div>
-                      <div class="ops-slate-mini-box">
-                        <span>Team PTO Coverage</span>
-                        <div class="ops-mini-pto">
-                          <span>17 Ethan</span>
-                          <span>18 Ethan</span>
-                          <span class="pto-focus" data-slate-el="pto-day">19 Ethan</span>
+                        <div class="ops-3d-crm-row">
+                          <div><b>Northstar Consulting</b><small>Sophia Reynolds · Assigned VA: Olivia Carter</small></div>
+                          <div class="ops-3d-usage"><span>52.5 / 80h</span><i><em style="width:65.6%"></em></i></div>
                         </div>
                       </div>
                     </div>
 
-                    <!-- Multi-Stop Scripted Mouse Pointer -->
-                    <div class="ops-named-cursor ops-js-cursor" id="opsSlateCursor" aria-hidden="true">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="#AE09E9" stroke="#ffffff" stroke-width="1.8"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
-                      <span>Jordan Mitchell</span>
+                    <!-- View 3: SLA Analytics -->
+                    <div class="ops-3d-view" id="ops3dView-analytics">
+                      <div class="ops-mock-header">
+                        <strong>Executive SLA Benchmarks</strong>
+                        <span class="ops-mock-cta">94.8% On-Time</span>
+                      </div>
+                      <div class="ops-3d-kpis">
+                        <div><small>Ethan Brooks</small><b>93.0% SLA</b><span>2.6h avg turnaround</span></div>
+                        <div><small>Olivia Carter</small><b>96.5% SLA</b><span>1.8h avg turnaround</span></div>
+                        <div><small>Kanban Velocity</small><b>+33.3%</b><span>Zero overdue blockers</span></div>
+                      </div>
+                    </div>
+
+                    <!-- View 4: Email Hub -->
+                    <div class="ops-3d-view" id="ops3dView-email">
+                      <div class="ops-mock-header">
+                        <strong>Unified Email Hub</strong>
+                        <span class="ops-mock-cta">6 Unread Synced</span>
+                      </div>
+                      <div class="ops-3d-crm-rows">
+                        <div class="ops-3d-crm-row">
+                          <div><b>BrightPath Digital · Campaign QA</b><small>Ethan Brooks replied with updated hero assets</small></div>
+                          <span class="tag tag-ok">Synced</span>
+                        </div>
+                        <div class="ops-3d-crm-row">
+                          <div><b>Northstar Consulting · Monthly Report</b><small>Olivia Carter attached November SLA summary</small></div>
+                          <span class="tag tag-med">Labeled</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ';
-                echo ops_render_media_or_fallback($opsMedia['slate_analytics'], 'Workly OPS Team Performance Benchmarks and PTO Coverage', $analyticsFallback);
+                echo ops_render_media_or_fallback($desktopUrl, 'Workly OPS 3D Desktop Platform', $desktop3dFallback);
                 ?>
               </div>
             </div>
           </div>
 
-          <div class="ops-wide-copy">
-            <span class="ops-eyebrow">Team Benchmarks &amp; PTO Coverage</span>
-            <h2>Data-backed visibility without micromanagement</h2>
-            <p>
-              Compare completion velocity across 7, 14, or 30 days, spot bottlenecked tasks early, and approve VA time-off requests with zero coverage gaps.
-            </p>
-            <ul class="ops-clean-list">
-              <li><span class="ops-check-badge">✓</span><span>Per-VA completion rate &amp; average turnaround hours</span></li>
-              <li><span class="ops-check-badge">✓</span><span>Visual Team PTO Approval calendar preventing overlap</span></li>
-              <li><span class="ops-check-badge">✓</span><span>One-click CSV &amp; Executive SLA PDF report exports</span></li>
-            </ul>
-            <a class="ops-btn ops-btn--light" href="#ops-interactive-suite">Try Live Analytics →</a>
+          <!-- Elevated Front Z-Layer Cards (Separate physically in Exploded 3D Mode) -->
+          <div class="ops-3d-layer ops-3d-layer--float-a">
+            <small>Pod SLA Benchmark</small>
+            <strong>94.8% On-Time · 2.6h</strong>
+          </div>
+          <div class="ops-3d-layer ops-3d-layer--float-b">
+            <small>Active Portfolio Load</small>
+            <strong>120.5 / 180h Retainer</strong>
           </div>
 
         </div>
@@ -582,17 +743,21 @@ require_once $headerPath;
   </section>
 
   <!-- ================================================================
-       5. PROTRUDING BANNER — UNIFIED EMAIL HUB (Thin iPhone 16+ Protruding!)
+       6. PROTRUDING BANNER — UNIFIED EMAIL HUB (Slim iPhone 16+)
        ================================================================ -->
   <section class="ops-protrude-section">
     <div class="ops-container">
-      <div class="ops-protrude-banner">
+      <div class="ops-protrude-banner ops-reveal">
         <div class="ops-protrude-grid">
           <div class="ops-protrude-copy">
-            <span class="ops-eyebrow ops-eyebrow--light">Email Hub &amp; Instant Connectivity</span>
+            <div class="ops-kicker ops-kicker--light">
+              <span>Email Hub</span>
+              <span aria-hidden="true">·</span>
+              <span>Instant Connectivity</span>
+            </div>
             <h2>Client threads organized right beside the work</h2>
             <p>
-              Your VA filters inbox threads by client and label, attaches deliverables, and keeps executive communications structured in one shared hub.
+              Your VA filters inbox threads by client and label, attaches completed deliverables, and keeps executive communications structured in one shared hub.
             </p>
             <div class="ops-hero-actions ops-protrude-actions">
               <a class="ops-btn ops-btn--dark" href="find-va">Browse Verified VAs</a>
@@ -600,7 +765,6 @@ require_once $headerPath;
             </div>
           </div>
 
-          <!-- Protruding Slim iPhone 16+ Frame (Reads $opsMedia['banner_phone']) -->
           <div class="ops-protrude-visual">
             <div class="ops-phone-bezel ops-phone-bezel--iphone16 ops-phone-bezel--protrude">
               <div class="ops-phone-island" aria-hidden="true"></div>
@@ -649,8 +813,8 @@ require_once $headerPath;
               </div>
             </div>
 
-            <div class="ops-protrude-tag ops-protrude-tag--1">✓ Unread Threads Triaged</div>
-            <div class="ops-protrude-tag ops-protrude-tag--2">↗ Auto-Labeled by Client</div>
+            <div class="ops-protrude-tag ops-protrude-tag--1">Unread Threads Triaged</div>
+            <div class="ops-protrude-tag ops-protrude-tag--2">Auto-Labeled by Client</div>
           </div>
         </div>
       </div>
@@ -658,179 +822,72 @@ require_once $headerPath;
   </section>
 
   <!-- ================================================================
-       6. INTERACTIVE PLATFORM SUITE EXPLORER (4 Distinct Modules)
+       7. ENGAGE CLIENTS ACROSS SERVICE CATEGORIES & ROLES
        ================================================================ -->
-  <section class="ops-interactive-section" id="ops-interactive-suite">
+  <section class="ops-categories-section" id="ops-services">
     <div class="ops-container">
       <div class="ops-section-heading">
-        <span class="ops-eyebrow">Interactive Tour</span>
-        <h2>Explore every module in one workspace</h2>
-        <p>Switch tabs below to test analytics timeframes, task progression, email triage, and meeting scheduling.</p>
+        <div class="ops-kicker ops-kicker--subtle">
+          <span>Built For Every Specialty</span>
+          <span aria-hidden="true">·</span>
+          <span>7 Core Service Verticals</span>
+        </div>
+        <h2>How teams deploy Workly OPS across industries</h2>
+        <p>Select a department to see the exact deliverables, SLA targets, and operational workflows our vetted bilingual VAs run daily.</p>
       </div>
 
-      <div class="ops-tabs-bar" role="tablist" aria-label="Workly OPS Modules">
-        <button type="button" class="ops-tab-btn active" data-tab="analytics" role="tab" aria-selected="true">SLA &amp; Velocity</button>
-        <button type="button" class="ops-tab-btn" data-tab="tasks" role="tab" aria-selected="false">Task Suite</button>
-        <button type="button" class="ops-tab-btn" data-tab="email" role="tab" aria-selected="false">Email Hub</button>
-        <button type="button" class="ops-tab-btn" data-tab="calendar" role="tab" aria-selected="false">Meetings &amp; PTO</button>
-      </div>
+      <div class="ops-cat-shell ops-reveal">
+        <div class="ops-cat-tabs" id="opsCatTabs" role="tablist" aria-label="Service Categories">
+          <button type="button" class="ops-cat-btn active" data-cat="it">IT &amp; Tech Support</button>
+          <button type="button" class="ops-cat-btn" data-cat="marketing">Digital Marketing</button>
+          <button type="button" class="ops-cat-btn" data-cat="legal">Legal Support</button>
+          <button type="button" class="ops-cat-btn" data-cat="insurance">Insurance</button>
+          <button type="button" class="ops-cat-btn" data-cat="healthcare">Healthcare Admin</button>
+          <button type="button" class="ops-cat-btn" data-cat="management">Operations &amp; Admin</button>
+          <button type="button" class="ops-cat-btn" data-cat="realestate">Real Estate</button>
+        </div>
 
-      <div class="ops-interactive-panel">
+        <div class="ops-cat-panel">
+          <div class="ops-cat-main">
+            <span class="ops-cat-eyebrow" id="opsCatTag">IT &amp; Technical Operations</span>
+            <h3 id="opsCatTitle">Tier-1 ticket triage, QA logging, and cloud documentation</h3>
+            <p id="opsCatDesc">Technical VAs track incoming helpdesk escalations inside structured Kanban queues, attach system logs, and maintain predictable SLA response windows.</p>
+            <ul class="ops-cat-list" id="opsCatList">
+              <li>Helpdesk triage &amp; ticket routing with clear response SLAs</li>
+              <li>SOP documentation &amp; Knowledge Base maintenance</li>
+              <li>Daily QA verification checklists before handoff</li>
+            </ul>
+            <a class="ops-btn ops-btn--primary" id="opsCatLink" href="find-va">Find IT Support VAs →</a>
+          </div>
 
-        <!-- TAB 1: SLA & VELOCITY ANALYTICS -->
-        <div class="ops-tab-pane active" id="opsTab-analytics">
-          <div class="ops-pane-grid">
-            <div class="ops-pane-info">
-              <span class="ops-card-tag">Interactive Benchmarks</span>
-              <h3>Compare VA turnaround &amp; SLA</h3>
-              <p>Filter performance windows across 7, 14, or 30 days to verify on-time delivery and team velocity.</p>
-              <div class="ops-mgmt-chips" id="opsTimeframeTabs">
-                <button type="button" class="ops-chip" data-tf="7d">7 Days</button>
-                <button type="button" class="ops-chip" data-tf="14d">14 Days</button>
-                <button type="button" class="ops-chip active" data-tf="30d">30 Days</button>
-              </div>
-              <div class="ops-pane-metrics ops-pane-metrics--3">
-                <div><strong id="opsExpSla">94.8%</strong><span>On-Time SLA</span></div>
-                <div><strong id="opsExpTurn">2.6h</strong><span>Avg Turnaround</span></div>
-                <div><strong id="opsExpComp">91.4%</strong><span>30D Velocity</span></div>
-              </div>
+          <div class="ops-cat-metrics">
+            <div class="ops-cat-stat">
+              <small>Target First Response</small>
+              <strong id="opsCatSpeed">45m</strong>
             </div>
-            <div class="ops-pane-visual">
-              <div class="ops-exp-chart-card">
-                <div class="ops-exp-chart-top">
-                  <strong>Productivity &amp; Velocity Curve</strong>
-                  <span>Live Pod Benchmark</span>
-                </div>
-                <svg viewBox="0 0 320 70" class="ops-exp-svg" aria-hidden="true">
-                  <path id="opsExpCurve" d="M0 52 Q 60 40, 120 14 T 230 16 T 320 6" fill="none" stroke="#AE09E9" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-                <div class="ops-exp-bars">
-                  <div><span>Backlog</span><b>0%</b></div>
-                  <div><span>To Do</span><b>33.3%</b></div>
-                  <div><span>In Progress</span><b>33.3%</b></div>
-                  <div class="is-ok"><span>Completed</span><b>33.3%</b></div>
-                </div>
-              </div>
+            <div class="ops-cat-stat">
+              <small>Verified Pod SLA</small>
+              <strong id="opsCatSla">96.2%</strong>
+            </div>
+            <div class="ops-cat-stat">
+              <small>Workly OPS Modules Used</small>
+              <strong id="opsCatModules">Tasks · Email Hub · SLA Reports</strong>
             </div>
           </div>
         </div>
-
-        <!-- TAB 2: INTERACTIVE TASK SUITE -->
-        <div class="ops-tab-pane" id="opsTab-tasks">
-          <div class="ops-pane-grid">
-            <div class="ops-pane-info">
-              <span class="ops-card-tag">Kanban Task Suite</span>
-              <h3>Step-by-step deliverable flow</h3>
-              <p>Click a stage to simulate how your VA advances deliverables from prioritized queue to verified sign-off.</p>
-              <div class="ops-suite-controls" id="opsSuiteTriggers">
-                <button type="button" class="ops-suite-btn active" data-step="0">1. Prioritize</button>
-                <button type="button" class="ops-suite-btn" data-step="1">2. Execute</button>
-                <button type="button" class="ops-suite-btn" data-step="2">3. Deliver</button>
-              </div>
-            </div>
-            <div class="ops-pane-visual">
-              <div class="ops-suite-board">
-                <div class="ops-suite-col">
-                  <span class="ops-col-head">To Do</span>
-                  <div class="ops-suite-task active" id="opsSuiteTask0">
-                    <b>Marketing Banner QA</b>
-                    <small>High · BrightPath · 40%</small>
-                  </div>
-                </div>
-                <div class="ops-suite-col">
-                  <span class="ops-col-head">In Progress</span>
-                  <div class="ops-suite-task" id="opsSuiteTask1">
-                    <b>Client CRM Audit</b>
-                    <small>Olivia · 78% complete</small>
-                  </div>
-                </div>
-                <div class="ops-suite-col">
-                  <span class="ops-col-head">Completed</span>
-                  <div class="ops-suite-task" id="opsSuiteTask2">
-                    <b>Monthly SLA Export</b>
-                    <small>Verified · 100%</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 3: EMAIL HUB -->
-        <div class="ops-tab-pane" id="opsTab-email">
-          <div class="ops-pane-grid">
-            <div class="ops-pane-info">
-              <span class="ops-card-tag">Email Communications</span>
-              <h3>Inbox organized by client &amp; label</h3>
-              <p>Review client correspondence, filter attachments, and track team replies without leaving your workspace.</p>
-              <div class="ops-pane-metrics">
-                <div><strong>25 Threads</strong><span>Synced Conversations</span></div>
-                <div><strong>6 Unread</strong><span>Labeled by Account</span></div>
-              </div>
-            </div>
-            <div class="ops-pane-visual">
-              <div class="ops-email-stack">
-                <div class="ops-email-item active">
-                  <span class="ops-avatar-pill">BP</span>
-                  <div>
-                    <strong>BrightPath Digital · Q4 Assets Ready</strong>
-                    <small>Ethan Brooks: Attached landing banner &amp; SLA summary.</small>
-                  </div>
-                  <span class="ops-email-time">11:00 AM</span>
-                </div>
-                <div class="ops-email-item">
-                  <span class="ops-avatar-pill">NC</span>
-                  <div>
-                    <strong>Northstar Consulting · Retainer Review</strong>
-                    <small>Olivia Carter: Updated monthly utilization to 65.6%.</small>
-                  </div>
-                  <span class="ops-email-time">10:15 AM</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- TAB 4: MEETINGS & PTO CALENDAR -->
-        <div class="ops-tab-pane" id="opsTab-calendar">
-          <div class="ops-pane-grid">
-            <div class="ops-pane-info">
-              <span class="ops-card-tag">Calendar &amp; PTO Coverage</span>
-              <h3>Sync meetings &amp; time-off cleanly</h3>
-              <p>Select a day to check focus blocks, approved PTO coverage, and discovery meeting availability.</p>
-              <a href="./#calendly-section" class="ops-btn ops-btn--primary">Confirm Selected Slot →</a>
-            </div>
-            <div class="ops-pane-visual">
-              <div class="ops-interactive-cal">
-                <div class="ops-ic-header">
-                  <strong>November 2026</strong>
-                  <span id="opsSelectedDayText">Wed, Nov 25 · 10:30 AM · Full Coverage</span>
-                </div>
-                <div class="ops-ic-days" id="opsCalDays">
-                  <button type="button" class="ops-ic-day" data-day="Mon, Nov 23 · 09:30 AM · All VAs Online"><span>Mon</span><b>23</b></button>
-                  <button type="button" class="ops-ic-day" data-day="Tue, Nov 24 · 11:00 AM · All VAs Online"><span>Tue</span><b>24</b></button>
-                  <button type="button" class="ops-ic-day active" data-day="Wed, Nov 25 · 10:30 AM · Full Coverage"><span>Wed</span><b>25</b></button>
-                  <button type="button" class="ops-ic-day" data-day="Thu, Nov 26 · 02:00 PM · PTO Approved (Ethan)"><span>Thu</span><b>26</b></button>
-                  <button type="button" class="ops-ic-day" data-day="Fri, Nov 27 · 04:00 PM · SLA Report Day"><span>Fri</span><b>27</b></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
   <!-- ================================================================
-       7. FINAL CTA BANNER
+       8. FINAL CTA BANNER
        ================================================================ -->
   <section class="ops-final-cta">
     <div class="ops-container">
-      <div class="ops-cta-box">
+      <div class="ops-cta-box ops-reveal">
         <div>
-          <div class="ops-eyebrow ops-eyebrow--light">
-            <img src="<?= htmlspecialchars($opsLogoPath, ENT_QUOTES, 'UTF-8') ?>" alt="Workly" class="ops-inline-logo">
+          <div class="ops-kicker ops-kicker--light">
+            <img src="<?= $logoEsc ?>" alt="Workly" class="ops-inline-logo">
             <span>Ready to Launch</span>
           </div>
           <h2>Pair a dedicated bilingual VA with Workly OPS.</h2>
