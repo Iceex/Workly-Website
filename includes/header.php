@@ -79,7 +79,7 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       <a href="about" class="<?= $currentPage === 'about' ? 'active' : '' ?>">About Us</a>
       <a href="./#how-it-works">How It Works</a>
       <a href="./#faqs">FAQs</a>
-      <a id="ops-nav" href="ops">OPS</a>
+      <a id="ops-nav" href="ops" style="font-weight:700;">OPS</a>
     </nav>
 
 
