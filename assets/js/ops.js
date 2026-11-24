@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
       reworkSub: 'Weekly/monthly email dispatched to Client & Lead',
       inbox: 'Real-Time',
       inboxSub: 'Meetings & threads tied to VA & Client CRM',
-      summary: 'Result: Consistent deliverable quality, transparent time logs, and proactive Team Leader supervision.'
+      summary: 'Outcome: VAs complete more high-value work with less friction, and clients realize measurable ROI faster.'
     },
     without: {
       turn: '11.4h',
@@ -191,9 +191,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* ========================================================================
-     4. COLLABORATIVE MULTI-CURSOR SUITE (Kanban, Comments, Alerts & 1-Click Reports)
+     4. GUIDED WORKFLOW SUITE (1 Smooth Guided Cursor + Fluid Transitions)
      ======================================================================== */
   var collabStage = document.getElementById('opsCollabStage');
+  var collabWorkspace = document.getElementById('opsCollabWorkspace');
   var collabStatus = document.getElementById('opsCollabStatus');
   var collabToggle = document.getElementById('opsCollabToggle');
   var collabReportBtn = document.getElementById('opsCollabReportBtn');
@@ -218,9 +219,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var pctCrm = document.getElementById('opsPctCrm');
   var noteCrm = document.getElementById('opsNoteCrm');
 
-  var cursorLead = document.getElementById('opsCursorLead');
-  var cursorEthan = document.getElementById('opsCursorEthan');
-  var cursorOlivia = document.getElementById('opsCursorOlivia');
+  var guidedCursor = document.getElementById('opsGuidedCursor');
+  var guidedCursorLabel = document.getElementById('opsGuidedCursorLabel');
+  var guidedStepBtns = document.querySelectorAll('#opsGuidedRail .ops-guided-step');
 
   var ptoTarget = document.getElementById('opsPtoTarget');
   var pto19Label = document.getElementById('opsPto19Label');
@@ -253,6 +254,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   };
 
+  var pendingTimers = [];
+  function scheduleStepTimeout(fn, delay) {
+    var id = setTimeout(fn, delay);
+    pendingTimers.push(id);
+    return id;
+  }
+
+  function clearStepTimeouts() {
+    while (pendingTimers.length) {
+      clearTimeout(pendingTimers.pop());
+    }
+  }
+
   function setBenchmark(tf) {
     var d = benchmarkData[tf] || benchmarkData['30d'];
     document.querySelectorAll('#opsBenchmarkTabs .ops-seg-btn').forEach(function (b) {
@@ -279,45 +293,107 @@ document.addEventListener('DOMContentLoaded', function () {
     if (countDone && zoneDone) countDone.textContent = String(zoneDone.children.length);
   }
 
-  function setBannerState(stage) {
-    if (!taskBanner) return;
-    taskBanner.classList.remove('is-complete');
-    if (stage === 'todo' && zoneTodo) {
-      zoneTodo.appendChild(taskBanner);
-      if (barBanner) barBanner.style.width = '40%';
-      if (pctBanner) pctBanner.textContent = '40% · Click to advance';
-      if (noteBanner) noteBanner.textContent = 'Note: Match Q4 hex · 2 comments';
-    } else if (stage === 'progress' && zoneProg) {
-      zoneProg.appendChild(taskBanner);
-      if (barBanner) barBanner.style.width = '72%';
-      if (pctBanner) pctBanner.textContent = '72% · Ethan updating';
-      if (noteBanner) noteBanner.textContent = 'Comment (@Jordan): Draft uploaded · 3 comments';
-    } else if (stage === 'done' && zoneDone) {
-      zoneDone.appendChild(taskBanner);
-      taskBanner.classList.add('is-complete');
-      if (barBanner) barBanner.style.width = '100%';
-      if (pctBanner) pctBanner.textContent = '100% · TL Signed Off';
-      if (noteBanner) noteBanner.textContent = 'Note: QA Verified · 4 comments';
+  function smoothMoveCard(card, targetZone, updateFn, instant) {
+    if (!card || !targetZone) return;
+    if (instant || prefersReducedMotion) {
+      if (card.parentElement !== targetZone) {
+        targetZone.appendChild(card);
+      }
+      if (updateFn) updateFn();
+      syncColumnCounts();
+      return;
     }
-    syncColumnCounts();
+
+    if (card.parentElement === targetZone) {
+      if (updateFn) updateFn();
+      syncColumnCounts();
+      return;
+    }
+
+    card.classList.remove('is-arriving');
+    card.classList.add('is-transitioning');
+
+    scheduleStepTimeout(function () {
+      targetZone.appendChild(card);
+      if (updateFn) updateFn();
+      syncColumnCounts();
+      card.classList.remove('is-transitioning');
+      card.classList.add('is-arriving');
+
+      scheduleStepTimeout(function () {
+        card.classList.remove('is-arriving');
+      }, 500);
+    }, 280);
   }
 
-  function setCrmState(stage) {
-    if (!taskCrm) return;
-    taskCrm.classList.remove('is-complete');
-    if (stage === 'progress' && zoneProg) {
-      zoneProg.appendChild(taskCrm);
-      if (barCrm) barCrm.style.width = '75%';
-      if (pctCrm) pctCrm.textContent = '75% · Olivia Carter';
-      if (noteCrm) noteCrm.textContent = 'Note: TL QA checked · 4 comments';
+  function setBannerState(stage, instant) {
+    if (!taskBanner) return;
+    if (stage === 'todo' && zoneTodo) {
+      smoothMoveCard(
+        taskBanner,
+        zoneTodo,
+        function () {
+          taskBanner.classList.remove('is-complete');
+          if (barBanner) barBanner.style.width = '40%';
+          if (pctBanner) pctBanner.textContent = '40% · Ready for VA';
+          if (noteBanner) noteBanner.textContent = 'Note: Match Q4 hex · 2 comments';
+        },
+        instant
+      );
+    } else if (stage === 'progress' && zoneProg) {
+      smoothMoveCard(
+        taskBanner,
+        zoneProg,
+        function () {
+          taskBanner.classList.remove('is-complete');
+          if (barBanner) barBanner.style.width = '72%';
+          if (pctBanner) pctBanner.textContent = '72% · Ethan updating';
+          if (noteBanner) noteBanner.textContent = 'Comment (@Jordan): Draft uploaded · 3 comments';
+        },
+        instant
+      );
     } else if (stage === 'done' && zoneDone) {
-      zoneDone.appendChild(taskCrm);
-      taskCrm.classList.add('is-complete');
-      if (barCrm) barCrm.style.width = '100%';
-      if (pctCrm) pctCrm.textContent = '100% · Client Emailed';
-      if (noteCrm) noteCrm.textContent = 'Note: Approved by Jordan · 5 comments';
+      smoothMoveCard(
+        taskBanner,
+        zoneDone,
+        function () {
+          taskBanner.classList.add('is-complete');
+          if (barBanner) barBanner.style.width = '100%';
+          if (pctBanner) pctBanner.textContent = '100% · TL Verified';
+          if (noteBanner) noteBanner.textContent = 'Note: Approved for Client · 4 comments';
+        },
+        instant
+      );
     }
-    syncColumnCounts();
+  }
+
+  function setCrmState(stage, instant) {
+    if (!taskCrm) return;
+    if (stage === 'progress' && zoneProg) {
+      smoothMoveCard(
+        taskCrm,
+        zoneProg,
+        function () {
+          taskCrm.classList.remove('is-complete');
+          if (barCrm) barCrm.style.width = '75%';
+          if (pctCrm) pctCrm.textContent = '75% · Olivia Carter';
+          if (noteCrm) noteCrm.textContent = 'Note: TL QA checked · 4 comments';
+        },
+        instant
+      );
+    } else if (stage === 'done' && zoneDone) {
+      smoothMoveCard(
+        taskCrm,
+        zoneDone,
+        function () {
+          taskCrm.classList.add('is-complete');
+          if (barCrm) barCrm.style.width = '100%';
+          if (pctCrm) pctCrm.textContent = '100% · Retainer Synced';
+          if (noteCrm) noteCrm.textContent = 'Note: Approved by Jordan · 5 comments';
+        },
+        instant
+      );
+    }
   }
 
   function setPto19(approved) {
@@ -334,7 +410,7 @@ document.addEventListener('DOMContentLoaded', function () {
       collabReportBtn.textContent = 'Report Sent ✓';
       collabReportBtn.classList.add('is-sent');
       if (!isAuto) {
-        setTimeout(function () {
+        scheduleStepTimeout(function () {
           collabReportBtn.textContent = '1-Click Send Report';
           collabReportBtn.classList.remove('is-sent');
         }, 2500);
@@ -357,12 +433,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function pulseCursor(el) {
-    if (!el) return;
-    el.classList.add('is-clicking');
-    setTimeout(function () {
-      el.classList.remove('is-clicking');
-    }, 340);
+  function setGuidedRailActive(stepIndex) {
+    guidedStepBtns.forEach(function (btn, idx) {
+      btn.classList.toggle('active', idx === stepIndex);
+    });
+  }
+
+  function moveGuidedCursorTo(targetEl, labelText, badgeColor) {
+    if (!guidedCursor || !collabWorkspace || !targetEl) return;
+    var wsRect = collabWorkspace.getBoundingClientRect();
+    var elRect = targetEl.getBoundingClientRect();
+    if (!wsRect.width || !elRect.width) return;
+
+    var x = elRect.left - wsRect.left + Math.min(elRect.width * 0.58, 92);
+    var y = elRect.top - wsRect.top + elRect.height * 0.52;
+
+    guidedCursor.style.left = Math.round(x) + 'px';
+    guidedCursor.style.top = Math.round(y) + 'px';
+
+    if (guidedCursorLabel && labelText) {
+      guidedCursorLabel.textContent = labelText;
+      guidedCursorLabel.style.backgroundColor = badgeColor || '#AE09E9';
+    }
+  }
+
+  function pulseGuidedCursor() {
+    if (!guidedCursor) return;
+    guidedCursor.classList.add('is-clicking');
+    scheduleStepTimeout(function () {
+      guidedCursor.classList.remove('is-clicking');
+    }, 420);
   }
 
   document.querySelectorAll('#opsBenchmarkTabs .ops-seg-btn').forEach(function (btn) {
@@ -375,7 +475,7 @@ document.addEventListener('DOMContentLoaded', function () {
     collabReportBtn.addEventListener('click', function () {
       triggerOneClickReport(false);
       if (collabStatus) {
-        collabStatus.textContent = 'Weekly SLA report emailed to Client & Team Leader in 1 click';
+        collabStatus.textContent = 'Step 4: Weekly report emailed to Client & Team Leader in 1 click';
       }
     });
   }
@@ -396,15 +496,13 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!card.parentElement) return;
       var pid = card.parentElement.id;
       if (card === taskBanner) {
-        if (pid === 'opsZoneTodo') setBannerState('progress');
-        else if (pid === 'opsZoneProg') setBannerState('done');
-        else setBannerState('todo');
+        if (pid === 'opsZoneTodo') setBannerState('progress', false);
+        else if (pid === 'opsZoneProg') setBannerState('done', false);
+        else setBannerState('todo', false);
       } else if (card === taskCrm) {
-        setCrmState(pid === 'opsZoneProg' ? 'done' : 'progress');
+        setCrmState(pid === 'opsZoneProg' ? 'done' : 'progress', false);
       } else if (card === taskReport && zoneProg && zoneDone) {
-        if (pid === 'opsZoneDone') zoneProg.appendChild(card);
-        else zoneDone.appendChild(card);
-        syncColumnCounts();
+        smoothMoveCard(card, pid === 'opsZoneDone' ? zoneProg : zoneDone, null, false);
       }
     });
   });
@@ -413,72 +511,101 @@ document.addEventListener('DOMContentLoaded', function () {
   var collabInterval = null;
   var collabStepIdx = 0;
 
-  var collabSequence = [
-    function () {
+  function runGuidedStep(stepIdx) {
+    clearStepTimeouts();
+    setGuidedRailActive(stepIdx);
+
+    if (stepIdx === 0) {
       resetReportDispatch();
-      if (cursorLead) { cursorLead.style.left = '14%'; cursorLead.style.top = '38%'; }
-      if (cursorEthan) { cursorEthan.style.left = '22%'; cursorEthan.style.top = '50%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '46%'; cursorOlivia.style.top = '42%'; }
-      setTimeout(function () {
-        pulseCursor(cursorEthan);
-        setBannerState('progress');
-        setBenchmark('30d');
-        if (collabStatus) collabStatus.textContent = 'Ethan added @Jordan comment & moved task to In Progress (1 click)';
-      }, 450);
-    },
-    function () {
-      if (cursorLead) { cursorLead.style.left = '76%'; cursorLead.style.top = '78%'; }
-      if (cursorEthan) { cursorEthan.style.left = '43%'; cursorEthan.style.top = '52%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '56%'; cursorOlivia.style.top = '34%'; }
-      setTimeout(function () {
-        pulseCursor(cursorLead);
-        pulseCursor(cursorOlivia);
+      setBannerState('todo', true);
+      setCrmState('progress', true);
+      setPto19(false);
+      setBenchmark('30d');
+
+      if (collabStatus) {
+        collabStatus.textContent = 'Step 1: Ethan (VA) opens task notes & moves Kanban card to In Progress';
+      }
+      moveGuidedCursorTo(taskBanner, 'Step 1 · Ethan (VA)', '#AE09E9');
+
+      scheduleStepTimeout(function () {
+        pulseGuidedCursor();
+        setBannerState('progress', false);
+      }, 1080);
+    } else if (stepIdx === 1) {
+      setBannerState('progress', true);
+      setCrmState('progress', true);
+      setPto19(false);
+
+      if (collabStatus) {
+        collabStatus.textContent = 'Step 2: Jordan (Team Lead) approves coverage & verifies CRM audit';
+      }
+      moveGuidedCursorTo(ptoTarget, 'Step 2 · Jordan (Lead)', '#0f172a');
+
+      scheduleStepTimeout(function () {
+        pulseGuidedCursor();
         setPto19(true);
-        setCrmState('done');
+        setCrmState('done', false);
         setBenchmark('14d');
-        if (collabStatus) collabStatus.textContent = 'Jordan approved alert coverage · Olivia closed CRM Retainer Audit';
-      }, 450);
-    },
-    function () {
-      if (cursorLead) { cursorLead.style.left = '70%'; cursorLead.style.top = '48%'; }
-      if (cursorEthan) { cursorEthan.style.left = '58%'; cursorEthan.style.top = '44%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '78%'; cursorOlivia.style.top = '22%'; }
-      setTimeout(function () {
-        pulseCursor(cursorLead);
-        pulseCursor(cursorEthan);
-        setBannerState('done');
+      }, 1080);
+    } else if (stepIdx === 2) {
+      setBannerState('progress', true);
+      setCrmState('done', true);
+      setPto19(true);
+
+      if (collabStatus) {
+        collabStatus.textContent = 'Step 3: Deliverable finalized at 100% — Weekly SLA climbs to 96.2%';
+      }
+      moveGuidedCursorTo(taskBanner, 'Step 3 · Verify SLA', '#10b981');
+
+      scheduleStepTimeout(function () {
+        pulseGuidedCursor();
+        setBannerState('done', false);
         setBenchmark('7d');
+      }, 1080);
+    } else {
+      setBannerState('done', true);
+      setCrmState('done', true);
+      setPto19(true);
+      setBenchmark('7d');
+
+      if (collabStatus) {
+        collabStatus.textContent = 'Step 4: 1-Click Weekly Report emailed directly to Client & Team Leader';
+      }
+      moveGuidedCursorTo(collabReportBtn, 'Step 4 · 1-Click Report', '#8822CE');
+
+      scheduleStepTimeout(function () {
+        pulseGuidedCursor();
         triggerOneClickReport(true);
-        if (collabStatus) collabStatus.textContent = 'Jordan triggered 1-Click Weekly Report to Client & Team Leader emails';
-      }, 450);
-    },
-    function () {
-      if (cursorLead) { cursorLead.style.left = '12%'; cursorLead.style.top = '26%'; }
-      if (cursorEthan) { cursorEthan.style.left = '16%'; cursorEthan.style.top = '38%'; }
-      if (cursorOlivia) { cursorOlivia.style.left = '42%'; cursorOlivia.style.top = '38%'; }
-      setTimeout(function () {
-        pulseCursor(cursorLead);
-        resetReportDispatch();
-        setBannerState('todo');
-        setCrmState('progress');
-        setPto19(false);
-        setBenchmark('30d');
-        if (collabStatus) collabStatus.textContent = 'Team Leader Jordan dispatched next sprint tasks with notes...';
-      }, 450);
+      }, 1080);
     }
-  ];
+  }
+
+  guidedStepBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var idx = Number(btn.getAttribute('data-guide-step')) || 0;
+      collabStepIdx = idx;
+      runGuidedStep(idx);
+      if (collabPlaying) {
+        clearInterval(collabInterval);
+        collabInterval = setInterval(function () {
+          collabStepIdx = (collabStepIdx + 1) % 4;
+          runGuidedStep(collabStepIdx);
+        }, 3800);
+      }
+    });
+  });
 
   function startCollabLoop() {
     if (collabInterval || !collabPlaying || !collabStage) return;
-    collabSequence[collabStepIdx]();
-    collabStepIdx = (collabStepIdx + 1) % collabSequence.length;
+    runGuidedStep(collabStepIdx);
     collabInterval = setInterval(function () {
-      collabSequence[collabStepIdx]();
-      collabStepIdx = (collabStepIdx + 1) % collabSequence.length;
-    }, 2700);
+      collabStepIdx = (collabStepIdx + 1) % 4;
+      runGuidedStep(collabStepIdx);
+    }, 3800);
   }
 
   function stopCollabLoop() {
+    clearStepTimeouts();
     if (collabInterval) {
       clearInterval(collabInterval);
       collabInterval = null;
@@ -489,7 +616,7 @@ document.addEventListener('DOMContentLoaded', function () {
     collabToggle.addEventListener('click', function () {
       collabPlaying = !collabPlaying;
       collabToggle.setAttribute('aria-pressed', collabPlaying ? 'true' : 'false');
-      collabToggle.textContent = collabPlaying ? 'Pause Live Team' : 'Play Live Team';
+      collabToggle.textContent = collabPlaying ? 'Pause Guide' : 'Play Guide';
       if (collabPlaying) startCollabLoop();
       else stopCollabLoop();
     });
@@ -509,51 +636,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ========================================================================
-     5. LONG-RUNWAY STICKY WALKTHROUGH (Real dwell scroll transition)
-     ======================================================================== */
-  var stickySection = document.getElementById('opsStickySection');
-  var stickySteps = document.querySelectorAll('#opsStickySteps .ops-sticky-step');
-  var stickyPanels = document.querySelectorAll('#opsStickyStage .ops-sticky-panel');
-  var stickyProgress = document.getElementById('opsStickyProgress');
-
-  function activateStickyStep(idx) {
-    var stepNum = Number(idx);
-    stickySteps.forEach(function (s) {
-      s.classList.toggle('active', s.getAttribute('data-sticky-step') === String(stepNum));
-    });
-    stickyPanels.forEach(function (p, i) {
-      p.classList.toggle('active', i === stepNum);
-    });
-    if (stickyProgress) {
-      var widths = ['33%', '67%', '100%'];
-      stickyProgress.style.width = widths[stepNum] || '33%';
-    }
-  }
-
-  stickySteps.forEach(function (stepBtn) {
-    stepBtn.addEventListener('click', function () {
-      activateStickyStep(stepBtn.getAttribute('data-sticky-step'));
-    });
-  });
-
-  if (stickySection && 'IntersectionObserver' in window) {
-    var stepObs = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            activateStickyStep(entry.target.getAttribute('data-sticky-step'));
-          }
-        });
-      },
-      { threshold: 0.45, rootMargin: '-22% 0px -22% 0px' }
-    );
-    stickySteps.forEach(function (step) {
-      stepObs.observe(step);
-    });
-  }
-
-  /* ========================================================================
-     6. INTERACTIVE 3D DESKTOP PLATFORM SHOWCASE
+     5. WORKLY OPS COMMAND CENTER (With Staggered Tab Entrance Animations)
      ======================================================================== */
   var scene3d = document.getElementById('ops3dScene');
   var rig3d = document.getElementById('ops3dRig');
@@ -571,7 +654,13 @@ document.addEventListener('DOMContentLoaded', function () {
       n.classList.toggle('active', n.getAttribute('data-3d-nav') === viewKey);
     });
     document.querySelectorAll('#ops3dScreen .ops-3d-view').forEach(function (v) {
-      v.classList.toggle('active', v.id === 'ops3dView-' + viewKey);
+      var isTarget = v.id === 'ops3dView-' + viewKey;
+      v.classList.remove('is-entering');
+      v.classList.toggle('active', isTarget);
+      if (isTarget) {
+        void v.offsetWidth;
+        v.classList.add('is-entering');
+      }
     });
     if (addr3d) addr3d.textContent = 'ops.worklystaff.com / ' + viewKey;
   }
