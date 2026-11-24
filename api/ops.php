@@ -992,8 +992,9 @@ require_once $headerPath;
           <button type="button" class="ops-cat-btn" data-cat="legal">Legal Assistance</button>
           <button type="button" class="ops-cat-btn" data-cat="insurance">Insurance Support</button>
           <button type="button" class="ops-cat-btn" data-cat="healthcare">Healthcare</button>
-          <button type="button" class="ops-cat-btn" data-cat="management">Administration</button>
-          <button type="button" class="ops-cat-btn" data-cat="realestate">Real Estate</button>
+          <button type="button" class="ops-cat-btn" data-cat="management">Management</button>
+          <button type="button" class="ops-cat-btn" data-cat="Accounting">Accounting</button>
+          <button type="button" class="ops-cat-btn" data-cat="Administrative">Administrative</button>
         </div>
 
         <div class="ops-cat-panel">

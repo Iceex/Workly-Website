@@ -148,3 +148,12 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initial Run
   applyFilters();
 });
+
+// Click container Find VA
+document.querySelectorAll('.va-card[data-href]').forEach(card => {
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('a, button')) return;
+
+    window.location.href = card.dataset.href;
+  });
+});

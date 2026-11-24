@@ -751,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '96.2%',
       modules: 'Kanban · Notes · 1-Click Reports',
       cta: 'Find IT Support VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Development'
     },
     marketing: {
       tag: 'Digital Marketing',
@@ -766,7 +766,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '94.8%',
       modules: 'Task Comments · Email Sync · CRM',
       cta: 'Find Marketing VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Marketing'
     },
     legal: {
       tag: 'Legal Support',
@@ -781,7 +781,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '97.4%',
       modules: 'VA & Client CRM · Alerts · Reports',
       cta: 'Find Legal VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Legal'
     },
     insurance: {
       tag: 'Insurance Operations',
@@ -796,7 +796,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '95.9%',
       modules: 'Email Hub · Calendar Sync · SLA',
       cta: 'Find Insurance VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Insurance'
     },
     healthcare: {
       tag: 'Healthcare Administration',
@@ -811,7 +811,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '98.1%',
       modules: 'Real-Time Calendar · Notes · Alerts',
       cta: 'Find Healthcare VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Healthcare'
     },
     management: {
       tag: 'Operations & Executive Admin',
@@ -826,22 +826,37 @@ document.addEventListener('DOMContentLoaded', function () {
       sla: '96.5%',
       modules: 'Full Suite · CRM · 1-Click Reports',
       cta: 'Find Executive VAs →',
-      href: 'find-va'
+      href: 'find-va?cat=Management'
     },
-    realestate: {
-      tag: 'Real Estate Coordination',
-      title: 'Contract-to-close checklists, vendor sync, and fast follow-up',
-      desc: 'Transaction coordinators manage escrow tasks, attach inspection notes, and keep agents updated through automated email reports.',
+    administrative: {
+      tag: 'Administrative Support',
+      title: 'Organized workflows, task management, and seamless coordination',
+      desc: 'Administrative assistants handle daily operations, organize schedules, manage documents, and keep teams connected through streamlined workflows.',
       items: [
-        'Escrow & listing Kanban boards with comment threads per property',
-        'Real-time showing & closing calendar sync across agents & VAs',
-        'Instant Team Leader alerts on upcoming contingency deadlines'
+        'Task tracking and organized project management boards',
+        'Calendar management, meeting scheduling, and team coordination',
+        'Document management and automated task reminders'
       ],
       speed: '50m',
       sla: '95.4%',
-      modules: 'Kanban · Calendar Sync · Client CRM',
-      cta: 'Find Real Estate VAs →',
-      href: 'find-va'
+      modules: 'Task Management · Calendar Sync · Team CRM',
+      cta: 'Find Administrative VAs →',
+      href: 'find-va?cat=Administrative'
+    },
+    Accounting: {
+      tag: 'Accounting Support',
+      title: 'Accurate financial records, expense tracking, and organized reporting',
+      desc: 'Accounting assistants help manage invoices, track expenses, organize financial records, and keep business finances up to date.',
+      items: [
+        'Invoice management and payment tracking',
+        'Expense tracking and financial record organization',
+        'Financial reports and accounts reconciliation support'
+      ],
+      speed: '50m',
+      sla: '95.4%',
+      modules: 'Invoicing · Expense Tracking · Financial Reports',
+      cta: 'Find Accounting VAs →',
+      href: 'find-va?cat=Accounting'
     }
   };
 

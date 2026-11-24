@@ -79,6 +79,7 @@ $requestedAvail = $_GET['avail'] ?? 'All';
       <?php foreach ($virtualAssistants as $va): ?>
         <div
           class="va-card catalog-va-item"
+          data-href="va-profile?id=<?= urlencode($va['id']) ?>"
           data-category="<?= htmlspecialchars($va['category'], ENT_QUOTES, 'UTF-8') ?>"
           data-secondary="<?= htmlspecialchars(implode(',', $va['secondaryRoles']), ENT_QUOTES, 'UTF-8') ?>"
           data-availability="<?= htmlspecialchars($va['availability'], ENT_QUOTES, 'UTF-8') ?>"
