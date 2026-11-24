@@ -168,12 +168,11 @@ require_once dirname(__DIR__) . '/includes/seo.php';
       </div>
       <svg class="drawer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </a>
-    </div>
 
     <a href="ops" class="drawer-link <?= $currentPage === 'ops' ? 'active' : '' ?>">
       <div class="drawer-icon-box">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-      </div>
+        <svg class="drawer-star" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+    </div>
       <div class="drawer-link-content">
         <div class="drawer-title-row">
           <span class="drawer-link-title">OPS</span>
@@ -181,8 +180,10 @@ require_once dirname(__DIR__) . '/includes/seo.php';
         </div>
         <span class="drawer-link-sub">Operations & Productivity Suite</span>
       </div>
-      <svg class="drawer-star" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <svg class="drawer-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
     </a>
+    
+    </div>
 
   <div class="drawer-footer">
     <a href="./#calendly-section" class="btn btn-primary btn-block">
