@@ -257,7 +257,7 @@ require_once $headerPath;
                 <img src="<?= $logoEsc ?>" alt="Workly" class="ops-sync-logo">
               </div>
               <div class="ops-sync-node ops-sync-node--1"><span>CRM &amp; Notes</span></div>
-              <div class="ops-sync-node ops-sync-node--2"><span>Email &amp; Cal</span></div>
+              <div class="ops-sync-node ops-sync-node--2"><span>Email &amp; Calls</span></div>
               <div class="ops-sync-node ops-sync-node--3"><span>Kanban Tasks</span></div>
               <div class="ops-sync-node ops-sync-node--4"><span>1-Click Reports</span></div>
             </div>
@@ -874,10 +874,10 @@ require_once $headerPath;
                         </div>
                       </div>
                       <div class="ops-ep-item">
-                        <span class="ops-avatar-pill">CAL</span>
+                        <span class="ops-avatar-pill">CALENDAR</span>
                         <div>
                           <b>Real-Time Meeting · 10:30 AM</b>
-                          <small>BrightPath review synced on Google Cal</small>
+                          <small>BrightPath review synced on Google Calendar</small>
                         </div>
                       </div>
                       <div class="ops-ep-item">
