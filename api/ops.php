@@ -314,21 +314,18 @@ require_once $headerPath;
 
         <article class="ops-bento-card ops-card--ivory ops-reveal">
           <div class="ops-bento-copy">
-            <span class="ops-card-tag">Progress &amp; Results</span>
-            <h3>See How Your Team Is Doing</h3>
-            <p>
-              Follow completed work, response times, and daily progress.
-              Get a clearer picture of how your team is performing and where there is room to improve.
-            </p>
+            <span class="ops-card-tag">Time &amp; SLA Analytics</span>
+            <h3>Performance Visibility</h3>
+            <p>Quantify turnaround speed and on-time delivery—proving clear client ROI while spotlighting top-performing VAs.</p>
           </div>
 
           <div class="ops-graph-stage" id="opsGraphStage">
             <div class="ops-graph-header">
               <div class="ops-graph-legend">
-                <span><i class="dot-purple"></i>Tasks Completed</span>
-                <span><i class="dot-green"></i>On-Time Delivery</span>
+                <span><i class="dot-purple"></i>Velocity</span>
+                <span><i class="dot-green"></i>On-Time SLA</span>
               </div>
-              <span class="ops-gkpi-pill">On-Time: <b>94.8%</b></span>
+              <span class="ops-gkpi-pill">Pod SLA: <b>94.8%</b></span>
             </div>
 
             <div class="ops-combo-chart">
@@ -344,7 +341,7 @@ require_once $headerPath;
                   <span class="bar-p" style="height: 72%;"></span>
                   <span class="bar-g" style="height: 95%;"></span>
                 </div>
-                <small>Team Avg</small>
+                <small>Pod Avg</small>
               </div>
               <div class="ops-gcol ops-gcol--olivia">
                 <div class="ops-gbar-pair">
@@ -359,8 +356,8 @@ require_once $headerPath;
               <strong class="tt-name">Ethan Brooks</strong>
               <span class="tt-role">Marketing · BrightPath</span>
               <div class="tt-metrics">
-                <b class="tt-sla">93.0% On-Time</b>
-                <small class="tt-turn">2.6h Avg Completion</small>
+                <b class="tt-sla">93.0% SLA</b>
+                <small class="tt-turn">2.6h Turnaround</small>
               </div>
             </div>
           </div>
