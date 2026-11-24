@@ -30,32 +30,8 @@
       "dest": "/robots.txt"
     },
     {
-      "src": "^/$",
-      "dest": "/api/index.php"
-    },
-    {
-      "src": "^/find-va/?$",
-      "dest": "/api/find-va.php"
-    },
-    {
-      "src": "^/va-profile/?$",
-      "dest": "/api/va-profile.php"
-    },
-    {
-      "src": "^/about/?$",
-      "dest": "/api/about.php"
-    },
-    {
-      "src": "^/terms/?$",
-      "dest": "/api/terms.php"
-    },
-    {
-      "src": "^/privacy/?$",
-      "dest": "/api/privacy.php"
-    },
-    {
-      "src": "^/ops/?$",
-      "dest": "/api/ops.php"
+      "src": "^/test/?$",
+      "dest": "/api/test.php"
     },
     {
       "src": "^/assets/(.*)$",
