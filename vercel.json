@@ -30,10 +30,6 @@
       "dest": "/robots.txt"
     },
     {
-      "src": "^/test/?$",
-      "dest": "/api/test.php"
-    },
-    {
       "src": "^/assets/(.*)$",
       "dest": "/assets/$1"
     },
