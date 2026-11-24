@@ -4,8 +4,8 @@
  * File: /php/ops.php
  */
 $currentPage     = "ops";
-$pageTitle       = "Workly OPS | VA & Client CRM, Task Orchestration & Real-Time Sync";
-$pageDescription = "Organize VA workflows with Kanban orchestration, task comments and notes, Team Leader supervision, real-time email & calendar sync, time analytics, and 1-click client reports.";
+$pageTitle       = "Workly OPS | VA workflows";
+$pageDescription = "OPS simplifies business operations by connecting tools, streamlining workflows, and making everyday tasks easier.";
 $canonicalUrl    = "https://worklystaff.com/ops";
 
 
