@@ -30,6 +30,10 @@
       "dest": "/robots.txt"
     },
     {
+      "src": "^/whatsapp-preview-test/?$",
+      "dest": "/api/whatsapp-preview-test.php"
+    },
+    {
       "src": "^/assets/(.*)$",
       "dest": "/assets/$1"
     },
