@@ -172,7 +172,8 @@ require_once dirname(__DIR__) . '/includes/seo.php';
     <a href="ops" id="ops-nav" class="drawer-link <?= $currentPage === 'ops' ? 'active' : '' ?>">
       <div class="drawer-icon-box">
         <svg class="drawer-star" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-      <div class="drawer-link-content">
+      </div>
+        <div class="drawer-link-content">
         <div class="drawer-title-row">
           <span class="drawer-link-title">OPS</span>
           <span class="drawer-chip-badge">Plataform</span>
