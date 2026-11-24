@@ -9,12 +9,13 @@ $currentPage = $currentPage ?? 'home';
 
 $logoUrl = 'https://worklystaff.com/assets/logo.png';
 
-require_once dirname(__DIR__) . '/includes/seo.php';
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <?php require_once dirname(__DIR__) . '/includes/seo.php'; ?>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="facebook-domain-verification" content="2gxrx7a43zuyv27gcvsbijo5bttpuf" />

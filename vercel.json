@@ -15,7 +15,7 @@
       }
     },
     {
-      "src": "^/(find-va|va-profile|terms|privacy|about|ops|test)\\.php$",
+      "src": "^/(find-va|va-profile|terms|privacy|about|ops)\\.php$",
       "status": 308,
       "headers": {
         "Location": "/$1"
