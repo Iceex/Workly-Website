@@ -126,7 +126,7 @@ body:has(.ops-page) {
   font-size: clamp(1.85rem, 4.2vw, 2.75rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-ink);
   text-wrap: balance;
 }
@@ -326,7 +326,7 @@ body:has(.ops-page) {
   font-size: clamp(2.15rem, 5vw, 3.7rem);
   line-height: 1.08;
   letter-spacing: -0.035em;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-ink);
   text-wrap: balance;
 }
@@ -432,7 +432,7 @@ body:has(.ops-page) {
   display: flex;
   justify-content: space-between;
   font-size: 9.5px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-muted);
   margin-bottom: 12px;
   padding: 0 4px;
@@ -465,7 +465,7 @@ body:has(.ops-page) {
 
 .ops-va-chip b {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-ink);
   letter-spacing: -0.02em;
 }
@@ -503,7 +503,7 @@ body:has(.ops-page) {
 
 .ops-notif-icon--dark { background: var(--ops-ink); }
 
-.ops-app-notif strong { display: block; font-size: 10.5px; font-weight: 800; color: var(--ops-ink); }
+.ops-app-notif strong { display: block; font-size: 10.5px; font-weight: 700; color: var(--ops-ink); }
 .ops-app-notif small  { display: block; font-size: 9.5px; color: var(--ops-muted); }
 
 /* Front Overlapping Action Cards */
@@ -545,7 +545,7 @@ body:has(.ops-page) {
 }
 
 .ops-overlay-text { flex: 1; min-width: 0; }
-.ops-overlay-text strong { display: block; font-size: 12.5px; font-weight: 800; }
+.ops-overlay-text strong { display: block; font-size: 12.5px; font-weight: 700; }
 .ops-overlay-text small  { display: block; font-size: 10.5px; color: var(--ops-on-dark-muted); }
 .ops-overlay-chevron     { font-size: 19px; font-weight: 700; opacity: 0.9; }
 
@@ -561,9 +561,9 @@ body:has(.ops-page) {
   z-index: 4;
 }
 
-.ops-float-meta-line { display: block; font-size: 10px; font-weight: 800; color: var(--ops-deep); }
+.ops-float-meta-line { display: block; font-size: 10px; font-weight: 700; color: var(--ops-deep); }
 .ops-float-meta-line.ops-meta-ok { color: #047857; }
-.ops-float-card strong { display: block; font-size: 12.5px; font-weight: 800; color: var(--ops-ink); margin: 3px 0; }
+.ops-float-card strong { display: block; font-size: 12.5px; font-weight: 700; color: var(--ops-ink); margin: 3px 0; }
 .ops-float-card small  { display: block; font-size: 10.5px; color: var(--ops-muted); }
 
 .ops-float-card--tl { left: 2%; top: 20px; animation: opsFloatTL 6.2s ease-in-out infinite; }
@@ -623,7 +623,7 @@ body:has(.ops-page) {
   display: grid;
   place-items: center;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   flex-shrink: 0;
 }
 
@@ -638,7 +638,7 @@ body:has(.ops-page) {
   display: grid;
   place-items: center;
   font-size: 9px;
-  font-weight: 800;
+  font-weight: 700;
   margin-left: -6px;
 }
 .ops-pill-avatars i:first-child { margin-left: 0; background: var(--ops-ink); }
@@ -693,7 +693,7 @@ body:has(.ops-page) {
 .ops-card-tag {
   display: inline-block;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--ops-deep);
@@ -702,7 +702,7 @@ body:has(.ops-page) {
 
 .ops-bento-copy h3 {
   font-size: clamp(1.3rem, 2.6vw, 1.65rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.025em;
   margin-bottom: 10px;
 }
@@ -716,7 +716,7 @@ body:has(.ops-page) {
 
 .ops-text-link {
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-primary);
 }
 
@@ -807,7 +807,7 @@ body:has(.ops-page) {
 .ops-mgmt-top strong { font-size: 13px; }
 .ops-badge-pct {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-deep);
   background: var(--ops-lilac);
   padding: 2px 8px;
@@ -912,10 +912,10 @@ body:has(.ops-page) {
   font-size: 11px;
 }
 
-.ops-graph-tooltip .tt-name { font-weight: 800; margin-right: 6px; }
+.ops-graph-tooltip .tt-name { font-weight: 700; margin-right: 6px; }
 .ops-graph-tooltip .tt-role { font-size: 10px; color: var(--ops-on-dark-muted); }
 .ops-graph-tooltip .tt-metrics { display: inline-flex; align-items: center; gap: 8px; }
-.ops-graph-tooltip .tt-sla  { color: #34d399; font-weight: 800; }
+.ops-graph-tooltip .tt-sla  { color: #34d399; font-weight: 700; }
 .ops-graph-tooltip .tt-turn { color: var(--ops-on-dark-muted); font-size: 10px; }
 
 /* Bento Card 4: Client CRM Capacity */
@@ -938,11 +938,11 @@ body:has(.ops-page) {
 }
 
 .ops-crm-kpis small  { display: block; font-size: 10px; color: var(--ops-muted); }
-.ops-crm-kpis strong { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
-.ops-crm-mini-row strong { font-size: 12.5px; font-weight: 800; }
+.ops-crm-kpis strong { font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ops-crm-mini-row strong { font-size: 12.5px; font-weight: 700; }
 .ops-crm-mini-row small  { display: block; font-size: 10.5px; color: var(--ops-muted); }
 .ops-crm-row-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 5px; }
-.ops-crm-row-top span { font-size: 11px; font-weight: 800; color: var(--ops-deep); font-variant-numeric: tabular-nums; }
+.ops-crm-row-top span { font-size: 11px; font-weight: 700; color: var(--ops-deep); font-variant-numeric: tabular-nums; }
 
 /* ==============================================================
    3. CONCEPT SECTION — QUALITY, SUPERVISION & CLICK-SIMPLE VA UX
@@ -966,7 +966,7 @@ body:has(.ops-page) {
   font-size: clamp(1.8rem, 3.8vw, 2.5rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  font-weight: 700;
   text-wrap: balance;
 }
 
@@ -989,7 +989,7 @@ body:has(.ops-page) {
 
 .ops-pillar-num {
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-primary);
   font-variant-numeric: tabular-nums;
   padding-top: 2px;
@@ -1018,7 +1018,7 @@ body:has(.ops-page) {
   gap: 12px;
 }
 
-.ops-compare-head strong { display: block; font-size: 16px; font-weight: 800; }
+.ops-compare-head strong { display: block; font-size: 16px; font-weight: 700; }
 .ops-compare-head small  { display: block; font-size: 12px; color: var(--ops-muted); }
 
 .ops-compare-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -1031,7 +1031,7 @@ body:has(.ops-page) {
 }
 
 .ops-cmp-stat small  { display: block; font-size: 11px; color: var(--ops-muted); margin-bottom: 6px; }
-.ops-cmp-stat strong { display: block; font-size: clamp(1.45rem, 2.6vw, 1.85rem); font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+.ops-cmp-stat strong { display: block; font-size: clamp(1.45rem, 2.6vw, 1.85rem); font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; margin-bottom: 6px; }
 .ops-cmp-stat span   { display: block; font-size: 11.5px; line-height: 1.45; color: var(--ops-muted); }
 
 .ops-compare-foot {
@@ -1077,7 +1077,7 @@ body:has(.ops-page) {
 
 .ops-wf-badge {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-deep);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -1085,7 +1085,7 @@ body:has(.ops-page) {
 
 .ops-wf-metric {
   font-size: 10.5px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 3px 9px;
   border-radius: 7px;
   background: var(--ops-lilac);
@@ -1095,7 +1095,7 @@ body:has(.ops-page) {
 
 .ops-wf-card h4 {
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.3;
 }
 
@@ -1143,7 +1143,7 @@ body:has(.ops-page) {
 
 .ops-collab-brand { display: flex; align-items: center; gap: 10px; }
 .ops-mock-brand-img { width: 20px; height: 20px; object-fit: contain; flex-shrink: 0; }
-.ops-collab-brand strong { display: block; font-size: 14px; font-weight: 800; }
+.ops-collab-brand strong { display: block; font-size: 14px; font-weight: 700; }
 .ops-collab-brand small  { display: block; font-size: 11.5px; font-weight: 600; color: var(--ops-deep); }
 
 .ops-collab-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
@@ -1194,7 +1194,7 @@ body:has(.ops-page) {
 
 .ops-guided-step b {
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 2px 6px;
   border-radius: 6px;
   background: var(--ops-surface);
@@ -1250,7 +1250,7 @@ body:has(.ops-page) {
   justify-content: space-between;
   align-items: center;
   font-size: 11.5px;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ops-muted);
   flex-shrink: 0;
 }
@@ -1305,9 +1305,9 @@ body:has(.ops-page) {
   border-color: rgba(16, 185, 129, 0.35);
 }
 
-.ops-task-meta { font-size: 10px; font-weight: 800; color: var(--ops-deep); margin-bottom: 4px; }
+.ops-task-meta { font-size: 10px; font-weight: 700; color: var(--ops-deep); margin-bottom: 4px; }
 .ops-task-meta.ops-meta-ok { color: #047857; }
-.ops-task-card strong { display: block; font-size: 12px; font-weight: 800; margin-bottom: 3px; }
+.ops-task-card strong { display: block; font-size: 12px; font-weight: 700; margin-bottom: 3px; }
 .ops-task-notes { font-size: 10px; color: var(--ops-muted); margin-bottom: 7px; line-height: 1.35; }
 
 .ops-task-bar { height: 5px; border-radius: 99px; background: var(--ops-surface); overflow: hidden; margin-bottom: 5px; }
@@ -1339,8 +1339,8 @@ body:has(.ops-page) {
 
 .ops-bench-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
 .ops-bench-head small  { display: block; font-size: 10.5px; color: var(--ops-muted); }
-.ops-bench-head strong { font-size: 15px; font-weight: 800; font-variant-numeric: tabular-nums; }
-.ops-bench-turn { font-size: 11px; font-weight: 800; color: #047857; }
+.ops-bench-head strong { font-size: 15px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.ops-bench-turn { font-size: 11px; font-weight: 700; color: #047857; }
 .ops-collab-svg { width: 100%; height: 68px; display: block; }
 
 .ops-collab-svg path,
@@ -1395,7 +1395,7 @@ body:has(.ops-page) {
   background: var(--ops-primary);
   color: var(--ops-white);
   font-size: 10.5px;
-  font-weight: 800;
+  font-weight: 700;
   white-space: nowrap;
   box-shadow: 0 8px 18px rgba(136, 34, 206, 0.28);
   transition: background-color 0.35s ease;
@@ -1510,7 +1510,7 @@ body:has(.ops-page) {
   gap: 6px;
 }
 
-.ops-mock-logo { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 800; margin-bottom: 12px; }
+.ops-mock-logo { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; margin-bottom: 12px; }
 
 .ops-3d-nav {
   text-align: left;
@@ -1527,7 +1527,7 @@ body:has(.ops-page) {
 }
 
 .ops-3d-nav:hover { background: rgba(255, 255, 255, 0.8); color: var(--ops-ink); }
-.ops-3d-nav.active { background: var(--ops-white); color: var(--ops-deep); font-weight: 800; box-shadow: 0 4px 12px rgba(136, 34, 206, 0.1); }
+.ops-3d-nav.active { background: var(--ops-white); color: var(--ops-deep); font-weight: 700; box-shadow: 0 4px 12px rgba(136, 34, 206, 0.1); }
 
 .ops-3d-layer--canvas {
   background: var(--ops-white);
@@ -1581,10 +1581,10 @@ body:has(.ops-page) {
 
 .ops-mock-kanban { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .ops-mock-col { background: var(--ops-surface); border-radius: 12px; padding: 10px; }
-.ops-mock-col label { display: block; font-size: 10.5px; font-weight: 800; color: var(--ops-muted); margin-bottom: 8px; }
+.ops-mock-col label { display: block; font-size: 10.5px; font-weight: 700; color: var(--ops-muted); margin-bottom: 8px; }
 .ops-mock-card { background: var(--ops-white); border: 1px solid var(--ops-border); border-radius: 9px; padding: 10px; }
 
-.tag { display: inline-block; font-size: 9.5px; font-weight: 800; padding: 2px 7px; border-radius: 5px; margin-bottom: 5px; }
+.tag { display: inline-block; font-size: 9.5px; font-weight: 700; padding: 2px 7px; border-radius: 5px; margin-bottom: 5px; }
 .tag-high { background: #fef3c7; color: #b45309; }
 .tag-med  { background: var(--ops-lilac); color: var(--ops-deep); }
 .tag-ok   { background: #ecfdf5; color: #047857; }
@@ -1609,14 +1609,14 @@ body:has(.ops-page) {
 .ops-3d-crm-row small { display: block; font-size: 11px; color: var(--ops-muted); }
 
 .ops-3d-usage { width: 150px; }
-.ops-3d-usage span { display: block; font-size: 11px; font-weight: 800; color: var(--ops-deep); text-align: right; margin-bottom: 4px; }
+.ops-3d-usage span { display: block; font-size: 11px; font-weight: 700; color: var(--ops-deep); text-align: right; margin-bottom: 4px; }
 .ops-3d-usage i  { display: block; height: 6px; background: var(--ops-white); border-radius: 99px; overflow: hidden; }
 .ops-3d-usage em { display: block; height: 100%; background: var(--ops-primary); }
 
 .ops-3d-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .ops-3d-kpis > div { background: var(--ops-lilac); border: 1px solid var(--ops-border); border-radius: 14px; padding: 16px; }
 .ops-3d-kpis small { display: block; font-size: 11px; color: var(--ops-muted); }
-.ops-3d-kpis b     { display: block; font-size: 20px; font-weight: 800; color: var(--ops-deep); margin: 4px 0; font-variant-numeric: tabular-nums; }
+.ops-3d-kpis b     { display: block; font-size: 20px; font-weight: 700; color: var(--ops-deep); margin: 4px 0; font-variant-numeric: tabular-nums; }
 .ops-3d-kpis span  { font-size: 11px; color: var(--ops-muted); }
 
 /* Floating Light 3D Z-Layers */
@@ -1638,7 +1638,7 @@ body:has(.ops-page) {
 .ops-3d-rig.is-exploded .ops-3d-layer--float-a { transform: translateZ(72px) translateY(-8px); }
 .ops-3d-rig.is-exploded .ops-3d-layer--float-b { transform: translateZ(62px) translateY(8px); }
 .ops-3d-layer--float-a small, .ops-3d-layer--float-b small  { display: block; font-size: 10px; font-weight: 700; color: var(--ops-deep); }
-.ops-3d-layer--float-a strong, .ops-3d-layer--float-b strong { font-size: 13px; font-weight: 800; }
+.ops-3d-layer--float-a strong, .ops-3d-layer--float-b strong { font-size: 13px; font-weight: 700; }
 
 /* ==============================================================
    7. PROTRUDING BANNER — EMAIL, CALENDAR & ALERTS (Slim iPhone 16+)
@@ -1662,7 +1662,7 @@ body:has(.ops-page) {
   font-size: clamp(1.75rem, 3.8vw, 2.5rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  font-weight: 700;
   text-wrap: balance;
 }
 
@@ -1701,7 +1701,7 @@ body:has(.ops-page) {
 }
 
 .ops-ep-head small  { display: block; font-size: 10.5px; color: var(--ops-deep); font-weight: 700; }
-.ops-ep-head strong { display: block; font-size: 18px; font-weight: 800; }
+.ops-ep-head strong { display: block; font-size: 18px; font-weight: 700; }
 .ops-ep-list { display: flex; flex-direction: column; gap: 8px; }
 
 .ops-ep-item {
@@ -1715,7 +1715,7 @@ body:has(.ops-page) {
 }
 
 .ops-ep-item.is-active { background: var(--ops-lilac); border-color: var(--ops-primary); }
-.ops-ep-item b     { display: block; font-size: 11px; font-weight: 800; }
+.ops-ep-item b     { display: block; font-size: 11px; font-weight: 700; }
 .ops-ep-item small { display: block; font-size: 9.5px; color: var(--ops-muted); }
 
 .ops-ep-footer {
@@ -1736,7 +1736,7 @@ body:has(.ops-page) {
   background: var(--ops-white);
   color: var(--ops-ink);
   font-size: 11.5px;
-  font-weight: 800;
+  font-weight: 700;
   box-shadow: 0 12px 26px rgba(15, 23, 42, 0.16);
 }
 
@@ -1787,13 +1787,13 @@ body:has(.ops-page) {
   align-items: center;
 }
 
-.ops-cat-eyebrow { display: block; font-size: 12px; font-weight: 800; color: var(--ops-deep); margin-bottom: 8px; }
-.ops-cat-main h3 { font-size: clamp(1.35rem, 2.8vw, 1.9rem); font-weight: 800; line-height: 1.2; margin-bottom: 10px; text-wrap: balance; }
+.ops-cat-eyebrow { display: block; font-size: 12px; font-weight: 700; color: var(--ops-deep); margin-bottom: 8px; }
+.ops-cat-main h3 { font-size: clamp(1.35rem, 2.8vw, 1.9rem); font-weight: 700; line-height: 1.2; margin-bottom: 10px; text-wrap: balance; }
 .ops-cat-main > p { font-size: 14.5px; line-height: 1.65; color: var(--ops-muted); margin-bottom: 16px; }
 
 .ops-cat-list { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 9px; }
 .ops-cat-list li { position: relative; padding-left: 18px; font-size: 13.5px; color: var(--ops-ink); }
-.ops-cat-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ops-emerald); font-weight: 800; }
+.ops-cat-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ops-emerald); font-weight: 700; }
 
 .ops-cat-metrics { display: grid; gap: 12px; }
 
@@ -1805,7 +1805,7 @@ body:has(.ops-page) {
 }
 
 .ops-cat-stat small  { display: block; font-size: 11px; color: var(--ops-muted); margin-bottom: 4px; }
-.ops-cat-stat strong { font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 800; color: var(--ops-deep); font-variant-numeric: tabular-nums; }
+.ops-cat-stat strong { font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 700; color: var(--ops-deep); font-variant-numeric: tabular-nums; }
 
 /* ==============================================================
    9. FINAL CTA BANNER
@@ -1824,7 +1824,7 @@ body:has(.ops-page) {
   flex-wrap: wrap;
 }
 
-.ops-cta-box h2 { margin: 12px 0 10px; font-size: clamp(1.55rem, 3.6vw, 2.25rem); font-weight: 800; line-height: 1.15; max-width: 580px; text-wrap: balance; }
+.ops-cta-box h2 { margin: 12px 0 10px; font-size: clamp(1.55rem, 3.6vw, 2.25rem); font-weight: 700; line-height: 1.15; max-width: 580px; text-wrap: balance; }
 .ops-cta-box p  { font-size: 14.5px; color: var(--ops-on-dark-muted); max-width: 520px; }
 .ops-cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
