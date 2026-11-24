@@ -73,7 +73,7 @@ require_once $headerPath;
 <div class="ops-page">
 
   <!-- ================================================================
-       1. NEAR-FULLWIDTH LIGHT BRAND HERO BANNER + FLOATING ELEMENTS
+       1. HERO SECTION
        ================================================================ -->
   <section class="ops-hero-section">
     <div class="ops-hero-wrap">
@@ -87,27 +87,37 @@ require_once $headerPath;
             <img src="<?= $logoEsc ?>" alt="Workly" class="ops-inline-logo">
             <span>Workly OPS</span>
             <span aria-hidden="true">·</span>
-            <span>Built for VAs &amp; Growing Businesses</span>
+            <span>A Better Way to Work Together</span>
           </div>
-          <h1>One connected workspace<br>where <span class="ops-gradient-text">VAs thrive &amp; clients scale</span></h1>
+
+          <h1>
+            Everything your team needs,<br>
+            <span class="ops-gradient-text">all in one place.</span>
+          </h1>
+
           <p>
-            Give your Virtual Assistant a simple, 1-click daily workspace while your business gains faster turnaround, transparent ROI, and hands-free Team Leader coordination—powered by shared CRM, real-time email &amp; calendar sync, and 1-click reporting.
+            Work smarter with a dedicated virtual assistant and a team that keeps everything organized.
+            Manage daily tasks, stay connected, track progress, and see how your business moves forward
+            — all from one simple workspace.
           </p>
+
           <div class="ops-hero-actions">
             <a class="ops-btn ops-btn--dark" href="find-va">
               <span>Find Your VA</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
-            <a class="ops-btn ops-btn--glass" href="#ops-capabilities">Explore Capabilities</a>
+            <a class="ops-btn ops-btn--glass" href="#ops-capabilities">Discover How It Works</a>
           </div>
         </div>
 
-        <!-- Centered Slim iPhone 16+ + Continuous Floating Cards -->
         <div class="ops-hero-stage">
 
           <div class="ops-float-card ops-float-card--tl">
-            <span class="ops-float-meta-line">Task Note · 2 Comments</span>
-            <strong>Fix marketing banner</strong>
+            <span class="ops-float-meta-line">Task Update · 2 Comments</span>
+            <strong>Update Marketing Banner</strong>
             <div class="ops-float-meta">
               <span>BrightPath Digital</span>
               <span>65%</span>
@@ -119,26 +129,25 @@ require_once $headerPath;
             <div class="ops-float-row">
               <span class="ops-avatar-pill">TL</span>
               <div>
-                <strong>Team Leader Alert</strong>
-                <small>Jordan prioritized Q4 meeting</small>
+                <strong>Team Update</strong>
+                <small>Your next meeting is ready</small>
               </div>
             </div>
           </div>
 
           <div class="ops-float-card ops-float-card--tr">
-            <span class="ops-float-meta-line ops-meta-ok">1-Click Weekly Report</span>
-            <strong>94.8% SLA · 2.6h Avg</strong>
-            <small>Emailed to Client &amp; Team Leader</small>
+            <span class="ops-float-meta-line ops-meta-ok">Weekly Summary</span>
+            <strong>94.8% On-Time · 2.6h Avg</strong>
+            <small>Shared with Client &amp; Team</small>
           </div>
 
           <div class="ops-float-pill ops-float-pill--br">
             <span class="ops-pill-avatars">
               <i>OC</i><i>EB</i>
             </span>
-            <span>VA &amp; Client CRM · <b>66.9% Used</b></span>
+            <span>Your Team &amp; Clients · <b>66.9% Used</b></span>
           </div>
 
-          <!-- Centered Slim iPhone 16+ Frame -->
           <div class="ops-hero-phone-wrap">
             <div class="ops-phone-bezel ops-phone-bezel--iphone16 ops-phone-bezel--hero">
               <div class="ops-phone-island" aria-hidden="true"></div>
@@ -154,8 +163,8 @@ require_once $headerPath;
                       <div class="ops-va-chip">
                         <img src="' . $logoEsc . '" alt="Workly" class="ops-phone-brand-logo">
                         <div>
-                          <small>Team Leader Supervised</small>
-                          <b>Hello, Jordan M.</b>
+                          <small>Your Workly Team</small>
+                          <b>Hello, Jordan!</b>
                         </div>
                       </div>
                     </div>
@@ -165,8 +174,8 @@ require_once $headerPath;
                           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                         </div>
                         <div>
-                          <strong>Task Comment · Marketing Banner</strong>
-                          <small>Ethan: Updated draft &amp; notes added</small>
+                          <strong>New Task Update</strong>
+                          <small>Ethan: Updated the design and added notes</small>
                         </div>
                       </div>
                       <div class="ops-app-notif ops-app-notif--deep">
@@ -174,8 +183,8 @@ require_once $headerPath;
                           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="18" height="18" x="3" y="4" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
                         </div>
                         <div>
-                          <strong>Real-Time Meeting Sync</strong>
-                          <small>BrightPath Call · Joined Calendar</small>
+                          <strong>Upcoming Meeting</strong>
+                          <small>BrightPath Call · Added to Calendar</small>
                         </div>
                       </div>
                       <div class="ops-app-notif ops-app-notif--white">
@@ -183,14 +192,14 @@ require_once $headerPath;
                           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
                         </div>
                         <div>
-                          <strong>Weekly Report Sent · 1-Click</strong>
-                          <small>Delivered to Client &amp; Team Leader</small>
+                          <strong>Weekly Report Sent</strong>
+                          <small>Shared with Client &amp; Team</small>
                         </div>
                       </div>
                     </div>
                   </div>
                 ';
-                echo ops_render_media_or_fallback($opsMedia['hero_center'], 'Workly OPS live assistant feed', $heroPhoneFallback);
+                echo ops_render_media_or_fallback($opsMedia['hero_center'], 'Workly workspace on mobile', $heroPhoneFallback);
                 ?>
               </div>
             </div>
@@ -201,8 +210,8 @@ require_once $headerPath;
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                 </span>
                 <div class="ops-overlay-text">
-                  <strong>Email &amp; Real-Time Calendar Sync</strong>
-                  <small>Meetings &amp; threads linked to every CRM client</small>
+                  <strong>Your Emails &amp; Meetings</strong>
+                  <small>Keep conversations and appointments together</small>
                 </div>
                 <span class="ops-overlay-chevron">›</span>
               </div>
@@ -211,8 +220,8 @@ require_once $headerPath;
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3v18h18"></path><path d="m19 9-5 5-4-4-3 3"></path></svg>
                 </span>
                 <div class="ops-overlay-text">
-                  <strong>1-Click Reports · Time &amp; Performance</strong>
-                  <small>Weekly or monthly digests emailed automatically</small>
+                  <strong>Simple Weekly &amp; Monthly Reports</strong>
+                  <small>Keep everyone informed about the work being done</small>
                 </div>
                 <span class="ops-overlay-chevron">›</span>
               </div>
@@ -224,60 +233,67 @@ require_once $headerPath;
     </div>
   </section>
 
+
   <!-- ================================================================
-       2. RESTORED ASYMMETRIC 4-CARD BENTO GRID (Light Workly Tints)
+       2. MAIN FEATURES
        ================================================================ -->
   <section class="ops-bento-section" id="ops-capabilities">
     <div class="ops-container">
       <div class="ops-section-heading">
         <div class="ops-kicker ops-kicker--subtle">
-          <span>Platform Pillars</span>
+          <span>Everything in One Place</span>
           <span aria-hidden="true">·</span>
-          <span>Core Capabilities</span>
+          <span>Simple Tools, Better Results</span>
         </div>
-        <h2>Higher output for clients. Effortless flow for VAs.</h2>
-        <p>Four connected modules that eliminate daily tool friction for VAs, protect client delivery margins, and turn completed work into measurable growth.</p>
+        <h2>Less time organizing. More time getting things done.</h2>
+        <p>
+          Everything your virtual assistant needs to stay organized, work efficiently, and keep you informed
+          — without the hassle of managing multiple tools.
+        </p>
       </div>
 
-      <!-- Row 1: Wide Card (Instant Sync & CRM) + Compact Card (1-Click Task Control) -->
       <div class="ops-bento-row ops-bento-row--wide-left">
 
-        <!-- CARD 1 (Wide Lilac): Unified CRM & Instant Sync -->
         <article class="ops-bento-card ops-card--lilac ops-reveal">
           <div class="ops-bento-split">
             <div class="ops-bento-copy">
-              <span class="ops-card-tag">Instant Sync Hub</span>
-              <h3>VA &amp; Client CRM</h3>
-              <p>Keep client retainers, assigned VAs, synced calendars, email threads, and Team Leader alerts aligned in one place so VAs start fast and clients never repeat context.</p>
-              <a href="#ops-collab" class="ops-text-link">See guided workflow →</a>
+              <span class="ops-card-tag">Stay Organized</span>
+              <h3>Your Team &amp; Clients</h3>
+              <p>
+                Keep client information, assigned assistants, important notes, and conversations together.
+                Everyone knows what needs to be done and has the information they need to do it right.
+              </p>
+              <a href="#ops-collab" class="ops-text-link">See how it works →</a>
             </div>
 
-            <div class="ops-sync-diagram" aria-label="Instant sync network visualization">
+            <div class="ops-sync-diagram" aria-label="Connected workspace overview">
               <div class="ops-sync-ring"></div>
               <div class="ops-sync-core">
                 <img src="<?= $logoEsc ?>" alt="Workly" class="ops-sync-logo">
               </div>
-              <div class="ops-sync-node ops-sync-node--1"><span>CRM &amp; Notes</span></div>
-              <div class="ops-sync-node ops-sync-node--2"><span>Email &amp; Calls</span></div>
-              <div class="ops-sync-node ops-sync-node--3"><span>Kanban Tasks</span></div>
-              <div class="ops-sync-node ops-sync-node--4"><span>1-Click Reports</span></div>
+              <div class="ops-sync-node ops-sync-node--1"><span>Client Details</span></div>
+              <div class="ops-sync-node ops-sync-node--2"><span>Emails &amp; Calls</span></div>
+              <div class="ops-sync-node ops-sync-node--3"><span>Daily Tasks</span></div>
+              <div class="ops-sync-node ops-sync-node--4"><span>Progress Reports</span></div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 2 (Compact Mint): 1-Click Task Orchestration & Notes -->
         <article class="ops-bento-card ops-card--mint ops-reveal">
           <div class="ops-bento-copy">
-            <span class="ops-card-tag">Kanban &amp; Notes</span>
-            <h3>1-Click Task Control</h3>
-            <p>VAs update task statuses, pin shared notes, and resolve comments in seconds—completing more billable deliverables every week.</p>
+            <span class="ops-card-tag">Daily Tasks</span>
+            <h3>Keep Every Task on Track</h3>
+            <p>
+              Easily create, update, and follow tasks from start to finish.
+              Add notes, share feedback, and always know what is pending, in progress, or completed.
+            </p>
           </div>
 
           <div class="ops-mgmt-chips" id="opsMgmtFilter">
             <button type="button" class="ops-chip active" data-stage="all">All</button>
             <button type="button" class="ops-chip" data-stage="todo">To Do</button>
             <button type="button" class="ops-chip" data-stage="progress">In Progress</button>
-            <button type="button" class="ops-chip" data-stage="done">Completed</button>
+            <button type="button" class="ops-chip" data-stage="done">Done</button>
           </div>
 
           <div class="ops-mgmt-preview" id="opsMgmtCard">
@@ -288,30 +304,31 @@ require_once $headerPath;
             <div class="ops-progress-track">
               <div class="ops-progress-fill" id="opsMgmtBar" style="width: 68%;"></div>
             </div>
-            <small id="opsMgmtClient">BrightPath Digital · Note + 2 comments · TL Supervised</small>
+            <small id="opsMgmtClient">BrightPath Digital · Note + 2 comments · Workly Team Support</small>
           </div>
         </article>
 
       </div>
 
-      <!-- Row 2: Compact Card (VA Performance Graph) + Wide Card (VA & Client CRM Retainer Capacity) -->
       <div class="ops-bento-row ops-bento-row--wide-right">
 
-        <!-- CARD 3 (Compact Ivory): Performance & Time Analytics -->
         <article class="ops-bento-card ops-card--ivory ops-reveal">
           <div class="ops-bento-copy">
-            <span class="ops-card-tag">Time &amp; SLA Analytics</span>
-            <h3>Performance Visibility</h3>
-            <p>Quantify turnaround speed and on-time delivery—proving clear client ROI while spotlighting top-performing VAs.</p>
+            <span class="ops-card-tag">Progress &amp; Results</span>
+            <h3>See How Your Team Is Doing</h3>
+            <p>
+              Follow completed work, response times, and daily progress.
+              Get a clearer picture of how your team is performing and where there is room to improve.
+            </p>
           </div>
 
           <div class="ops-graph-stage" id="opsGraphStage">
             <div class="ops-graph-header">
               <div class="ops-graph-legend">
-                <span><i class="dot-purple"></i>Velocity</span>
-                <span><i class="dot-green"></i>On-Time SLA</span>
+                <span><i class="dot-purple"></i>Tasks Completed</span>
+                <span><i class="dot-green"></i>On-Time Delivery</span>
               </div>
-              <span class="ops-gkpi-pill">Pod SLA: <b>94.8%</b></span>
+              <span class="ops-gkpi-pill">On-Time: <b>94.8%</b></span>
             </div>
 
             <div class="ops-combo-chart">
@@ -327,7 +344,7 @@ require_once $headerPath;
                   <span class="bar-p" style="height: 72%;"></span>
                   <span class="bar-g" style="height: 95%;"></span>
                 </div>
-                <small>Pod Avg</small>
+                <small>Team Avg</small>
               </div>
               <div class="ops-gcol ops-gcol--olivia">
                 <div class="ops-gbar-pair">
@@ -342,30 +359,32 @@ require_once $headerPath;
               <strong class="tt-name">Ethan Brooks</strong>
               <span class="tt-role">Marketing · BrightPath</span>
               <div class="tt-metrics">
-                <b class="tt-sla">93.0% SLA</b>
-                <small class="tt-turn">2.6h Turnaround</small>
+                <b class="tt-sla">93.0% On-Time</b>
+                <small class="tt-turn">2.6h Avg Completion</small>
               </div>
             </div>
           </div>
         </article>
 
-        <!-- CARD 4 (Wide Slate): VA & Client CRM + 1-Click Report Linking -->
         <article class="ops-bento-card ops-card--slate ops-reveal">
           <div class="ops-bento-split">
             <div class="ops-bento-copy">
-              <span class="ops-card-tag">CRM &amp; 1-Click Reports</span>
-              <h3>Account Capacity</h3>
-              <p>Track retainer hours and delivery velocity side by side, then send weekly or monthly executive reports to clients and Team Leaders in 1 click.</p>
+              <span class="ops-card-tag">Hours &amp; Reports</span>
+              <h3>Know Where Your Time Goes</h3>
+              <p>
+                Keep track of working hours and completed tasks for each client.
+                Share clear weekly or monthly reports and stay informed about everything your team accomplishes.
+              </p>
               <div class="ops-mgmt-chips" id="opsCrmToggle">
-                <button type="button" class="ops-chip active" data-mode="retainer">Retainer Usage</button>
-                <button type="button" class="ops-chip" data-mode="sla">SLA Health</button>
+                <button type="button" class="ops-chip active" data-mode="retainer">Hours Used</button>
+                <button type="button" class="ops-chip" data-mode="sla">Task Progress</button>
               </div>
             </div>
 
             <div class="ops-crm-mini-panel">
               <div class="ops-crm-kpis">
-                <div><small>Consumed / Turnaround</small><strong id="opsCrmTotal">120.5h</strong></div>
-                <div><small>Portfolio / Pod SLA</small><strong class="ops-text-purple" id="opsCrmRate">66.9%</strong></div>
+                <div><small>Hours Worked</small><strong id="opsCrmTotal">120.5h</strong></div>
+                <div><small>Hours Available</small><strong class="ops-text-purple" id="opsCrmRate">66.9%</strong></div>
               </div>
               <div class="ops-crm-mini-row">
                 <div class="ops-crm-row-top">
@@ -373,7 +392,7 @@ require_once $headerPath;
                   <span id="opsBpLabel">68.0 / 100h</span>
                 </div>
                 <div class="ops-progress-track"><div class="ops-progress-fill" id="opsBpBar" style="width: 68%;"></div></div>
-                <small>VA: Ethan Brooks · TL: Jordan Mitchell · Reports Synced</small>
+                <small>Assistant: Ethan Brooks · Workly Team: Jordan Mitchell · Reports Ready</small>
               </div>
               <div class="ops-crm-mini-row">
                 <div class="ops-crm-row-top">
@@ -381,7 +400,7 @@ require_once $headerPath;
                   <span id="opsNsLabel">52.5 / 80h</span>
                 </div>
                 <div class="ops-progress-track"><div class="ops-progress-fill" id="opsNsBar" style="width: 65.6%;"></div></div>
-                <small>VA: Olivia Carter · TL: Jordan Mitchell · Reports Synced</small>
+                <small>Assistant: Olivia Carter · Workly Team: Jordan Mitchell · Reports Ready</small>
               </div>
             </div>
           </div>
@@ -391,43 +410,59 @@ require_once $headerPath;
     </div>
   </section>
 
+
   <!-- ================================================================
-       3. PLATFORM CONCEPT — MUTUAL GROWTH FOR VAs & CLIENTS
+       3. HOW WORKLY WORKS
        ================================================================ -->
   <section class="ops-concept-section" id="ops-concept">
     <div class="ops-container">
       <div class="ops-concept-grid ops-reveal">
         <div class="ops-concept-copy">
           <div class="ops-kicker ops-kicker--subtle">
-            <span>Built For Mutual Growth</span>
+            <span>Better Work, Better Together</span>
             <span aria-hidden="true">·</span>
-            <span>VA Efficiency + Client ROI</span>
+            <span>For Assistants &amp; Businesses</span>
           </div>
-          <h2>Faster execution for VAs. Predictable ROI for clients.</h2>
+
+          <h2>Your assistant gets organized. Your business keeps moving.</h2>
+
           <p>
-            Cluttered spreadsheets and scattered chats slow VAs down and cost clients valuable hours. Workly OPS gives VAs an intuitive 1-click daily cockpit backed by a dedicated Workly Team Leader—delivering consistent quality, faster turnaround, and higher output without pulling clients into daily micro-management.
+            Managing daily work shouldn't be complicated.
+            Workly brings tasks, conversations, schedules, and progress together in one place,
+            while our team helps keep everything running smoothly.
           </p>
 
           <div class="ops-concept-pillars">
             <div class="ops-pillar-item">
               <span class="ops-pillar-num">01</span>
               <div>
-                <strong>VA &amp; Client CRM with Threaded Comments &amp; Notes</strong>
-                <p>Every task links directly to a client account, pinned brand notes, and @comment feedback—so VAs execute accurately on the first pass and clients never repeat instructions.</p>
+                <strong>All Your Tasks and Information in One Place</strong>
+                <p>
+                  Your assistant always has access to the right instructions, important files,
+                  and client preferences. No more searching through endless messages or repeating the same information.
+                </p>
               </div>
             </div>
+
             <div class="ops-pillar-item">
               <span class="ops-pillar-num">02</span>
               <div>
-                <strong>Real-Time Email, Calendar Sync &amp; Team Leader Alerts</strong>
-                <p>Live Google Calendar meetings, synced client emails, and instant alerts keep the VA and Workly Team Leader aligned on deadlines—eliminating delays before they affect revenue.</p>
+                <strong>Never Miss an Important Update</strong>
+                <p>
+                  Keep up with emails, upcoming meetings, and important notifications.
+                  Your assistant and Workly team stay connected so nothing gets overlooked.
+                </p>
               </div>
             </div>
+
             <div class="ops-pillar-item">
               <span class="ops-pillar-num">03</span>
               <div>
-                <strong>Turnaround Analytics &amp; 1-Click Linked Reports</strong>
-                <p>Automated performance and time logs turn completed work into polished weekly or monthly digests—emailed directly to the client and Team Leader in a single click.</p>
+                <strong>Know What's Getting Done</strong>
+                <p>
+                  Receive easy-to-understand weekly or monthly reports showing completed tasks,
+                  working hours, and team progress. Always know how your business is moving forward.
+                </p>
               </div>
             </div>
           </div>
@@ -436,92 +471,101 @@ require_once $headerPath;
         <div class="ops-compare-card">
           <div class="ops-compare-head">
             <div>
-              <strong>Speed, Quality &amp; Retention Impact</strong>
-              <small>Why structured OPS outperforms scattered chat tools</small>
+              <strong>A Better Way to Manage Your Team</strong>
+              <small>See the difference between having everything organized and managing work through scattered messages</small>
             </div>
-            <div class="ops-segmented ops-segmented--light" id="opsCompareToggle" role="tablist" aria-label="Workflow comparison">
-              <button type="button" class="ops-seg-btn active" data-compare="with" aria-selected="true">With Workly OPS</button>
-              <button type="button" class="ops-seg-btn" data-compare="without" aria-selected="false">Ad-Hoc Chats</button>
+            <div class="ops-segmented ops-segmented--light" id="opsCompareToggle" role="tablist" aria-label="Workspace comparison">
+              <button type="button" class="ops-seg-btn active" data-compare="with" aria-selected="true">With Workly</button>
+              <button type="button" class="ops-seg-btn" data-compare="without" aria-selected="false">Without a Shared Workspace</button>
             </div>
           </div>
 
           <div class="ops-compare-metrics">
             <div class="ops-cmp-stat">
-              <small>Avg Turnaround Time</small>
+              <small>Average Completion Time</small>
               <strong id="opsCmpTurn">2.6h</strong>
-              <span id="opsCmpTurnSub">Simple 1-click task progression &amp; live alerts</span>
+              <span id="opsCmpTurnSub">Simple task updates and helpful notifications</span>
             </div>
             <div class="ops-cmp-stat">
-              <small>On-Time SLA Compliance</small>
+              <small>Tasks Completed on Time</small>
               <strong id="opsCmpSla" class="ops-text-accent">94.8%</strong>
-              <span id="opsCmpSlaSub">Coordinated with Team Leader quality checks</span>
+              <span id="opsCmpSlaSub">Workly team support and regular follow-ups</span>
             </div>
             <div class="ops-cmp-stat">
-              <small>Client Report Effort</small>
+              <small>Report Preparation</small>
               <strong id="opsCmpRework">1 Click</strong>
-              <span id="opsCmpReworkSub">Weekly/monthly email dispatched to Client &amp; Lead</span>
+              <span id="opsCmpReworkSub">Weekly and monthly updates shared with your team</span>
             </div>
             <div class="ops-cmp-stat">
-              <small>Calendar &amp; Email Sync</small>
+              <small>Emails &amp; Meetings</small>
               <strong id="opsCmpInbox">Real-Time</strong>
-              <span id="opsCmpInboxSub">Meetings &amp; threads tied to VA &amp; Client CRM</span>
+              <span id="opsCmpInboxSub">Keep important conversations and meetings together</span>
             </div>
           </div>
 
           <div class="ops-compare-foot">
-            <span id="opsCmpSummary">Outcome: VAs complete more high-value work with less friction, and clients realize measurable ROI faster.</span>
+            <span id="opsCmpSummary">The result: Your assistant can focus on meaningful work while you stay informed and in control.</span>
           </div>
         </div>
       </div>
 
-      <!-- Integrated 3-Stage Value Strip (Absorbed from former walkthrough section) -->
-      <div class="ops-workflow-strip ops-reveal" aria-label="End-to-end operational flow">
+      <div class="ops-workflow-strip ops-reveal" aria-label="How Workly supports your team">
         <article class="ops-wf-card">
           <div class="ops-wf-top">
-            <span class="ops-wf-badge">Stage 01 · Execution</span>
-            <span class="ops-wf-metric">Zero Rework</span>
+            <span class="ops-wf-badge">Step 01 · Daily Work</span>
+            <span class="ops-wf-metric">Stay Organized</span>
           </div>
-          <h4>CRM-Linked Tasks, Comments &amp; Notes</h4>
-          <p>VAs open a task and see client preferences, pinned files, and Team Leader notes instantly—cutting back-and-forth questions in half.</p>
-          <div class="ops-wf-foot">Benefit: Faster first-draft delivery &amp; higher VA productivity</div>
+          <h4>Tasks, Notes &amp; Shared Information</h4>
+          <p>
+            Your assistant can easily find instructions, important files, and feedback before starting each task.
+          </p>
+          <div class="ops-wf-foot">Benefit: Less confusion and more time for meaningful work</div>
         </article>
 
         <article class="ops-wf-card">
           <div class="ops-wf-top">
-            <span class="ops-wf-badge">Stage 02 · Coordination</span>
-            <span class="ops-wf-metric">Real-Time Sync</span>
+            <span class="ops-wf-badge">Step 02 · Communication</span>
+            <span class="ops-wf-metric">Stay Connected</span>
           </div>
-          <h4>Synced Emails, Meetings &amp; Live Alerts</h4>
-          <p>Client replies and live calendar bookings stay tied to active deliverables, while Team Leader alerts keep every deadline protected.</p>
-          <div class="ops-wf-foot">Benefit: Zero missed client calls or stalled deliverables</div>
+          <h4>Emails, Meetings &amp; Important Updates</h4>
+          <p>
+            Keep conversations and scheduled meetings together while your assistant and Workly team stay up to date.
+          </p>
+          <div class="ops-wf-foot">Benefit: Fewer missed updates and smoother communication</div>
         </article>
 
         <article class="ops-wf-card">
           <div class="ops-wf-top">
-            <span class="ops-wf-badge">Stage 03 · Retention</span>
-            <span class="ops-wf-metric">1-Click Export</span>
+            <span class="ops-wf-badge">Step 03 · Results</span>
+            <span class="ops-wf-metric">Clear Reports</span>
           </div>
-          <h4>SLA Scorecards &amp; Linked Email Reports</h4>
-          <p>Every hour logged and deliverable shipped feeds a clean weekly or monthly executive report sent directly to Client and Team Leader.</p>
-          <div class="ops-wf-foot">Benefit: Clear ROI proof that grows long-term client retainers</div>
+          <h4>Easy-to-Read Progress Reports</h4>
+          <p>
+            See working hours, completed tasks, and overall progress through simple weekly or monthly reports.
+          </p>
+          <div class="ops-wf-foot">Benefit: A clear picture of the work your team delivers</div>
         </article>
       </div>
     </div>
   </section>
 
+
   <!-- ================================================================
-       4. GUIDED WORKFLOW SUITE (Single Smooth Guided Mouse + Stable Columns)
+       4. GUIDED WORKFLOW DEMONSTRATION
        ================================================================ -->
   <section class="ops-collab-section" id="ops-collab">
     <div class="ops-container">
       <div class="ops-section-heading">
         <div class="ops-kicker ops-kicker--subtle">
-          <span>Guided Workflow</span>
+          <span>See Workly in Action</span>
           <span aria-hidden="true">·</span>
-          <span>Live Team Leader &amp; VA Coordination</span>
+          <span>A Simple Way to Stay Organized</span>
         </div>
-        <h2>Watch one smooth flow turn daily tasks into client growth</h2>
-        <p>Follow a step-by-step demonstration of how VAs update Kanban progress, sync live calendars, get Team Leader approval, and dispatch 1-click executive reports.</p>
+        <h2>From daily tasks to completed work, all in one place.</h2>
+        <p>
+          Take a look at how your virtual assistant organizes tasks, communicates with your team,
+          manages meetings, and keeps you updated on every important step.
+        </p>
       </div>
 
       <div class="ops-collab-shell ops-reveal" id="opsCollabStage">
@@ -529,35 +573,34 @@ require_once $headerPath;
           <div class="ops-collab-brand">
             <img src="<?= $logoEsc ?>" alt="Workly" class="ops-mock-brand-img">
             <div>
-              <strong>Workly OPS · Guided Pod Flow</strong>
-              <small id="opsCollabStatus">Step 1: VA Ethan opens CRM task &amp; starts execution...</small>
+              <strong>Workly · Team Workspace</strong>
+              <small id="opsCollabStatus">Step 1: Your assistant starts working on an assigned task...</small>
             </div>
           </div>
 
           <div class="ops-collab-controls">
             <div class="ops-segmented ops-segmented--light" id="opsBenchmarkTabs">
               <button type="button" class="ops-seg-btn" data-tf="7d">Weekly</button>
-              <button type="button" class="ops-seg-btn" data-tf="14d">14D</button>
+              <button type="button" class="ops-seg-btn" data-tf="14d">14 Days</button>
               <button type="button" class="ops-seg-btn active" data-tf="30d">Monthly</button>
             </div>
-            <button type="button" class="ops-collab-reportbtn" id="opsCollabReportBtn">1-Click Send Report</button>
-            <button type="button" class="ops-collab-playbtn" id="opsCollabToggle" aria-pressed="true">Pause Guide</button>
+            <button type="button" class="ops-collab-reportbtn" id="opsCollabReportBtn">Send Report</button>
+            <button type="button" class="ops-collab-playbtn" id="opsCollabToggle" aria-pressed="true">Pause Demo</button>
           </div>
         </div>
 
-        <!-- Guided 4-Step Process Indicator -->
-        <div class="ops-guided-rail" id="opsGuidedRail" role="tablist" aria-label="Guided workflow steps">
+        <div class="ops-guided-rail" id="opsGuidedRail" role="tablist" aria-label="Demonstration steps">
           <button type="button" class="ops-guided-step active" data-guide-step="0">
-            <b>01</b><span>Advance Kanban &amp; Notes</span>
+            <b>01</b><span>Organize Tasks</span>
           </button>
           <button type="button" class="ops-guided-step" data-guide-step="1">
-            <b>02</b><span>Approve Alert &amp; Calendar</span>
+            <b>02</b><span>Review Updates</span>
           </button>
           <button type="button" class="ops-guided-step" data-guide-step="2">
-            <b>03</b><span>Verify Completion &amp; SLA</span>
+            <b>03</b><span>Check Completed Work</span>
           </button>
           <button type="button" class="ops-guided-step" data-guide-step="3">
-            <b>04</b><span>1-Click Client Report</span>
+            <b>04</b><span>Share Your Report</span>
           </button>
         </div>
 
@@ -570,11 +613,11 @@ require_once $headerPath;
               </div>
               <div class="ops-col-dropzone" id="opsZoneTodo">
                 <article class="ops-task-card" id="opsTaskBanner" data-task="banner">
-                  <div class="ops-task-meta">High · BrightPath CRM</div>
-                  <strong>Fix marketing banner</strong>
-                  <div class="ops-task-notes" id="opsNoteBanner">Note: Match Q4 hex · 2 comments</div>
+                  <div class="ops-task-meta">Priority Task · BrightPath</div>
+                  <strong>Update Marketing Banner</strong>
+                  <div class="ops-task-notes" id="opsNoteBanner">Note: Match Q4 colors · 2 comments</div>
                   <div class="ops-task-bar"><span id="opsBarBanner" style="width: 40%;"></span></div>
-                  <small id="opsPctBanner">40% · Ready for VA</small>
+                  <small id="opsPctBanner">40% · Ready to Start</small>
                 </article>
               </div>
             </div>
@@ -586,9 +629,9 @@ require_once $headerPath;
               </div>
               <div class="ops-col-dropzone" id="opsZoneProg">
                 <article class="ops-task-card" id="opsTaskCrm" data-task="crm">
-                  <div class="ops-task-meta">In Review · Northstar CRM</div>
-                  <strong>Client CRM Retainer Audit</strong>
-                  <div class="ops-task-notes" id="opsNoteCrm">Note: TL QA checked · 4 comments</div>
+                  <div class="ops-task-meta">Under Review · Northstar</div>
+                  <strong>Review Client Hours</strong>
+                  <div class="ops-task-notes" id="opsNoteCrm">Notes reviewed · 4 comments</div>
                   <div class="ops-task-bar"><span id="opsBarCrm" style="width: 75%;"></span></div>
                   <small id="opsPctCrm">75% · Olivia Carter</small>
                 </article>
@@ -602,11 +645,11 @@ require_once $headerPath;
               </div>
               <div class="ops-col-dropzone" id="opsZoneDone">
                 <article class="ops-task-card is-complete" id="opsTaskReport" data-task="report">
-                  <div class="ops-task-meta ops-meta-ok">Done · Synced Email</div>
-                  <strong>Monthly Client Summary</strong>
-                  <div class="ops-task-notes">Note: Verified &amp; Emailed · 1 comment</div>
+                  <div class="ops-task-meta ops-meta-ok">Completed</div>
+                  <strong>Monthly Progress Report</strong>
+                  <div class="ops-task-notes">Reviewed &amp; Shared · 1 comment</div>
                   <div class="ops-task-bar"><span id="opsBarReport" style="width: 100%;"></span></div>
-                  <small id="opsPctReport">100% · Client Notified</small>
+                  <small id="opsPctReport">100% · Client Updated</small>
                 </article>
               </div>
             </div>
@@ -616,8 +659,8 @@ require_once $headerPath;
             <div class="ops-bench-box">
               <div class="ops-bench-head">
                 <div>
-                  <small>Performance &amp; Turnaround Analytics</small>
-                  <strong id="opsCollabSlaVal">94.8% On-Time SLA</strong>
+                  <small>Team Progress</small>
+                  <strong id="opsCollabSlaVal">94.8% Completed on Time</strong>
                 </div>
                 <span class="ops-bench-turn" id="opsCollabTurnVal">2.6h Avg</span>
               </div>
@@ -633,33 +676,32 @@ require_once $headerPath;
                 <circle id="opsCollabDot" cx="140" cy="16" r="4.5" fill="#10b981" stroke="#ffffff" stroke-width="2"/>
               </svg>
               <div class="ops-report-dispatch" id="opsReportDispatchBanner">
-                Linked Emails: lucas@brightpath.com · jordan@worklystaff.com
+                Reports shared with your team
               </div>
             </div>
 
             <div class="ops-pto-box">
               <div class="ops-pto-head">
-                <strong>Live Alerts &amp; Real-Time Calendar</strong>
-                <small id="opsPtoStatusText">Nov 19: Team Leader Review</small>
+                <strong>Upcoming Meetings &amp; Updates</strong>
+                <small id="opsPtoStatusText">Nov 19: Workly Team Review</small>
               </div>
               <div class="ops-pto-days" id="opsPtoDays">
-                <button type="button" class="ops-pto-btn is-approved" data-pto="Meeting Sync · Client + VA Call (10:30 AM)">
-                  <span>Live Call</span>
+                <button type="button" class="ops-pto-btn is-approved" data-pto="Meeting · Client + Assistant Call (10:30 AM)">
+                  <span>Meeting</span>
                   <b>10:30 AM</b>
                 </button>
-                <button type="button" class="ops-pto-btn is-approved" data-pto="Task Alert · Team Leader notified Ethan">
-                  <span>TL Alert</span>
-                  <b>Synced</b>
+                <button type="button" class="ops-pto-btn is-approved" data-pto="Update · Workly Team notified Ethan">
+                  <span>Team Update</span>
+                  <b>Ready</b>
                 </button>
-                <button type="button" class="ops-pto-btn" id="opsPtoTarget" data-pto="Nov 19 Approved · Olivia Assigned Backup">
-                  <span>Approve</span>
-                  <b id="opsPto19Label">Review</b>
+                <button type="button" class="ops-pto-btn" id="opsPtoTarget" data-pto="Nov 19 Reviewed · Olivia Assigned Backup">
+                  <span>Review</span>
+                  <b id="opsPto19Label">Pending</b>
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Single Smooth Guided Cursor -->
           <div class="ops-named-cursor ops-collab-cursor ops-cursor--guided" id="opsGuidedCursor" aria-hidden="true">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="#AE09E9" stroke="#ffffff" stroke-width="2"><path d="M4 4l7.07 17 2.51-7.39L21 11.07z"></path></svg>
             <span id="opsGuidedCursorLabel">Step 1 · Ethan (VA)</span>
@@ -669,32 +711,36 @@ require_once $headerPath;
     </div>
   </section>
 
+
   <!-- ================================================================
-       5. WORKLY OPS COMMAND CENTER (With Staggered Tab Entrance Effects)
+       5. WORKSPACE PRESENTATION
        ================================================================ -->
   <section class="ops-3d-section" id="ops-3d-platform">
     <div class="ops-container">
       <div class="ops-section-heading">
         <div class="ops-kicker ops-kicker--subtle">
-          <span>Workly OPS Command Center</span>
+          <span>Meet Your Workspace</span>
           <span aria-hidden="true">·</span>
-          <span>Unified Platform Modules</span>
+          <span>Everything Working Together</span>
         </div>
-        <h2>Every tool VAs and clients rely on, in one view</h2>
-        <p>Explore how simple-click task boards, shared client CRM retainers, real-time calendar meetings, and 1-click executive reports work together to increase output and keep ROI visible.</p>
+        <h2>A simpler way to manage your daily operations.</h2>
+        <p>
+          Explore the tools that help your virtual assistant stay organized, manage client tasks,
+          keep track of meetings, and share progress with you.
+        </p>
       </div>
 
       <div class="ops-3d-toolbar">
-        <div class="ops-segmented ops-segmented--light" id="ops3dViews" role="tablist" aria-label="Platform Views">
+        <div class="ops-segmented ops-segmented--light" id="ops3dViews" role="tablist" aria-label="Workspace sections">
           <button type="button" class="ops-seg-btn active" data-3d-view="tasks">Tasks &amp; Notes</button>
-          <button type="button" class="ops-seg-btn" data-3d-view="clients">VA &amp; Client CRM</button>
-          <button type="button" class="ops-seg-btn" data-3d-view="calendar">Email &amp; Calendar</button>
-          <button type="button" class="ops-seg-btn" data-3d-view="analytics">1-Click Reports</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="clients">Team &amp; Clients</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="calendar">Emails &amp; Calendar</button>
+          <button type="button" class="ops-seg-btn" data-3d-view="analytics">Reports</button>
         </div>
 
-        <div class="ops-segmented ops-segmented--light" id="ops3dModes" role="tablist" aria-label="Perspective Modes">
-          <button type="button" class="ops-seg-btn active" data-3d-mode="tilt">3D Perspective</button>
-          <button type="button" class="ops-seg-btn" data-3d-mode="exploded">Layered Depth</button>
+        <div class="ops-segmented ops-segmented--light" id="ops3dModes" role="tablist" aria-label="Workspace display">
+          <button type="button" class="ops-seg-btn active" data-3d-mode="tilt">3D View</button>
+          <button type="button" class="ops-seg-btn" data-3d-mode="exploded">Layered View</button>
           <button type="button" class="ops-seg-btn" data-3d-mode="flat">Flat View</button>
         </div>
       </div>
@@ -715,9 +761,9 @@ require_once $headerPath;
                   <span>Workly</span>
                 </div>
                 <button type="button" class="ops-3d-nav active" data-3d-nav="tasks">Tasks &amp; Notes</button>
-                <button type="button" class="ops-3d-nav" data-3d-nav="clients">VA &amp; Client CRM</button>
-                <button type="button" class="ops-3d-nav" data-3d-nav="calendar">Email &amp; Calendar</button>
-                <button type="button" class="ops-3d-nav" data-3d-nav="analytics">1-Click Reports</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="clients">Team &amp; Clients</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="calendar">Emails &amp; Calendar</button>
+                <button type="button" class="ops-3d-nav" data-3d-nav="analytics">Reports</button>
               </aside>
 
               <div class="ops-3d-layer--canvas">
@@ -725,36 +771,37 @@ require_once $headerPath;
                 $desktopUrl = $opsMedia['desktop_3d'] !== '' ? $opsMedia['desktop_3d'] : $opsMedia['wide_frame'];
                 $desktop3dFallback = '
                   <div class="ops-3d-views-wrap" id="ops3dScreen">
+
                     <div class="ops-3d-view active is-entering" id="ops3dView-tasks">
                       <div class="ops-mock-header">
-                        <strong>Task Orchestration · Notes &amp; Comments</strong>
-                        <span class="ops-mock-cta">Team Leader Guided</span>
+                        <strong>Tasks &amp; Updates</strong>
+                        <span class="ops-mock-cta">Supported by Workly</span>
                       </div>
                       <div class="ops-mock-kanban">
                         <div class="ops-mock-col">
-                          <label>To Do · Status Synced</label>
+                          <label>To Do</label>
                           <div class="ops-mock-card">
-                            <span class="tag tag-high">Note Attached</span>
-                            <b>Fix marketing banner</b>
-                            <small>2 comments · @Jordan check</small>
+                            <span class="tag tag-high">Important Note</span>
+                            <b>Update Marketing Banner</b>
+                            <small>2 comments · Review requested</small>
                             <i><em style="width:40%"></em></i>
                           </div>
                         </div>
                         <div class="ops-mock-col">
-                          <label>In Progress · Live</label>
+                          <label>In Progress</label>
                           <div class="ops-mock-card">
                             <span class="tag tag-med">3 Comments</span>
-                            <b>CRM Pipeline Sync</b>
-                            <small>Note: Client list updated</small>
+                            <b>Update Client List</b>
+                            <small>Note: Information updated</small>
                             <i><em style="width:78%"></em></i>
                           </div>
                         </div>
                         <div class="ops-mock-col">
-                          <label>Completed · Verified</label>
+                          <label>Completed</label>
                           <div class="ops-mock-card">
-                            <span class="tag tag-ok">Signed Off</span>
-                            <b>Bookkeeping Close</b>
-                            <small>Team Leader approved</small>
+                            <span class="tag tag-ok">Reviewed</span>
+                            <b>Monthly Bookkeeping</b>
+                            <small>Reviewed by Workly Team</small>
                             <i><em style="width:100%"></em></i>
                           </div>
                         </div>
@@ -763,16 +810,16 @@ require_once $headerPath;
 
                     <div class="ops-3d-view" id="ops3dView-clients">
                       <div class="ops-mock-header">
-                        <strong>VA &amp; Client CRM Directory</strong>
-                        <span class="ops-mock-cta">Linked Report Emails</span>
+                        <strong>Your Team &amp; Clients</strong>
+                        <span class="ops-mock-cta">Shared Reports</span>
                       </div>
                       <div class="ops-3d-crm-rows">
                         <div class="ops-3d-crm-row">
-                          <div><b>BrightPath Digital · Lucas Bennett</b><small>VA: Ethan Brooks · TL: Jordan Mitchell · lucas@brightpath.com</small></div>
+                          <div><b>BrightPath Digital · Lucas Bennett</b><small>Assistant: Ethan Brooks · Workly Team: Jordan Mitchell · lucas@brightpath.com</small></div>
                           <div class="ops-3d-usage"><span>68.0 / 100h</span><i><em style="width:68%"></em></i></div>
                         </div>
                         <div class="ops-3d-crm-row">
-                          <div><b>Northstar Consulting · Sophia Reynolds</b><small>VA: Olivia Carter · TL: Jordan Mitchell · sophia@northstar.co</small></div>
+                          <div><b>Northstar Consulting · Sophia Reynolds</b><small>Assistant: Olivia Carter · Workly Team: Jordan Mitchell · sophia@northstar.co</small></div>
                           <div class="ops-3d-usage"><span>52.5 / 80h</span><i><em style="width:65.6%"></em></i></div>
                         </div>
                       </div>
@@ -780,47 +827,48 @@ require_once $headerPath;
 
                     <div class="ops-3d-view" id="ops3dView-calendar">
                       <div class="ops-mock-header">
-                        <strong>Synced Email Threads &amp; Live Meetings</strong>
-                        <span class="ops-mock-cta">Google Calendar Live</span>
+                        <strong>Your Emails &amp; Upcoming Meetings</strong>
+                        <span class="ops-mock-cta">Calendar Connected</span>
                       </div>
                       <div class="ops-3d-crm-rows">
                         <div class="ops-3d-crm-row">
-                          <div><b>Real-Time Client Sync · 10:30 AM Today</b><small>Joined by Client, Ethan Brooks (VA) &amp; Jordan (Team Leader)</small></div>
-                          <span class="tag tag-ok">Live Meeting</span>
+                          <div><b>Client Meeting · 10:30 AM Today</b><small>Client, Ethan Brooks (VA) &amp; Jordan (Workly Team)</small></div>
+                          <span class="tag tag-ok">Meeting Ready</span>
                         </div>
                         <div class="ops-3d-crm-row">
-                          <div><b>Email Hub · BrightPath Digital Thread</b><small>Auto-synced messages linked to deliverables &amp; CRM timeline</small></div>
-                          <span class="tag tag-med">Email Synced</span>
+                          <div><b>BrightPath Digital · New Email</b><small>Latest client messages and attachments available in one place</small></div>
+                          <span class="tag tag-med">New Message</span>
                         </div>
                       </div>
                     </div>
 
                     <div class="ops-3d-view" id="ops3dView-analytics">
                       <div class="ops-mock-header">
-                        <strong>Time Analytics &amp; 1-Click Reports</strong>
+                        <strong>Working Hours &amp; Progress Reports</strong>
                         <button type="button" class="ops-mock-cta ops-3d-sendbtn" id="ops3dSendReport">Send Weekly Report</button>
                       </div>
                       <div class="ops-3d-kpis">
-                        <div><small>Ethan Brooks</small><b>93.0% SLA</b><span>2.6h avg response time</span></div>
-                        <div><small>Olivia Carter</small><b>96.5% SLA</b><span>1.8h avg response time</span></div>
-                        <div><small>Auto-Linked Dispatch</small><b>1-Click</b><span id="ops3dReportNote">Weekly/Monthly to Client &amp; Lead</span></div>
+                        <div><small>Ethan Brooks</small><b>93.0% On-Time</b><span>2.6h average completion time</span></div>
+                        <div><small>Olivia Carter</small><b>96.5% On-Time</b><span>1.8h average completion time</span></div>
+                        <div><small>Easy Report Sharing</small><b>One Click</b><span id="ops3dReportNote">Weekly or monthly updates</span></div>
                       </div>
                     </div>
+
                   </div>
                 ';
-                echo ops_render_media_or_fallback($desktopUrl, 'Workly OPS 3D Desktop Platform', $desktop3dFallback);
+                echo ops_render_media_or_fallback($desktopUrl, 'Workly workspace overview', $desktop3dFallback);
                 ?>
               </div>
             </div>
           </div>
 
           <div class="ops-3d-layer ops-3d-layer--float-a">
-            <small>Team Leader Guided SLA</small>
+            <small>Workly Team Support</small>
             <strong>94.8% On-Time · 2.6h Avg</strong>
           </div>
           <div class="ops-3d-layer ops-3d-layer--float-b">
-            <small>1-Click Reports</small>
-            <strong>Client &amp; Lead Emails Linked</strong>
+            <small>Progress Reports</small>
+            <strong>Shared with Clients &amp; Team</strong>
           </div>
 
         </div>
@@ -828,8 +876,9 @@ require_once $headerPath;
     </div>
   </section>
 
+
   <!-- ================================================================
-       6. SYNC & NOTIFICATIONS (Sleek Elongated iPhone 16+)
+       6. EMAILS, MEETINGS & NOTIFICATIONS
        ================================================================ -->
   <section class="ops-protrude-section">
     <div class="ops-container">
@@ -837,17 +886,21 @@ require_once $headerPath;
         <div class="ops-protrude-grid">
           <div class="ops-protrude-copy">
             <div class="ops-kicker ops-kicker--light">
-              <span>Sync &amp; Notifications</span>
+              <span>Stay Connected</span>
               <span aria-hidden="true">·</span>
-              <span>Always Connected</span>
+              <span>Always in the Loop</span>
             </div>
-            <h2>Synced emails, live meetings, and instant alerts in your pocket</h2>
+
+            <h2>Your team, your updates, always within reach.</h2>
+
             <p>
-              VAs receive immediate alerts for task comments, live calendar meetings, and synced client emails—eliminating missed updates so clients experience faster execution and reliable turnarounds.
+              Stay informed about task updates, upcoming meetings, and important client messages.
+              Everything your assistant needs to keep work moving is right where it belongs.
             </p>
+
             <div class="ops-hero-actions ops-protrude-actions">
-              <a class="ops-btn ops-btn--dark" href="find-va">Browse Verified VAs</a>
-              <a class="ops-btn ops-btn--white" href="./#calendly-section">Schedule Discovery Call</a>
+              <a class="ops-btn ops-btn--dark" href="find-va">Browse Our Assistants</a>
+              <a class="ops-btn ops-btn--white" href="./#calendly-section">Let's Talk</a>
             </div>
           </div>
 
@@ -860,111 +913,128 @@ require_once $headerPath;
                   <div class="ops-email-phone-ui">
                     <div class="ops-app-statusbar">
                       <span>9:41</span>
-                      <span>Alerts &amp; Sync</span>
+                      <span>Updates &amp; Messages</span>
                     </div>
                     <div class="ops-ep-head">
-                      <small>Synced Inbox &amp; Calendar</small>
-                      <strong>Live Feed (4)</strong>
+                      <small>Your Inbox &amp; Calendar</small>
+                      <strong>Recent Updates (4)</strong>
                     </div>
                     <div class="ops-ep-list">
                       <div class="ops-ep-item is-active">
                         <span class="ops-avatar-pill">TL</span>
                         <div>
-                          <b>Team Leader Alert · Task Comment</b>
-                          <small>Jordan tagged @Ethan on Q4 banner note</small>
+                          <b>New Task Update</b>
+                          <small>Jordan shared feedback on the marketing design</small>
                         </div>
                       </div>
                       <div class="ops-ep-item">
-                        <span class="ops-avatar-pill">CALENDAR</span>
+                        <span class="ops-avatar-pill">CALL</span>
                         <div>
-                          <b>Real-Time Meeting · 10:30 AM</b>
-                          <small>BrightPath review synced on Google Calendar</small>
+                          <b>Upcoming Meeting · 10:30 AM</b>
+                          <small>BrightPath meeting added to your calendar</small>
                         </div>
                       </div>
                       <div class="ops-ep-item">
                         <span class="ops-avatar-pill">CRM</span>
                         <div>
-                          <b>Client Email Linked · BrightPath</b>
-                          <small>New creative assets attached to active board</small>
+                          <b>New Client Email</b>
+                          <small>BrightPath shared new files and information</small>
                         </div>
                       </div>
                       <div class="ops-ep-item">
                         <span class="ops-avatar-pill">RPT</span>
                         <div>
-                          <b>Monthly Report Emailed</b>
-                          <small>Sent to Client &amp; Team Leader in 1 click</small>
+                          <b>Monthly Report Shared</b>
+                          <small>Sent to Client &amp; Workly Team</small>
                         </div>
                       </div>
                     </div>
                     <div class="ops-ep-footer">
-                      <span>Synced · Client CRM + Team Leader</span>
+                      <span>Everything Up to Date</span>
                     </div>
                   </div>
                 ';
-                echo ops_render_media_or_fallback($opsMedia['banner_phone'], 'Workly OPS alerts, calendar and email sync', $bannerPhoneFallback);
+                echo ops_render_media_or_fallback($opsMedia['banner_phone'], 'Workly mobile updates and notifications', $bannerPhoneFallback);
                 ?>
               </div>
             </div>
 
-            <div class="ops-protrude-tag ops-protrude-tag--1">Real-Time Meeting Sync</div>
-            <div class="ops-protrude-tag ops-protrude-tag--2">1-Click Linked Reports</div>
+            <div class="ops-protrude-tag ops-protrude-tag--1">Upcoming Meetings</div>
+            <div class="ops-protrude-tag ops-protrude-tag--2">Easy Report Sharing</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- ================================================================
-       7. ENGAGE CLIENTS ACROSS SERVICE CATEGORIES & ROLES
+       7. SERVICES & SPECIALTIES
        ================================================================ -->
   <section class="ops-categories-section" id="ops-services">
     <div class="ops-container">
       <div class="ops-section-heading">
         <div class="ops-kicker ops-kicker--subtle">
-          <span>Built For Every Specialty</span>
+          <span>Support for Every Kind of Business</span>
           <span aria-hidden="true">·</span>
-          <span>7 Core Service Verticals</span>
+          <span>Our Areas of Expertise</span>
         </div>
-        <h2>How Workly OPS drives faster output across 7 industries</h2>
-        <p>Every department runs on simple-click Kanban workflows, Team Leader coordination, shared CRM context, and 1-click weekly reports—saving hours and increasing client retention.</p>
+
+        <h2>The right support for every part of your business.</h2>
+
+        <p>
+          From everyday administrative work to marketing, customer support, and specialized assistance,
+          Workly helps businesses find the right people and stay organized as they grow.
+        </p>
       </div>
 
       <div class="ops-cat-shell ops-reveal">
         <div class="ops-cat-tabs" id="opsCatTabs" role="tablist" aria-label="Service Categories">
-          <button type="button" class="ops-cat-btn active" data-cat="it">IT &amp; Tech Support</button>
-          <button type="button" class="ops-cat-btn" data-cat="marketing">Digital Marketing</button>
-          <button type="button" class="ops-cat-btn" data-cat="legal">Legal Support</button>
-          <button type="button" class="ops-cat-btn" data-cat="insurance">Insurance</button>
-          <button type="button" class="ops-cat-btn" data-cat="healthcare">Healthcare Admin</button>
-          <button type="button" class="ops-cat-btn" data-cat="management">Operations &amp; Admin</button>
+          <button type="button" class="ops-cat-btn active" data-cat="it">IT &amp; Technology</button>
+          <button type="button" class="ops-cat-btn" data-cat="marketing">Marketing</button>
+          <button type="button" class="ops-cat-btn" data-cat="legal">Legal Assistance</button>
+          <button type="button" class="ops-cat-btn" data-cat="insurance">Insurance Support</button>
+          <button type="button" class="ops-cat-btn" data-cat="healthcare">Healthcare</button>
+          <button type="button" class="ops-cat-btn" data-cat="management">Administration</button>
           <button type="button" class="ops-cat-btn" data-cat="realestate">Real Estate</button>
         </div>
 
         <div class="ops-cat-panel">
           <div class="ops-cat-main">
-            <span class="ops-cat-eyebrow" id="opsCatTag">IT &amp; Technical Operations</span>
-            <h3 id="opsCatTitle">Tier-1 ticket triage, task notes, and SLA oversight</h3>
-            <p id="opsCatDesc">Technical VAs track incoming helpdesk escalations in Kanban boards, add troubleshooting notes and comments, and keep response times transparent so clients resolve issues faster.</p>
+            <span class="ops-cat-eyebrow" id="opsCatTag">IT &amp; Technology</span>
+
+            <h3 id="opsCatTitle">
+              Keep your technology and daily tasks running smoothly.
+            </h3>
+
+            <p id="opsCatDesc">
+              Get help managing technical requests, organizing information, assisting customers,
+              and keeping your daily operations on track.
+            </p>
+
             <ul class="ops-cat-list" id="opsCatList">
-              <li>1-click ticket status updates with threaded Team Leader comments</li>
-              <li>Real-time calendar escalation calls synced with IT leads</li>
-              <li>Weekly 1-click SLA performance reports emailed to stakeholders</li>
+              <li>Organized tracking of requests and ongoing tasks</li>
+              <li>Clear communication and timely updates</li>
+              <li>Regular reports to keep you informed</li>
             </ul>
-            <a class="ops-btn ops-btn--primary" id="opsCatLink" href="find-va">Find IT Support VAs →</a>
+
+            <a class="ops-btn ops-btn--primary" id="opsCatLink" href="find-va">
+              Find IT Support Assistants →
+            </a>
           </div>
 
           <div class="ops-cat-metrics">
             <div class="ops-cat-stat">
-              <small>Target Response Time</small>
+              <small>Response Time Goal</small>
               <strong id="opsCatSpeed">45m</strong>
             </div>
             <div class="ops-cat-stat">
-              <small>Verified Pod SLA</small>
+              <small>On-Time Completion</small>
               <strong id="opsCatSla">96.2%</strong>
             </div>
             <div class="ops-cat-stat">
-              <small>Active OPS Tools</small>
-              <strong id="opsCatModules">Kanban · Notes · 1-Click Reports</strong>
+              <small>Available Tools</small>
+              <strong id="opsCatModules">Tasks · Notes · Reports</strong>
             </div>
           </div>
         </div>
@@ -972,8 +1042,9 @@ require_once $headerPath;
     </div>
   </section>
 
+
   <!-- ================================================================
-       8. FINAL CTA BANNER
+       8. FINAL CALL TO ACTION
        ================================================================ -->
   <section class="ops-final-cta">
     <div class="ops-container">
@@ -981,14 +1052,20 @@ require_once $headerPath;
         <div>
           <div class="ops-kicker ops-kicker--light">
             <img src="<?= $logoEsc ?>" alt="Workly" class="ops-inline-logo">
-            <span>Scale Profitably</span>
+            <span>Grow With Workly</span>
           </div>
-          <h2>Grow output with dedicated VAs and Workly OPS.</h2>
-          <p>Cut staffing overhead by up to 70% while giving your VAs an intuitive workspace backed by Team Leader coordination, real-time calendar &amp; email sync, and 1-click weekly reporting.</p>
+
+          <h2>The right people. The right support. A better way to grow.</h2>
+
+          <p>
+            Focus on growing your business while your dedicated virtual assistant takes care of the daily work.
+            With Workly, you get organized support, clear communication, and a team that helps you move forward.
+          </p>
         </div>
+
         <div class="ops-cta-actions">
           <a class="ops-btn ops-btn--primary" href="find-va">Find Your VA →</a>
-          <a class="ops-btn ops-btn--light" href="./#calendly-section">Book Discovery Call</a>
+          <a class="ops-btn ops-btn--light" href="./#calendly-section">Let's Talk</a>
         </div>
       </div>
     </div>
