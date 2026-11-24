@@ -1858,7 +1858,7 @@ body:has(.ops-page) {
   .ops-collab-side { height: auto; }
   .ops-collab-col { min-height: 230px; }
 
-  .ops-phone-bezel--protrude { margin-top: 8px; margin-bottom: -18px; height: 495px; }
+  .ops-phone-bezel--protrude { margin-top: 8px; margin-bottom: -80px; height: 495px; }
   .ops-3d-rig { transform: none !important; }
 }
 
@@ -1870,6 +1870,11 @@ body:has(.ops-page) {
     flex-direction: column;
     width: 100%;
   }
+    .ops-cat-metrics { grid-template-columns: repeat(2, 1fr); }
+
+    .ops-segmented {
+    overflow-x: auto;
+    }
 
   .ops-hero-actions .ops-btn,
   .ops-cta-actions .ops-btn,

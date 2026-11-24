@@ -938,6 +938,12 @@ body.mobile-drawer-open .mobile-side-drawer {
   color: var(--primary);
 }
 
+
+.ops-nav {
+  color: var(--primary);
+}
+
+
 /* ==============================================================
    DIRECTORY & STICKY FILTER (Full Mobile & Tablet Adaptability)
    ============================================================== */
@@ -2444,6 +2450,7 @@ video {
 @media (prefers-reduced-motion: reduce) {
 .seg-indicator {
   transition: none;
+  left: 20px;
 }
 }
 @media (max-width: 480px) {
