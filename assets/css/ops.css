@@ -268,7 +268,7 @@ body:has(.ops-page) {
    1. NEAR-FULLWIDTH LIGHT BRAND HERO BANNER + FLOATING CARDS
    ============================================================== */
 .ops-hero-section {
-  padding: clamp(12px, 2vw, 20px) 0 clamp(44px, 6vw, 68px);
+  padding: clamp(12px, 2vw, 20px) 0 clamp(10px, 6vw, 20px);
 }
 
 .ops-hero-wrap {
@@ -281,7 +281,7 @@ body:has(.ops-page) {
   overflow: hidden;
   border-radius: 32px;
   border: 1px solid rgba(136, 34, 206, 0.16);
-  padding: clamp(44px, 6vw, 74px) clamp(18px, 4vw, 56px) 0;
+  padding: clamp(44px, 6vw, 50px) clamp(18px, 4vw, 30px) 0;
   background:
     radial-gradient(circle at 50% 60%, rgba(174, 9, 233, 0.2) 0%, rgba(136, 34, 206, 0.08) 44%, transparent 74%),
     linear-gradient(180deg, #FBF3FF 0%, #f4e3ff 56%, #ebd0fd 100%);
@@ -1679,11 +1679,11 @@ body:has(.ops-page) {
 
 .ops-phone-bezel--protrude {
   width: min(256px, 80vw);
-  height: 540px;
+  height: 520px;
   padding: 6px;
   border-radius: 46px;
-  margin-top: -36px;
-  margin-bottom: -36px;
+  margin-top: -150px;
+  margin-bottom: -150px;
 }
 
 .ops-phone-bezel--protrude .ops-phone-viewport {
